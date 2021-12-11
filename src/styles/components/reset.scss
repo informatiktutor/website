@@ -1,0 +1,13 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: inherit;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+  background-color: initial;
+  border: none;
+}
