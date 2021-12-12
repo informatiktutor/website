@@ -51,7 +51,10 @@ const common = {
         loader: 'handlebars-loader',
         options: {
           inlineRequires: '/static/',
-          partialDirs: [path.join(__dirname, 'src', 'partials')],
+          partialDirs: [
+            path.join(__dirname, 'src', 'partials'),
+            path.join(__dirname, 'src', 'views'),
+          ],
           helperDirs: [path.join(__dirname, 'src', 'helpers')],
         },
       },

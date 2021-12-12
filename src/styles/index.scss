@@ -1,1 +1,346 @@
-@import './components/base.scss';
+@import 'mathsass';
+
+@import './components/base';
+@import './components/colors';
+
+$max-width: 600px;
+
+.root {
+  overflow-x: hidden;
+}
+
+.page {
+  max-width: $max-width;
+  margin: auto;
+}
+
+.is-block {
+  display: block;
+}
+
+.is-tall-line {
+  line-height: 1.8;
+}
+
+.marker {
+  padding: 1rem;
+
+  &.is-green {
+    background-color: $palette-green;
+    color: $color-bright-text;
+  }
+}
+
+.highlight {
+  // $color: rgba(255, 251, 0, 0.507);
+  // $color: rgb(255, 253, 126);
+  // $color: rgb(252, 255, 154);
+  // $color: rgb(255, 249, 167);
+
+  @mixin highlight-color($color, $overlap-x, $overlap-y) {
+    box-shadow: $overlap-x 0 0 $color, (-1 * $overlap-x) 0 0 $color,
+      $overlap-x $overlap-y 0 $color, (-1 * $overlap-x) $overlap-y 0 $color;
+    box-decoration-break: clone; // Firefox
+  }
+
+  display: inline;
+
+  $horizontal-overlap: 0.75rem;
+  $vertical-overlap: 0.3rem;
+
+  &.is-inline {
+    padding: 0 0.25rem;
+  }
+
+  &.is-black {
+    color: $color-bright-text;
+    background-color: $palette-black;
+
+    &:not(.is-inline) {
+      @include highlight-color(
+        $palette-black,
+        $horizontal-overlap,
+        $vertical-overlap
+      );
+    }
+  }
+  &.is-blue {
+    color: $color-bright-text;
+    background-color: $palette-blue;
+    @include highlight-color(
+      $palette-blue,
+      $horizontal-overlap,
+      $vertical-overlap
+    );
+  }
+}
+
+.underline {
+  $height: 0.8rem;
+
+  @mixin underline-shadow($color, $height: 0.25rem, $offset: 0rem) {
+    // The $offset may not be larger than $height or a negative number.
+    box-shadow: inset 0 (-1 * ($height - $offset)) $color-underline-yellow,
+      0 max(0, $offset) $color-underline-yellow;
+  }
+
+  &.is-yellow {
+    @include underline-shadow($color-underline-yellow, $height);
+  }
+}
+
+.hero {
+  margin-bottom: 2rem;
+
+  &__section {
+    margin-bottom: 0.5rem;
+    &:last-of-type {
+      margin-bottom: inherit;
+    }
+  }
+}
+
+.section {
+  // padding: 1.5rem 2rem;
+  padding: 4rem 2rem 3.5rem 2rem;
+  // border: 1px dotted yellowgreen;
+
+  // margin: 0 42rem;
+
+  .segment {
+    margin-bottom: 1.75rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.is-spaced {
+      padding-top: 1.25rem;
+    }
+
+    p {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+.action {
+  max-width: 600px;
+
+  // TODO expand background to the left and right
+  background-color: white;
+
+  border: 2px solid rgb(228, 228, 228);
+  border-left: none;
+  border-right: none;
+  font-size: 16pt;
+
+  &__button {
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__name {
+      flex: 1;
+      margin-right: 1rem;
+    }
+
+    &__icon {
+      flex: 0;
+      padding: 0 0.5rem;
+    }
+  }
+
+  &__button,
+  &__content,
+  &-note {
+    padding: 1rem 1rem;
+  }
+
+  &-note {
+    font-size: 10pt;
+  }
+}
+
+.spoiler {
+  &__checkbox,
+  &__content {
+    display: none;
+  }
+
+  &__checkbox:checked + .action__button .icon-plus::before {
+    width: 0;
+  }
+
+  &__checkbox:checked + .action__button + &__content {
+    display: inherit;
+  }
+}
+
+.link {
+  a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.asterisk {
+  $color-asterisk: rgb(116, 116, 116);
+
+  &-source::after,
+  &-destination::before {
+    content: '*';
+    color: $color-asterisk;
+  }
+  &-source::after {
+    padding-left: 4px;
+  }
+  &-destination::before {
+    padding-right: 4px;
+  }
+}
+
+.icon-plus {
+  $size: 14pt;
+  $tickness: 2px;
+
+  width: $size;
+  height: $size;
+  position: relative;
+  display: block;
+
+  margin-bottom: 1px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: $size;
+    height: $tickness;
+    background-color: black;
+    top: 50%;
+    margin: auto;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.icon-arrow {
+  // $color-arrow: rgb(59, 59, 59);
+  $color-arrow: black;
+
+  $size: 18pt;
+  $thickness: 2px;
+
+  width: $size;
+  height: $size;
+  display: inline-block;
+
+  position: relative;
+  transform: rotate(-45deg);
+
+  // bar
+  &::before {
+    content: '';
+    position: absolute;
+    height: $thickness;
+    width: $size + 0.5pt;
+    background-color: $color-arrow;
+    border-radius: 100px;
+    transform: rotate(45deg);
+    transform-origin: bottom;
+    left: 0;
+    top: 50%;
+  }
+
+  // arrow
+  &::after {
+    content: '';
+    position: absolute;
+    border-bottom-style: solid;
+    border-bottom-width: $thickness;
+    border-right-style: solid;
+    border-right-width: $thickness;
+    border-color: $color-arrow;
+    height: 10px;
+    width: 10px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.slanted-shadow {
+  position: relative;
+
+  $excess-width: 100vw;
+
+  &__content::before {
+    content: '';
+    position: absolute;
+    left: -$excess-width;
+    width: 100vw + (2 * $excess-width);
+    height: 100%;
+    transform-origin: 0 0;
+    background-color: whitesmoke;
+    pointer-events: none;
+    z-index: -100;
+  }
+
+  @mixin slanted-transform($angle, $width) {
+    // The negative top property moves the background rectangle up,
+    // which is necessary because its origin (top-left corner of the rectangle)
+    // starts to the left of the screen (not visible to the user).
+    // Since it is angled, the visible part will start lower than intended.
+    // The offset by which the rectangle needs to moved upwards
+    // can be calculated with simple trigonometry:
+    //   tan(angle) = opposite / adjacent
+    // The angle is at the top-left, the opposite leg is the wanted offset
+    // and the adjacent leg of the triangle is equal to the excess width.
+    top: tan($angle) * -$width;
+    transform: rotate($angle);
+  }
+
+  // PostCSS will remove the style definitions that are unused.
+  @for $i from 1 through 9 {
+    $slant-angle: $i * 1deg;
+
+    &.is-rising.is-#{$i} &__content::before {
+      @include slanted-transform(-$slant-angle, $excess-width);
+    }
+    &.is-falling.is-#{$i} &__content::before {
+      @include slanted-transform($slant-angle, $excess-width);
+    }
+  }
+
+  &.is-yellow &__content::before {
+    // background-color: rgb(255, 251, 236);
+    background-color: rgb(240, 255, 252);
+    // background-color: adjust-color(
+    //   $color: $palette-yellow,
+    //   $lightness: -10%,
+    //   $alpha: -0.82
+    // );
+  }
+
+  &.is-blue &__content::before {
+    // background-color: $palette-blue-faint;
+    background-color: adjust-color(
+      $color: $palette-blue,
+      $lightness: +10%,
+      $alpha: -0.9
+    );
+  }
+
+  &.is-green &__content::before {
+    background-color: adjust-color(
+      $color: $palette-green,
+      $lightness: +10%,
+      $alpha: -0.9
+    );
+  }
+}
