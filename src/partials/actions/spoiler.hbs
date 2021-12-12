@@ -1,0 +1,18 @@
+<div class='spoiler'>
+  <form action='javascript:void(0);'>
+    <input id='{{id}}' class='spoiler__checkbox' type='checkbox' />
+    <label for='{{id}}' class='action__button'>
+      <span class='action__button__name'>
+        {{name}}
+      </span>
+      <span class='action__button__icon'>
+        <span class='icon-plus'></span>
+      </span>
+    </label>
+    <div class='action__content spoiler__content'>
+      <p class='spoiler__content__container'>
+        {{> @partial-block}}
+      </p>
+    </div>
+  </form>
+</div>

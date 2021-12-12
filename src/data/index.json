@@ -1,3 +1,25 @@
 {
-  "title": "informatiktutor"
+  "title": "informatiktutor",
+  "greetings": {
+    "default": "Hey",
+    "punctuation": "!",
+    "time_based": [
+      {
+        "value": "Guten Morgen",
+        "hour_range": [4, 11]
+      },
+      {
+        "value": "Guten Mittag",
+        "hour_range": [11, 14]
+      },
+      {
+        "value": "Guten Nachmittag",
+        "hour_range": [14, 17]
+      },
+      {
+        "value": "Guten Abend",
+        "hour_range": [17, 24]
+      }
+    ]
+  }
 }
