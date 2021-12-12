@@ -54,6 +54,9 @@ module.exports = merge(common, {
       },
     },
   },
+  output: {
+    publicPath: '/website/',
+  },
   devServer: {
     compress: true,
     liveReload: true,
