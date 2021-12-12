@@ -15,7 +15,9 @@
     "serve:development": "webpack serve --config webpack.dev.js",
     "build": "npm run build:production",
     "serve": "npm run serve:production",
-    "watch": "npm run serve:development"
+    "watch": "npm run serve:development",
+    "pages:clean": "rm -rf docs/*",
+    "pages:deploy": "npm run build:production -- -o docs"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
