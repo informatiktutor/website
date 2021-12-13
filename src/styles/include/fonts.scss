@@ -1,0 +1,33 @@
+// https://google-webfonts-helper.herokuapp.com/fonts/open-sans?subsets=latin
+
+/* open-sans-500 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/open-sans-v27-latin-500.eot');
+  src: local(''),
+    url('../fonts/open-sans-v27-latin-500.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/open-sans-v27-latin-500.woff2') format('woff2'),
+    url('../fonts/open-sans-v27-latin-500.woff') format('woff'),
+    url('../fonts/open-sans-v27-latin-500.ttf') format('truetype'),
+    url('../fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg');
+  font-display: swap;
+}
+
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/open-sans-v27-latin-600.eot');
+  src: local(''),
+    url('../fonts/open-sans-v27-latin-600.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/open-sans-v27-latin-600.woff2') format('woff2'),
+    url('../fonts/open-sans-v27-latin-600.woff') format('woff'),
+    url('../fonts/open-sans-v27-latin-600.ttf') format('truetype'),
+    url('../fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg');
+  font-display: swap;
+}
