@@ -75,6 +75,16 @@ const common = {
       template: 'src/views/kontakt.hbs',
       chunks: [],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'impressum.html',
+      template: 'src/views/impressum.hbs',
+      chunks: [],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'datenschutz.html',
+      template: 'src/views/datenschutz.hbs',
+      chunks: [],
+    }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
