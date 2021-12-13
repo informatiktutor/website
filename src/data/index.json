@@ -74,7 +74,6 @@
   "payment": {
     "methods": ["PayPal", "Lastschrift", "Kreditkarte", "Banküberweisung"],
     "page": {
-      "github": "https://github.com/informatiktutor/pay",
       "example": {
         "url": "pay.informatiktutor.de/beispiel",
         "url_full": "https://pay.informatiktutor.de/beispiel"

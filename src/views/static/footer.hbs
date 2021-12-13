@@ -1,0 +1,28 @@
+<div class='page-footer'>
+  <footer class='footer'>
+    <div class='footer__content'>
+      {{> ./footer-link
+        id='imprint'
+        name='Impressum'
+        href='/impressum.html'
+      }}
+      {{> ./footer-link
+        id='github-website'
+        name='Quellcode dieser Seite'
+        href=(shared 'links.github.source.website')
+        target='_blank'
+        no-track=true
+      }}
+      {{> ./footer-link
+        id='github-vonas'
+        name='GitHub'
+        href=(shared 'links.github.profile.personal')
+        target='_blank'
+        no-track=true
+      }}
+      <p class='is-faint' style='padding-top: 1rem'>
+        Copyright &copy; 2021 Jonas van den Berg
+      </p>
+    </div>
+  </footer>
+</div>
