@@ -17,6 +17,10 @@
     "imprint": {
       "development": "impressum.html",
       "production": "impressum"
+    },
+    "data_protection": {
+      "development": "datenschutz.html",
+      "production": "datenschutz"
     }
   }
 }
