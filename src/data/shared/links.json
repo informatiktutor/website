@@ -8,5 +8,15 @@
       "website": "https://github.com/informatiktutor/website",
       "pay": "https://github.com/informatiktutor/pay"
     }
+  },
+  "local": {
+    "contact": {
+      "development": "kontakt.html",
+      "production": "kontakt"
+    },
+    "imprint": {
+      "development": "impressum.html",
+      "production": "impressum"
+    }
   }
 }
