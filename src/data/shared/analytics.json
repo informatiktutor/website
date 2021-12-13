@@ -1,4 +1,5 @@
 {
+  "enabled": true,
   "domains": {
     "custom": "sa.informatiktutor.de",
     "scripts": "scripts.simpleanalyticscdn.com",

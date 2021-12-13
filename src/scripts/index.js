@@ -1,8 +1,10 @@
 import '../styles/index.scss'
 
-import { initialize } from './components/greeting'
+import { update_greeting } from './components/greeting'
+import { register_analytics_events } from './components/analytics'
 
-initialize();
+update_greeting()
+register_analytics_events()
 
 // (function () {
 

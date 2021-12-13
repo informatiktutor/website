@@ -34,8 +34,8 @@
   <div class='segment pt-4'>
     <div class='action'>
       {{#> actions/spoiler
+          id='about-me'
           name='Erfahre mehr über mich'
-          id='spoiler-about'
         }}
       {{> spoilers/about-me.hbs}}
       {{/actions/spoiler}}
@@ -59,6 +59,7 @@
       <div class='segment is-padded'>
         <div class='action'>
           {{> actions/link
+            id='contact-top'
             name='Kontaktiere mich'
             href='/kontakt.html'
             no-track=false
@@ -85,8 +86,8 @@
   <div class='segment'>
     <div class='action'>
       {{#> actions/spoiler
+          id='courses'
           name='Liste der Kurse'
-          id='spoiler-courses'
         }}
       {{> spoilers/courses.hbs}}
       {{/actions/spoiler}}
@@ -137,8 +138,10 @@
         <div class='action'>
           <!-- TODO link to ScheduleOnce booking page -->
           {{> actions/link
+            id='booking-page'
             name='Buche ein Meeting'
             href='/kontakt.html'
+            target='_blank'
             no-track=true
           }}
         </div>
@@ -151,8 +154,8 @@
       <div class='segment'>
         <div class='action'>
           {{#> actions/spoiler
+              id='pricing'
               name='Details zum Preis'
-              id='spoiler-pricing'
             }}
           {{> spoilers/pricing.hbs}}
           {{/actions/spoiler}}
@@ -181,8 +184,8 @@
   <div class='segment'>
     <div class='action'>
       {{#> actions/spoiler
+          id='tools'
           name='Verwendete Tools'
-          id='spoiler-tools'
         }}
       {{> spoilers/tools.hbs}}
       {{/actions/spoiler}}
@@ -211,6 +214,7 @@
       <div class='segment'>
         <div class='action'>
           {{> actions/link
+            id='contact-bottom'
             name='Zur Kontakt-Seite'
             href='/kontakt.html'
             no-track=false

@@ -1,3 +1,4 @@
+{{#if (shared 'analytics.enabled')}}
 <script async defer data-hostname='{{shared 'analytics' 'hostname' (env)}}'
   data-collect-dnt='{{shared 'analytics.ignore_dnt'}}' src='https://{{
     shared 'analytics' 'domains' (when (env 'production') 'custom' 'scripts')
@@ -13,3 +14,4 @@
       shared 'analytics.ignore_dnt'
     }}' alt='' referrerpolicy='no-referrer-when-downgrade' />
 </noscript>
+{{/if}}
