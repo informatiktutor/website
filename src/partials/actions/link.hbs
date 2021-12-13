@@ -1,6 +1,7 @@
 <div class='link'>
   <a href='{{href}}' class='action__button' {{#if target}} target='{{target}}'
-    {{/if}} {{#unless (false no-track)}} {{> attributes/no-track}} {{/unless}}>
+    {{/if}} {{#unless (false no-track)}} {{> attributes/no-track}} {{/unless}}
+    {{> attributes/analytics id=(concat 'link_' id)}}>
     <span class='action__button__name'>{{name}}</span>
     <span class='action__button__icon'>
       <span class='icon-arrow'></span>

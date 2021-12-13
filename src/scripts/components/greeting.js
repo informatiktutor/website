@@ -1,21 +1,19 @@
-import { get } from '../lib/js-data';
+import { get } from '../lib/js-data'
 
-function initialize() {
-  const greetings = get('greetings');
-  const element = document.querySelector('.js-greeting');
+function update_greeting() {
+  const greetings = get('greetings')
+  const element = document.querySelector('.js-greeting')
 
-  const now = new Date();
-  const currentHour = now.getHours();
+  const now = new Date()
+  const currentHour = now.getHours()
 
   for (const greeting of greetings.time_based) {
-    const [start_inclusive, end_exclusive] = greeting.hour_range;
+    const [start_inclusive, end_exclusive] = greeting.hour_range
     if (currentHour >= start_inclusive && currentHour < end_exclusive) {
-      element.innerText = greeting.value;
-      break;
+      element.innerText = greeting.value
+      break
     }
   }
 }
 
-export {
-  initialize
-}
+export { update_greeting }

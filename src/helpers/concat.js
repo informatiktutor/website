@@ -1,3 +1,6 @@
 module.exports = function (a1, a2) {
-  return a1.concat(a2);
+  if (Array.isArray(a1) && Array.isArray(a2)) {
+    return a1.concat(a2);
+  }
+  return a1 + a2;
 };

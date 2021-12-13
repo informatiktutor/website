@@ -1,7 +1,8 @@
 <div class='spoiler'>
   <form action='javascript:void(0);'>
-    <input id='{{id}}' class='spoiler__checkbox' type='checkbox' />
-    <label for='{{id}}' class='action__button'>
+    <input id='spoiler-{{id}}' class='spoiler__checkbox' type='checkbox' />
+    <label for='spoiler-{{id}}' class='action__button'
+      {{> attributes/analytics id=(concat 'spoiler_' id)}}>
       <span class='action__button__name'>
         {{name}}
       </span>

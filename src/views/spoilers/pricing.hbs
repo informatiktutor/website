@@ -44,15 +44,18 @@
 <p>
   Die Abwicklung erfolgt schnell und einfach
   über ein
-  <a {{> attributes/external}} href='{{payment.page.github}}'>eigens
+  <a {{> attributes/external}} href='{{payment.page.github}}'
+    {{> attributes/analytics id=(concat 'link_' 'ext-github-pay')}}>eigens
     entwickeltes</a>
   Bezahlfenster.
   Du erhältst dazu einen Link, der so aussehen wird:
 </p>
 <p>
   <a class='highlight is-subtle is-small is-rounded is-padded is-size-small'
-    href='{{payment.page.example.url_full}}'
-    target='_blank'>{{payment.page.example.url}}</a>
+    href='{{payment.page.example.url_full}}' target='_blank'
+    {{> attributes/analytics id=(concat 'link_' 'payment-page')}}>
+    {{~payment.page.example.url~}}
+  </a>
 </p>
 <p>
   Besuche die Seite um Dich mit ihr vertraut zu machen!
