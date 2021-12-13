@@ -1,5 +1,20 @@
 {
   "title": "informatiktutor",
+  "price": {
+    "value": 18,
+    "currency": "€"
+  },
+  "external": {
+    "university": {
+      "name_die": "Technische Hochschule Köln",
+      "name_der": "Technischen Hochschule Köln",
+      "url": "https://www.th-koeln.de/"
+    },
+    "tutoring": {
+      "name": "Mathe hat Vorfahrt!",
+      "url": "https://www.th-koeln.de/hochschule/mathe-hat-vorfahrt_68514.php"
+    }
+  },
   "greetings": {
     "default": "Hey",
     "punctuation": "!",
@@ -21,5 +36,45 @@
         "hour_range": [17, 24]
       }
     ]
+  },
+  "courses": {
+    "obligatory": [
+      "Algorithmen und Programmierung I",
+      "Algorithmen und Programmierung II",
+      "Algorithmik",
+      "Softwaretechnik I",
+      "Softwaretechnik II",
+      "Theoretische Informatik I",
+      "Theoretische Informatik II",
+      "Datenbanken I",
+      "Datenbanken II",
+      "Mathematik I",
+      "Mathematik II",
+      "Diskrete Mathematik",
+      "Einführung in Betriebssysteme und Rechnerarchitektur",
+      "Betriebssysteme und verteilte Systeme",
+      "Kommunikationstechnik und Netze",
+      "Informatikprojekt",
+      "Praxisprojekt"
+    ],
+    "other_degrees": [
+      "Informatik I",
+      "Informatik II",
+      "Einführungsprojekt in die Informatik",
+      "Datenbanksysteme"
+    ],
+    "optional": {
+      "attended": ["Einführung in Docker", "Software-Qualitätssicherung"]
+    }
+  },
+  "payment": {
+    "methods": ["PayPal", "Lastschrift", "Kreditkarte", "Banküberweisung"],
+    "page": {
+      "github": "https://github.com/informatiktutor/pay",
+      "example": {
+        "url": "pay.informatiktutor.de/beispiel",
+        "url_full": "https://pay.informatiktutor.de/beispiel"
+      }
+    }
   }
 }

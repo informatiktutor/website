@@ -1,12 +1,15 @@
-<div class="page">
+<div class='page'>
   <div id='intro' class='section'>
     <div class='hero'>
       <div class='segment'>
         <h1>
           <span class='is-block is-tall-line'>
             <span class='highlight is-black'>
-              <!-- TODO: Time-based greeting. -->
-              <span class='js-greeting'>Hey</span><span class='js-greeting-punctuation'>!</span>
+              <span class='js-greeting'>{{
+                greetings.default
+              }}</span><span class='js-greeting-punctuation'>{{
+                greetings.punctuation
+              }}</span>
             </span>
           </span>
           <span class='is-block is-tall-line'>
@@ -29,9 +32,12 @@
       <span class='underline is-yellow'>Leidenschaft</span>
       für Informatik gestalten dabei meinen Unterricht.
     </p>
-    <div class='segment'>
+    <div class='segment pt-4'>
       <div class='action'>
-        {{#> actions/spoiler name='Erfahre mehr über mich' id='spoiler-about' }}
+        {{#> actions/spoiler
+          name='Erfahre mehr über mich'
+          id='spoiler-about'
+        }}
         {{> spoilers/about-me.hbs}}
         {{/actions/spoiler}}
       </div>
@@ -69,34 +75,35 @@
 
   <div id='elements' class='section'>
     <p class='segment'>
-      Ich gebe
-      <span class='highlight is-inline is-black'>Nachhilfe</span>
-      in allen Kursen die
+      Ich gebe Nachhilfe in allen Kursen die
       <span class='underline is-yellow'>Informatik</span>,
       <span class='underline is-yellow'>Programmierung</span>,
       <span class='underline is-yellow'>Mathematik</span> oder
       <span class='underline is-yellow'>Logik</span>
       zum Inhalt haben.
     </p>
+    <div class='segment'>
+      <div class='action'>
+        {{#> actions/spoiler
+          name='Liste der Kurse'
+          id='spoiler-courses'
+        }}
+        {{> spoilers/courses.hbs}}
+        {{/actions/spoiler}}
+      </div>
+    </div>
     <p class='segment'>
-      Weiterhin biete ich auch die
+      Weiterhin biete ich die
       <span class='highlight is-inline is-black'>Korrektur</span>
       und
       <span class='highlight is-inline is-black'>Verbesserung</span>
       Deiner Lösungen an.
     </p>
-    <div class='segment'>
-      <div class='action'>
-        {{#> actions/spoiler name='Liste der Kurse' id='spoiler-courses' }}
-        {{> spoilers/courses.hbs}}
-        {{/actions/spoiler}}
-      </div>
-    </div>
     <p class="segment">
       Haben wir nach unserem Meeting noch Zeit,
       gebe ich gerne auch
       <span class='highlight is-inline is-black'>Beratung</span>
-      zu Deinem Studium!
+      zu Deinem Studium.
     </p>
   </div>
 
@@ -105,11 +112,11 @@
       <div id='pricing' class='section'>
         <div class='segment'>
           <p>
-            Der Preis ist einfach.
+            Der Preis ist transparent.
           </p>
           <p>
             <span class='highlight is-blue'>
-              Ich nehme 18€ pro Stunde.
+              Ich nehme {{price.value}}{{price.currency}} pro Stunde.
             </span>
           </p>
           <p>
@@ -123,11 +130,10 @@
             </span>
           </p>
           <p>
-            Lerne mich in einem Gespräch kennen und quetsche mich aus!
+            Lerne mich erst in einem Gespräch kennen!
           </p>
         </div>
         <div class='segment'>
-          <!-- TODO make this a handlebars component -->
           <div class='action'>
             {{> actions/link
             name='Buche ein Meeting'
@@ -138,11 +144,14 @@
         <div class='segment'>
           Baue
           <span class='underline is-yellow'>Vertrauen</span>
-          in mich auf, bevor du mir Geld sendest.
+          in mich auf, bevor Du mir Geld sendest.
         </div>
         <div class='segment'>
           <div class='action'>
-            {{#> actions/spoiler name='Details zum Preis' id='spoiler-pricing' }}
+            {{#> actions/spoiler
+              name='Details zur Zahlung'
+              id='spoiler-pricing'
+            }}
             {{> spoilers/pricing.hbs}}
             {{/actions/spoiler}}
           </div>
@@ -160,17 +169,19 @@
     </p>
     <p class='segment'>
       <span class='highlight is-black'>
-        Meine Nachhilfe findet momentan nur online statt.
+        Meine Nachhilfe findet online statt.
       </span>
     </p>
     <p class='segment'>
-      So kann ich Dir
-      <span class='underline is-yellow'>zu jeder Zeit</span>
+      So kann ich Dir zu jeder Zeit
       und so schnell es geht zur Seite stehen.
     </p>
     <div class='segment'>
       <div class='action'>
-        {{#> actions/spoiler name='Verwendete Tools' id='spoiler-tools' }}
+        {{#> actions/spoiler
+          name='Verwendete Tools'
+          id='spoiler-tools'
+        }}
         {{> spoilers/tools.hbs}}
         {{/actions/spoiler}}
       </div>
@@ -181,19 +192,18 @@
     <div class='slanted-shadow__content'>
       <div id='ready' class='section'>
         <p class='segment'>
-          <span class='highlight is-black'>Bist Du bereit?</span>
+          <span class='highlight is-black'>Brauchst Du Hilfe?</span>
         </p>
         <div class='segment'>
           <p>
             <span class='underline is-yellow'>Kontaktiere mich</span>
-            und teile mir mit, wobei du Hilfe benötigst.
+            und schildere, wobei Du Schwierigkeiten hast.
           </p>
-          <p>
-            Sende mir die nötigen
+          <p class='pt-2'>
+            Sende mir auch
+            <span class='underline is-yellow'>Aufgaben</span> und
             <span class='underline is-yellow'>Unterlagen</span>,
-            sodass ich verstehe um welche
-            <span class='underline is-yellow'>Themen</span>
-            es geht.
+            so dass ich verstehe um welche Themen es geht.
           </p>
         </div>
         <div class='segment'>
@@ -212,11 +222,9 @@
   </div>
 
   <!-- TODO: FAQ? -->
-
-  <div style='height: 300px'></div>
-
-  {{!-- <div style='height: 100vh'></div> --}}
-
   <!-- ich helfe nicht während einer prüfung -->
+</div>
 
+<div id='js-data' class='is-hidden' aria-hidden='true'>
+  <div class='js-data-greetings' data-greetings='{{json greetings}}'></div>
 </div>
