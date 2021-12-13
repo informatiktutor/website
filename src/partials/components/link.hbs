@@ -1,0 +1,6 @@
+<a href='{{href}}' {{#if class}} class='{{class}}' {{/if}} {{#if target}}
+  target='{{target}}' {{/if}} {{#unless (false no-track)}}
+  {{> attributes/no-track}} {{/unless}}
+  {{> attributes/analytics id=(concat 'link_' id)}}>
+  {{~> @partial-block~}}
+</a>

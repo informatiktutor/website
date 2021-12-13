@@ -5,8 +5,6 @@
 
 // TODO Refactor this. Works for now though.
 
-$max-width: 600px;
-
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -29,15 +27,6 @@ a {
 
 .is-size-small {
   font-size: 14pt !important;
-}
-
-.root {
-  overflow-x: hidden;
-}
-
-.page {
-  max-width: $max-width;
-  margin: auto;
 }
 
 .is-block {
