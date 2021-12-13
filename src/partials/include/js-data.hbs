@@ -1,0 +1,8 @@
+{{#if js-data.length}}
+<div id='js-data' class='is-hidden' aria-hidden='true'>
+  {{#each js-data}}
+  <div class='js-data-{{this}}' data-{{this}}='{{json (lookup @root this)}}'>
+  </div>
+  {{/each}}
+</div>
+{{/if}}

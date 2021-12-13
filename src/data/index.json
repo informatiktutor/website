@@ -1,5 +1,8 @@
 {
-  "title": "informatiktutor",
+  "meta": {
+    "title": "informatiktutor.de",
+    "description": "Ich helfe Informatik-Studenten bei ihrem Studium."
+  },
   "price": {
     "value": 18,
     "currency": "€"
@@ -37,6 +40,7 @@
       }
     ]
   },
+  "js-data": ["greetings"],
   "courses": {
     "obligatory": [
       "Algorithmen und Programmierung I",

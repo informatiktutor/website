@@ -1,14 +1,14 @@
 <p>
   Ich heiße Jonas van den Berg
   und habe Informatik mit Abschluss Bachelor an der
-  <a target='_blank' href='{{external.university.url}}'>{{
-    external.university.name_der
-  }}</a>
+  <a {{> attributes/external}} href='{{external.university.url}}'>
+    {{~external.university.name_der~}}
+  </a>
   studiert.
 </p>
 <p>
   Ich war bereits während meines Studiums als Tutor beschäftigt
-  (<a target='_blank' href='{{external.tutoring.url}}'>siehe
+  (<a {{> attributes/external}} href='{{external.tutoring.url}}'>siehe
     hier</a>)
   und habe regelmäßig Kommilitonen innerhalb von Lerngruppen geholfen
   die Inhalte der Vorlesungen zu verstehen
