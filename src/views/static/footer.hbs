@@ -4,12 +4,12 @@
       {{> ./footer-link
         id='contact-footer'
         name='Kontakt'
-        href='/kontakt.html'
+        href=(shared 'links.local.contact' (env))
       }}
       {{> ./footer-link
         id='imprint'
         name='Impressum'
-        href='/impressum.html'
+        href=(shared 'links.local.imprint' (env))
       }}
       {{> ./footer-link
         id='github-website'

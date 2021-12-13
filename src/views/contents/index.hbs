@@ -61,7 +61,7 @@
           {{> actions/link
             id='contact-top'
             name='Kontaktiere mich'
-            href='/kontakt.html'
+            href=(shared 'links.local.contact' (env))
             no-track=false
           }}
         </div>
@@ -140,7 +140,7 @@
           {{> actions/link
             id='booking-page'
             name='Buche ein Meeting'
-            href='/kontakt.html'
+            href=(shared 'links.local.contact' (env))
             target='_blank'
             no-track=true
           }}
@@ -216,7 +216,7 @@
           {{> actions/link
             id='contact-bottom'
             name='Zur Kontakt-Seite'
-            href='/kontakt.html'
+            href=(shared 'links.local.contact' (env))
             no-track=false
           }}
         </div>
