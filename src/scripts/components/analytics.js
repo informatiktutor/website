@@ -56,6 +56,7 @@ function register_click_events(elements) {
   }
 }
 
+// TODO register scroll start event.
 function register_analytics_events() {
   if (!sa_event) {
     // Do not register event listeners if analytics are disabled.
