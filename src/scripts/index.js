@@ -1,13 +1,17 @@
 import '../styles/index.scss'
 
-(function () {
+import { initialize } from './components/greeting'
 
-const spoilers = document.querySelectorAll('.spoiler');
-for (const spoiler of spoilers) {
-  const button = spoiler.querySelector('button.toggle-collapse');
-  button.addEventListener('click', function (e) {
-    spoiler.classList.toggle('is-collapsed');
-  });
-}
+initialize();
 
-})()
+// (function () {
+
+// const spoilers = document.querySelectorAll('.spoiler');
+// for (const spoiler of spoilers) {
+//   const button = spoiler.querySelector('button.toggle-collapse');
+//   button.addEventListener('click', function (e) {
+//     spoiler.classList.toggle('is-collapsed');
+//   });
+// }
+
+// })()

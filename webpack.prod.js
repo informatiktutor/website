@@ -27,7 +27,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    // TODO Add plugin that copies static files (only in production).
     new MiniCssExtractPlugin({
       filename: '[name].bundle.[contenthash].css',
       chunkFilename: '[id].chunk.[contenthash].css',

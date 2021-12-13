@@ -1,1 +1,30 @@
-Kurse...
+<p>
+  Beispielhaft sind nachfolgend
+  Kurse der {{external.university.name_der}} aufgelistet.
+</p>
+<ul class='course-list'>
+  {{#each (sort (concat courses.obligatory courses.other_degrees))}}
+  <li>
+    <span class='highlight is-small is-subtle is-rounded is-padded'>
+      {{{nbsp_until 2 this}}}
+    </span>
+  </li>
+  {{/each}}
+</ul>
+<p>
+  Außerdem habe ich folgende Wahlpflichtfächer
+  während meines Studiums belegt:
+</p>
+<ul class='course-list'>
+  {{#each (sort courses.optional.attended)}}
+  <li>
+    <span class='highlight is-small is-subtle is-rounded is-padded'>
+      {{{nbsp_until 2 this}}}
+    </span>
+  </li>
+  {{/each}}
+</ul>
+<p>
+  Falls Dein Kurs nicht aufgelistet sein sollte,
+  kannst Du mich dennoch gerne darauf ansprechen.
+</p>

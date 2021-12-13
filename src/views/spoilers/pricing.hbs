@@ -1,1 +1,47 @@
-Preise
+<p>
+  Die Zahlung findet im Voraus statt.
+  Du kannst Dein Geld jederzeit zurück erhalten,
+  sofern ich die gewünschte Leistung noch nicht erbracht habe.
+</p>
+<p>
+  Falls es notwendig sein sollte,
+  können wir unser Meeting gerne etwas überziehen.
+  Mir ist wichtig, dass du die Inhalte richtig verstehst
+  und du mit einem guten Gefühl gehst.
+  {{!-- Ich bestehe nicht darauf, dass du deswegen ein paar Euro mehr bezahlst. --}}
+</p>
+<p>
+  Wenn wir früher fertig sein sollten als zunächst gedacht,
+  erstatte ich dir gerne das Geld für die ungenutzten Minuten zurück.
+  Spreche mich am Ende des Meetings einfach darauf an.
+</p>
+<div style='margin: 1.5rem 0'>
+  <div style='border-top: 1px solid lightgrey; width: 50%'></div>
+</div>
+<p>
+  Ich biete die folgenden Zahlungsmethoden an:
+</p>
+<ul class='course-list'>
+  {{#each payment.methods}}
+  <li>
+    <span class='highlight is-small is-subtle is-rounded is-padded'>
+      {{{this}}}
+    </span>
+  </li>
+  {{/each}}
+</ul>
+<p>
+  Die Abwicklung erfolgt schnell und einfach
+  über ein
+  <a target='_blank' href='{{payment.page.github}}'>eigens entwickeltes</a>
+  Bezahlfenster.
+  Du erhältst dazu einen Link, der so aussehen wird:
+</p>
+<p>
+  <a class='highlight is-blue is-small is-rounded is-padded is-size-small'
+    href='{{payment.page.example.url_full}}'
+    target='_blank'>{{payment.page.example.url}}</a>
+</p>
+<p>
+  Klicke auf den Link um Dich mit der Seite vertraut zu machen!
+</p>
