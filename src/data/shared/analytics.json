@@ -1,0 +1,13 @@
+{
+  "domains": {
+    "custom": "sa.informatiktutor.de",
+    "scripts": "scripts.simpleanalyticscdn.com",
+    "queue": "queue.simpleanalyticscdn.com"
+  },
+  "hostname": {
+    "production": "informatiktutor.de",
+    "development": "dev.informatiktutor.de"
+  },
+  "ignore_dnt": "true",
+  "script_dev_suffix": ".dev"
+}

@@ -1,1 +1,15 @@
-<!-- TODO simple analytics -->
+<script async defer data-hostname='{{shared 'analytics' 'hostname' (env)}}'
+  data-collect-dnt='{{shared 'analytics.ignore_dnt'}}' src='https://{{
+    shared 'analytics' 'domains' (when (env 'production') 'custom' 'scripts')
+  }}/latest{{
+    shared 'analytics' (when (env 'development') 'script_dev_suffix' '')
+  }}.js'></script>
+<noscript>
+  <img src='https://{{
+      shared 'analytics' 'domains' (when (env 'production') 'custom' 'queue')
+    }}/noscript.gif?hostname={{
+      shared 'analytics' 'hostname' (env)
+    }}&ignore-dnt={{
+      shared 'analytics.ignore_dnt'
+    }}' alt='' referrerpolicy='no-referrer-when-downgrade' />
+</noscript>
