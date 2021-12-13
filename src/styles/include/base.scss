@@ -33,6 +33,10 @@ body {
     color: $color-footer-text;
   }
 
+  a:hover {
+    color: $palette-black;
+  }
+
   margin-top: 5rem;
   padding: 2.5rem 0;
 }
