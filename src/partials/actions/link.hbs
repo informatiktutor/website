@@ -1,6 +1,6 @@
 <div class='link'>
-  <!-- TODO Add rel=noopener etc. -->
-  <a href='{{href}}' class='action__button'>
+  <a href='{{href}}' class='action__button' {{#if target}} target='{{target}}'
+    {{/if}} {{#unless (false no-track)}} {{> attributes/no-track}} {{/unless}}>
     <span class='action__button__name'>{{name}}</span>
     <span class='action__button__icon'>
       <span class='icon-arrow'></span>

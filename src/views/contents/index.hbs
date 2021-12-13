@@ -1,230 +1,225 @@
-<div class='page'>
-  <div id='intro' class='section'>
-    <div class='hero'>
-      <div class='segment'>
-        <h1>
-          <span class='is-block is-tall-line'>
-            <span class='highlight is-black'>
-              <span class='js-greeting'>{{
+<section id='intro' class='section'>
+  <div class='hero'>
+    <div class='segment'>
+      <h1>
+        <span class='is-block is-tall-line'>
+          <span class='highlight is-black'>
+            <span class='js-greeting'>{{
                 greetings.default
               }}</span><span class='js-greeting-punctuation'>{{
                 greetings.punctuation
               }}</span>
-            </span>
           </span>
-          <span class='is-block is-tall-line'>
-            <span class='highlight is-black'>Mein Name ist Jonas.</span>
-          </span>
-        </h1>
-      </div>
-      <div class='segment'>
-        <div class='marker is-green'>
-          <h2>
-            Ich helfe Studenten wie Dir bei ihrem Studium.
-          </h2>
-        </div>
+        </span>
+        <span class='is-block is-tall-line'>
+          <span class='highlight is-black'>Mein Name ist Jonas.</span>
+        </span>
+      </h1>
+    </div>
+    <div class='segment'>
+      <div class='rectangle is-green'>
+        <h2>
+          Ich helfe Studenten wie Dir bei ihrem Studium.
+        </h2>
       </div>
     </div>
-    <p class='segment'>
-      Die
-      <span class='underline is-yellow'>Zusammenarbeit</span>
-      auf persönlicher Ebene und meine
-      <span class='underline is-yellow'>Leidenschaft</span>
-      für Informatik gestalten dabei meinen Unterricht.
-    </p>
-    <div class='segment pt-4'>
-      <div class='action'>
-        {{#> actions/spoiler
+  </div>
+  <p class='segment'>
+    Die
+    <span class='underline is-yellow'>Zusammenarbeit</span>
+    auf persönlicher Ebene und meine
+    <span class='underline is-yellow'>Leidenschaft</span>
+    für Informatik gestalten dabei meinen Unterricht.
+  </p>
+  <div class='segment pt-4'>
+    <div class='action'>
+      {{#> actions/spoiler
           name='Erfahre mehr über mich'
           id='spoiler-about'
         }}
-        {{> spoilers/about-me.hbs}}
-        {{/actions/spoiler}}
-      </div>
+      {{> spoilers/about-me.hbs}}
+      {{/actions/spoiler}}
     </div>
   </div>
+</section>
 
-  <div class='slanted-shadow is-green is-falling is-4'>
-    <div class='slanted-shadow__content'>
-      <div id='contact' class='section'>
-        <p class='segment'>
-          Ich bringe Dir das nötige Wissen bei, damit Du Deine Aufgaben
-          <span class='underline is-yellow'>eigenständig</span>
-          lösen kannst.
-        </p>
-        <p class='segment'>
-          <span class='highlight is-black'>
-            Sehe mich als Deinen Lehrer, Mentor oder Freund!
-          </span>
-        </p>
-        <div class='segment is-spaced'>
-          <div class='action'>
-            {{> actions/link
+<div class='slanted-shadow is-green is-falling is-4'>
+  <div class='slanted-shadow__content'>
+    <section id='contact' class='section'>
+      <p class='segment'>
+        Ich bringe Dir das nötige Wissen bei, damit Du Deine Aufgaben
+        <span class='underline is-yellow'>eigenständig</span>
+        lösen kannst.
+      </p>
+      <p class='segment'>
+        <span class='highlight is-black'>
+          Sehe mich als Deinen Lehrer, Mentor oder Freund!
+        </span>
+      </p>
+      <div class='segment is-padded'>
+        <div class='action'>
+          {{> actions/link
             name='Kontaktiere mich'
             href='/kontakt.html'
+            no-track=false
           }}
-          </div>
-          {{!-- <div class='action-note'>
+        </div>
+        {{!-- <div class='action-note'>
           {{! <span class='asterisk-destination'>Ich beiße nicht &#x1F9DB;</span> }}
           <span class='asterisk-destination'>Ich antworte so schnell wie möglich</span>
         </div> --}}
-        </div>
       </div>
-    </div>
+    </section>
   </div>
+</div>
 
-  <div id='elements' class='section'>
-    <p class='segment'>
-      Ich gebe Nachhilfe in allen Kursen die
-      <span class='underline is-yellow'>Informatik</span>,
-      <span class='underline is-yellow'>Programmierung</span>,
-      <span class='underline is-yellow'>Mathematik</span> oder
-      <span class='underline is-yellow'>Logik</span>
-      zum Inhalt haben.
-    </p>
-    <div class='segment'>
-      <div class='action'>
-        {{#> actions/spoiler
+<section id='elements' class='section'>
+  <p class='segment'>
+    Ich gebe Nachhilfe in allen Kursen die
+    <span class='underline is-yellow'>Informatik</span>,
+    <span class='underline is-yellow'>Programmierung</span>,
+    <span class='underline is-yellow'>Mathematik</span> oder
+    <span class='underline is-yellow'>Logik</span>
+    zum Inhalt haben.
+  </p>
+  <div class='segment'>
+    <div class='action'>
+      {{#> actions/spoiler
           name='Liste der Kurse'
           id='spoiler-courses'
         }}
-        {{> spoilers/courses.hbs}}
-        {{/actions/spoiler}}
-      </div>
+      {{> spoilers/courses.hbs}}
+      {{/actions/spoiler}}
     </div>
-    <p class='segment'>
-      Weiterhin biete ich die
-      <span class='highlight is-inline is-black'>Korrektur</span>
-      und
-      <span class='highlight is-inline is-black'>Verbesserung</span>
-      Deiner Lösungen an.
-    </p>
-    <p class="segment">
-      Haben wir nach unserem Meeting noch Zeit,
-      gebe ich gerne auch
-      <span class='highlight is-inline is-black'>Beratung</span>
-      zu Deinem Studium.
-    </p>
   </div>
+  <p class='segment'>
+    Weiterhin biete ich die
+    <span class='highlight is-inline is-black'>Korrektur</span>
+    und
+    <span class='highlight is-inline is-black'>Verbesserung</span>
+    Deiner Lösungen an.
+  </p>
+  <p class="segment">
+    Haben wir nach unserem Meeting noch Zeit,
+    gebe ich gerne auch
+    <span class='highlight is-inline is-black'>Beratung</span>
+    zu Deinem Studium.
+  </p>
+</section>
 
-  <div class='slanted-shadow is-blue is-rising is-1'>
-    <div class='slanted-shadow__content'>
-      <div id='pricing' class='section'>
-        <div class='segment'>
-          <p>
-            Der Preis ist transparent.
-          </p>
-          <p>
-            <span class='highlight is-blue'>
-              Ich nehme {{price.value}}{{price.currency}} pro Stunde.
-            </span>
-          </p>
-          <p>
-            Keinen Cent mehr.
-          </p>
-        </div>
-        <div class='segment'>
-          <p>
-            <span class='highlight is-black'>
-              Wir kennen uns noch nicht?
-            </span>
-          </p>
-          <p>
-            Lerne mich erst in einem Gespräch kennen!
-          </p>
-        </div>
-        <div class='segment'>
-          <div class='action'>
-            {{> actions/link
+<div class='slanted-shadow is-blue is-rising is-1'>
+  <div class='slanted-shadow__content'>
+    <section id='pricing' class='section'>
+      <div class='segment'>
+        <p>
+          Der Preis ist transparent.
+        </p>
+        <p>
+          <span class='highlight is-blue'>
+            Ich nehme {{price.value}}{{price.currency}} pro Stunde.
+          </span>
+        </p>
+        <p>
+          Keinen Cent mehr.
+        </p>
+      </div>
+      <div class='segment'>
+        <p>
+          <span class='highlight is-black'>
+            Wir kennen uns noch nicht?
+          </span>
+        </p>
+        <p>
+          Lerne mich erst in einem Gespräch kennen!
+        </p>
+      </div>
+      <div class='segment'>
+        <div class='action'>
+          <!-- TODO link to ScheduleOnce booking page -->
+          {{> actions/link
             name='Buche ein Meeting'
             href='/kontakt.html'
+            no-track=true
           }}
-          </div>
         </div>
-        <div class='segment'>
-          Baue
-          <span class='underline is-yellow'>Vertrauen</span>
-          in mich auf, bevor Du mir Geld sendest.
-        </div>
-        <div class='segment'>
-          <div class='action'>
-            {{#> actions/spoiler
+      </div>
+      <div class='segment'>
+        Baue
+        <span class='underline is-yellow'>Vertrauen</span>
+        in mich auf, bevor Du mir Geld sendest.
+      </div>
+      <div class='segment'>
+        <div class='action'>
+          {{#> actions/spoiler
               name='Details zur Zahlung'
               id='spoiler-pricing'
             }}
-            {{> spoilers/pricing.hbs}}
-            {{/actions/spoiler}}
-          </div>
+          {{> spoilers/pricing.hbs}}
+          {{/actions/spoiler}}
         </div>
       </div>
-    </div>
+    </section>
   </div>
+</div>
 
-  <div id='tools' class='section'>
-    <p class='segment'>
-      Wir arbeiten an einem gemeinsamen
-      <span class='underline is-yellow'>Whiteboard</span>
-      und in einer geteilten
-      <span class='underline is-yellow'>Entwicklungsumgebung</span>.
-    </p>
-    <p class='segment'>
-      <span class='highlight is-black'>
-        Meine Nachhilfe findet online statt.
-      </span>
-    </p>
-    <p class='segment'>
-      So kann ich Dir zu jeder Zeit
-      und so schnell es geht zur Seite stehen.
-    </p>
-    <div class='segment'>
-      <div class='action'>
-        {{#> actions/spoiler
+<section id='tools' class='section'>
+  <p class='segment'>
+    Wir arbeiten an einem gemeinsamen
+    <span class='underline is-yellow'>Whiteboard</span>
+    und in einer geteilten
+    <span class='underline is-yellow'>Entwicklungsumgebung</span>.
+  </p>
+  <p class='segment'>
+    <span class='highlight is-black'>
+      Meine Nachhilfe findet online statt.
+    </span>
+  </p>
+  <p class='segment'>
+    So kann ich Dir zu jeder Zeit
+    und so schnell es geht zur Seite stehen.
+  </p>
+  <div class='segment'>
+    <div class='action'>
+      {{#> actions/spoiler
           name='Verwendete Tools'
           id='spoiler-tools'
         }}
-        {{> spoilers/tools.hbs}}
-        {{/actions/spoiler}}
-      </div>
+      {{> spoilers/tools.hbs}}
+      {{/actions/spoiler}}
     </div>
   </div>
+</section>
 
-  <div class='slanted-shadow is-green'>
-    <div class='slanted-shadow__content'>
-      <div id='ready' class='section'>
-        <p class='segment'>
-          <span class='highlight is-black'>Brauchst Du Hilfe?</span>
+<div class='slanted-shadow is-green'>
+  <div class='slanted-shadow__content'>
+    <section id='ready' class='section'>
+      <p class='segment'>
+        <span class='highlight is-black'>Brauchst Du Hilfe?</span>
+      </p>
+      <div class='segment is-spaced'>
+        <p>
+          <span class='underline is-yellow'>Kontaktiere mich</span>
+          und schildere, wobei Du Schwierigkeiten hast.
         </p>
-        <div class='segment'>
-          <p>
-            <span class='underline is-yellow'>Kontaktiere mich</span>
-            und schildere, wobei Du Schwierigkeiten hast.
-          </p>
-          <p class='pt-2'>
-            Sende mir auch
-            <span class='underline is-yellow'>Aufgaben</span> und
-            <span class='underline is-yellow'>Unterlagen</span>,
-            so dass ich verstehe um welche Themen es geht.
-          </p>
-        </div>
-        <div class='segment'>
-          <div class='action'>
-            {{> actions/link
+        <p>
+          Sende mir auch
+          <span class='underline is-yellow'>Aufgaben</span> und
+          <span class='underline is-yellow'>Unterlagen</span>,
+          so dass ich verstehe um welche Themen es geht.
+        </p>
+      </div>
+      <div class='segment'>
+        <div class='action'>
+          {{> actions/link
             name='Zur Kontakt-Seite'
             href='/kontakt.html'
+            no-track=false
           }}
-          </div>
         </div>
-        <p class='segment'>
-          <span class='highlight is-black'>Ich freue mich auf Dich!</span>
-        </p>
       </div>
-    </div>
+      <p class='segment'>
+        <span class='highlight is-black'>Ich freue mich auf Dich!</span>
+      </p>
+    </section>
   </div>
-
-  <!-- TODO: FAQ? -->
-  <!-- ich helfe nicht während einer prüfung -->
-</div>
-
-<div id='js-data' class='is-hidden' aria-hidden='true'>
-  <div class='js-data-greetings' data-greetings='{{json greetings}}'></div>
 </div>
