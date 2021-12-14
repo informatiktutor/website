@@ -1,3 +1,40 @@
+<div class='overlay is-hidden' aria-hidden='true'>
+  <div class='overlay__content qrcode'>
+    <div class='qrcode__title'>
+      <span class='highlight is-black is-padded'>
+        Auf dem Smartphone öffnen
+      </span>
+      <button class='close-popup js-qr-close' title='Pop-up schließen'>
+        <span class='close-popup__icon'>
+          <span class='icon-close'></span>
+        </span>
+      </button>
+    </div>
+    <div class='qrcode__subtitle'>
+      Scanne den QR-Code mit der Kamera deines Telefons um mit mir auf
+      <span class='underline is-yellow js-qr-app-name'></span>
+      zu schreiben.
+    </div>
+    <div class='qrcode__code'>
+      <canvas class='js-qr-canvas' width='256' height='256'></canvas>
+    </div>
+    <div class='qrcode__link'>
+      <div class='js-qr-button-container'>
+        {{!-- The contact button will be put here --}}
+        {{!-- {{> components/contact-button
+          id='whatsapp-2'
+          name='Stattdessen hier öffnen'
+          icon='whatsapp'
+          class='is-messenger is-whatsapp js-qr'
+          href=apps.whatsapp.open_url
+          target='_blank'
+          no-track=true
+        }} --}}
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class='section is-small'>
   <h1 class='title'>
     <b>Kontakt</b>
@@ -44,7 +81,7 @@
       id='whatsapp'
       name='WhatsApp'
       icon='whatsapp'
-      class='is-messenger is-whatsapp'
+      class='is-messenger is-whatsapp js-qr'
       href=apps.whatsapp.open_url
       target='_blank'
       no-track=true
@@ -53,7 +90,7 @@
       id='discord'
       name='Discord'
       icon='discord'
-      class='is-messenger is-discord'
+      class='is-messenger is-discord js-qr'
       href=apps.discord.open_url
       target='_blank'
       no-track=true
@@ -62,7 +99,7 @@
       id='signal'
       name='Signal'
       icon='signal'
-      class='is-messenger is-signal'
+      class='is-messenger is-signal js-qr'
       href=apps.signal.open_url
       target='_blank'
       no-track=true

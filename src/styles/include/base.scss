@@ -311,6 +311,39 @@ body {
   }
 }
 
+.icon-close {
+  // $color-arrow: rgb(59, 59, 59);
+  $color-arrow: black;
+
+  $size: 18pt;
+  $thickness: 2px;
+
+  width: $size;
+  height: $size;
+  display: inline-block;
+
+  position: relative;
+
+  // bar
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: $thickness;
+    width: $size;
+    background-color: $color-arrow;
+    border-radius: 100px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    left: 0;
+    top: 50%;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 $svg-icon-size: 1.25rem;
 
 .icon-whatsapp {

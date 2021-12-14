@@ -18,7 +18,11 @@ function predicate_for_trigger(name) {
   }
 }
 
-function get_id(element) {
+export function set_analytics_id(element, id) {
+  return element.setAttribute(`data-${DATA_NAME}-id`, id)
+}
+
+export function get_analytics_id(element) {
   return element.getAttribute(`data-${DATA_NAME}-id`)
 }
 
@@ -29,31 +33,40 @@ function opens_link_here(element) {
   )
 }
 
+export function register_click_event(element) {
+  ;(function () {
+    // Only trigger the event once per page view.
+    let was_clicked = false
+    const id = get_analytics_id(element)
+    element.addEventListener('click', function (e) {
+      if (was_clicked) return
+      was_clicked = true
+      if (opens_link_here(element)) {
+        e.preventDefault()
+        const callback = () => {
+          window.location.href = element.href
+        }
+        // Make sure the callback is called after the maximum delay.
+        // Otherwise it might end up not working
+        // because of problems with SimpleAnalytics.
+        setTimeout(callback, LINK_MAX_DELAY_MS)
+        trigger_event(id, callback)
+      } else {
+        trigger_event(id)
+      }
+    })
+  })()
+}
+
 function register_click_events(elements) {
   for (const element of elements) {
-    ;(function () {
-      // Only trigger the event once per page view.
-      let was_clicked = false
-      const id = get_id(element)
-      element.addEventListener('click', function (e) {
-        if (was_clicked) return
-        was_clicked = true
-        if (opens_link_here(element)) {
-          e.preventDefault()
-          const callback = () => {
-            window.location.href = element.href
-          }
-          // Make sure the callback is called after the maximum delay.
-          // Otherwise it might end up not working
-          // because of problems with SimpleAnalytics.
-          setTimeout(callback, LINK_MAX_DELAY_MS)
-          trigger_event(id, callback)
-        } else {
-          trigger_event(id)
-        }
-      })
-    })()
+    register_click_event(element)
   }
+}
+
+export function get_analytics_children(element) {
+  let elements = element.querySelectorAll(`*[data-${DATA_NAME}-id]`)
+  return [...elements]
 }
 
 // TODO register scroll start event.
@@ -62,8 +75,9 @@ function register_analytics_events() {
     // Do not register event listeners if analytics are disabled.
     return
   }
-  let elements = document.querySelectorAll(`*[data-${DATA_NAME}-id]`)
-  elements = [...elements]
+  const elements = get_analytics_children(document)
+  // let elements = document.querySelectorAll(`*[data-${DATA_NAME}-id]`)
+  // elements = [...elements]
 
   register_click_events(elements.filter(predicate_for_trigger('click')))
 }
