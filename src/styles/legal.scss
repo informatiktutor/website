@@ -1,9 +1,15 @@
 @import './include/base';
 
 .has-small-text {
-  p {
+  p,
+  li {
     font-size: 12pt;
     line-height: 1.5;
+  }
+
+  li {
+    margin-left: 1.25rem;
+    margin-bottom: 0.4rem;
   }
 
   .section {
@@ -11,4 +17,13 @@
       margin: 1rem 0;
     }
   }
+}
+
+.legal-badge {
+  font-size: 10pt !important;
+  padding: 0.3rem 0.75rem 0.4rem 0.75rem;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 4pt;
+  display: inline;
 }
