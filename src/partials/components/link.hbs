@@ -1,6 +1,7 @@
 <a href='{{href}}' {{#if class}} class='{{class}}' {{/if}} {{#if target}}
   target='{{target}}' {{/if}} {{#unless (false no-track)}}
   {{> attributes/no-track}} {{/unless}} {{#unless (false analytics)}}
-  {{> attributes/analytics id=(concat 'link_' id)}} {{/unless}}>
+  {{> attributes/analytics id=(concat (concat (default id_prefix 'link') '_') id)}}
+  {{/unless}}>
   {{~> @partial-block~}}
 </a>

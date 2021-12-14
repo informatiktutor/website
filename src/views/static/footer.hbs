@@ -1,50 +1,53 @@
 <div class='page-footer'>
   <footer class='footer'>
     <div class='footer__content'>
-      {{> ./footer-link
-        id='contact-footer'
+      {{> components/footer-link
+        id='contact'
         name='Kontakt'
         href=(shared 'links.local.contact' (env))
         analytics=false
         no-track=false
       }}
-      {{> ./footer-link
+      {{> components/footer-link
         id='imprint'
         name='Impressum'
         href=(shared 'links.local.imprint' (env))
         analytics=false
         no-track=false
       }}
-      {{> ./footer-link
+      {{> components/footer-link
         id='data-protection'
         name='Datenschutz'
         href=(shared 'links.local.data_protection' (env))
         analytics=false
         no-track=false
       }}
-      {{> ./footer-link
-        id='github-website'
+      {{> components/footer-link
+        id_prefix='footer'
+        id='source'
         name='Quellcode dieser Seite'
-        href=(shared 'links.github.source.website')
+        href=(shared 'links.github.website')
         target='_blank'
         no-track=true
       }}
-      {{> ./footer-link
+      {{> components/footer-link
         id='linkedin'
         name='LinkedIn'
-        href=(shared 'links.linkedin')
+        href=(shared 'contact.platforms.linkedin')
         target='_blank'
         no-track=true
       }}
-      {{> ./footer-link
-        id='github-vonas'
+      {{> components/footer-link
+        id='github'
         name='GitHub'
-        href=(shared 'links.github.profile.personal')
+        href=(shared 'contact.platforms.github')
         target='_blank'
         no-track=true
       }}
       <p class='is-faint' style='padding-top: 1rem'>
-        Copyright &copy; 2021 Jonas van den Berg
+        Copyright &copy; 2021
+        {{shared 'contact.name.second'}}
+        {{shared 'contact.name.last'}}
       </p>
     </div>
   </footer>

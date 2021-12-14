@@ -31,20 +31,23 @@ module.exports = merge(common, {
       filename: '[name].bundle.[contenthash].css',
       chunkFilename: '[id].chunk.[contenthash].css',
     }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`,  { nodir: true }),
-    }),
+    // FIXME PurgeCSS removes svg icon classes for whatever reason
+    // new PurgecssPlugin({
+    //   paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, {
+    //     nodir: true,
+    //   }),
+    // }),
   ],
   optimization: {
     moduleIds: 'deterministic',
     runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.(sc|c)ss$/,
-          chunks: 'all',
-        },
+        // styles: {
+        //   name: 'styles',
+        //   test: /\.(sc|c)ss$/,
+        //   chunks: 'all',
+        // },
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
@@ -54,7 +57,7 @@ module.exports = merge(common, {
     },
   },
   output: {
-    publicPath: '/website/',
+    publicPath: '/',
   },
   devServer: {
     compress: true,

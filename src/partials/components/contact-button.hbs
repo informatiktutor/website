@@ -1,0 +1,12 @@
+<div class='contact-button {{class}}'>
+  {{#> components/link id_prefix=(default id_prefix 'contact') class='contact-button__link'}}
+  <span class='svg-icon icon-{{icon}}'></span>
+  <span class='name'>
+    <span class='is-bolder'>{{name}}</span>
+    {{#if after_name}}
+    <span>{{after_name}}</span>
+    {{/if}}
+  </span>
+  <span class='svg-icon'></span>
+  {{/components/link}}
+</div>

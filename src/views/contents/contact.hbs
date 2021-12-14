@@ -1,0 +1,118 @@
+<section class='section is-small'>
+  <h1 class='title'>
+    <b>Kontakt</b>
+  </h1>
+  <div class='contact-details'>
+    <p>
+      <span
+        class='tag highlight is-light is-small is-rounded is-padded'>E-Mail</span>
+      {{~#> components/link
+        id_prefix='contact'
+        id='email'
+        href=(shared 'contact.email.url')
+        no-track=false
+      ~}}
+      {{shared 'contact.email.address'}}
+      {{/components/link}}
+    </p>
+    <p>
+      <span
+        class='tag highlight is-light is-small is-rounded is-padded'>Telefon</span>
+      {{~#> components/link
+        id_prefix='contact'
+        id='phone'
+        href=(shared 'contact.phone.url')
+        no-track=false
+      ~}}
+      {{shared 'contact.phone.number'}}
+      {{/components/link}}
+    </p>
+    <p>
+      <span
+        class='tag highlight is-light is-small is-rounded is-padded'>Discord</span><span>
+        {{~apps.discord.name~}}
+      </span>
+    </p>
+  </div>
+</section>
+<section class='section is-small'>
+  <h2 class='title'>
+    <span class='highlight is-black is-padded'>Schreibe mir direkt</span>
+  </h2>
+  <div class='contact-buttons'>
+    {{> components/contact-button
+      id='whatsapp'
+      name='WhatsApp'
+      icon='whatsapp'
+      class='is-messenger is-whatsapp'
+      href=apps.whatsapp.open_url
+      target='_blank'
+      no-track=true
+    }}
+    {{> components/contact-button
+      id='discord'
+      name='Discord'
+      icon='discord'
+      class='is-messenger is-discord'
+      href=apps.discord.open_url
+      target='_blank'
+      no-track=true
+    }}
+    {{> components/contact-button
+      id='signal'
+      name='Signal'
+      icon='signal'
+      class='is-messenger is-signal'
+      href=apps.signal.open_url
+      target='_blank'
+      no-track=true
+    }}
+  </div>
+</section>
+<section class='section is-small'>
+  <h2 class='title'>
+    <span class='highlight is-black is-padded'>Weitere Möglichkeiten</span>
+  </h2>
+  <div class='contact-buttons'>
+    {{> components/contact-button
+      id='email'
+      name='E-Mail'
+      after_name='schreiben'
+      icon='paper-plane'
+      href=(shared 'contact.email.url')
+      no-track=false
+    }}
+    {{> components/contact-button
+      id='meeting'
+      name='Meeting'
+      after_name='buchen'
+      icon='zoom'
+      href=(shared 'contact.booking')
+      target='_blank'
+      no-track=true
+    }}
+  </div>
+</section>
+<section class='section is-small'>
+  <h2 class='title'>
+    <span class='highlight is-black is-padded'>Plattformen</span>
+  </h2>
+  <div class='contact-buttons is-subtle'>
+    {{> components/contact-button
+      id='linkedin'
+      name='LinkedIn'
+      icon='linkedin'
+      href=(shared 'contact.platforms.linkedin')
+      target='_blank'
+      no-track=true
+    }}
+    {{> components/contact-button
+      id='github'
+      name='GitHub'
+      icon='github'
+      href=(shared 'contact.platforms.github')
+      target='_blank'
+      no-track=true
+    }}
+  </div>
+</section>

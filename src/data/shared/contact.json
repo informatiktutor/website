@@ -1,0 +1,25 @@
+{
+  "name": {
+    "first": "Tadeg",
+    "second": "Jonas",
+    "last": "van den Berg"
+  },
+  "address": {
+    "street": "Hülsenpfad 10",
+    "city": "51491 Overath",
+    "country": "Deutschland"
+  },
+  "email": {
+    "address": "jonas@informatiktutor.de",
+    "url": "mailto:jonas@informatiktutor.de"
+  },
+  "phone": {
+    "number": "+49 1573 5689487",
+    "url": "tel:+4915735689487"
+  },
+  "booking": "https://go.oncehub.com/informatiktutor",
+  "platforms": {
+    "linkedin": "https://www.linkedin.com/in/jonas-vandenberg/",
+    "github": "https://github.com/vonas"
+  }
+}
