@@ -1,8 +1,6 @@
-{{#if meta.title}}
-<title>{{meta.title}}</title>
-<meta property="og:title" content="{{meta.title}}" />
-<meta property="og:site_name" content="{{meta.title}}">
-{{/if}}
+<title>{{default meta.title title}}</title>
+<meta property="og:title" content="{{default meta.title title}}" />
+<meta property="og:site_name" content="{{default meta.title title}}">
 {{#if meta.description}}
 <meta property="og:description" content="{{meta.description}}" />
 {{/if}}
