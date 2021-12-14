@@ -1,14 +1,7 @@
 {
-  "linkedin": "https://www.linkedin.com/in/jonas-vandenberg/",
   "github": {
-    "profile": {
-      "personal": "https://github.com/vonas",
-      "tutor": "https://github.com/informatiktutor"
-    },
-    "source": {
-      "website": "https://github.com/informatiktutor/website",
-      "pay": "https://github.com/informatiktutor/pay"
-    }
+    "website": "https://github.com/informatiktutor/website",
+    "pay": "https://github.com/informatiktutor/pay"
   },
   "local": {
     "contact": {

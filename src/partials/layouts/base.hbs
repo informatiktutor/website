@@ -7,6 +7,9 @@
 
 <body>
   <div class='root'>
+    {{#if header}}
+    {{> static/header}}
+    {{/if}}
     <div class='page'>
       {{#> content-block}}
       {{/content-block}}

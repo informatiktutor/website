@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Kontakt",
+    "description": "Hier findest Du alle Möglichkeiten mit mir in Kontakt zu treten."
+  },
+  "apps": {
+    "whatsapp": {
+      "open_url": "https://wa.me/+4915735689487"
+    },
+    "discord": {
+      "name": "Jonas#3769",
+      "open_url": "https://discordapp.com/users/888437230320898088"
+    },
+    "signal": {
+      "open_url": "https://signal.me/#p/+4915735689487"
+    }
+  }
+}

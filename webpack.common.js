@@ -14,6 +14,7 @@ const variables = {
 const common = {
   entry: {
     index: './src/scripts/index.js',
+    contact: './src/scripts/contact.js',
   },
   target: ['web', 'es5'],
   module: {
@@ -40,7 +41,7 @@ const common = {
         ],
       },
       {
-        test: /\.(jpe?g|png|svg)$/,
+        test: /\.(jpe?g|png)$/,
         loader: 'file-loader',
         options: {
           esModule: false,
@@ -73,7 +74,8 @@ const common = {
     new HtmlWebpackPlugin({
       filename: 'kontakt.html',
       template: 'src/views/kontakt.hbs',
-      chunks: [],
+      templateParameters: require('./src/data/contact'),
+      chunks: ['contact'],
     }),
     new HtmlWebpackPlugin({
       filename: 'impressum.html',
