@@ -3,5 +3,9 @@
   {{> attributes/no-track}} {{/unless}} {{#unless (false analytics)}}
   {{> attributes/analytics id=(concat (concat (default id_prefix 'link') '_') id)}}
   {{/unless}}>
+  {{#if @partial-block}}
   {{~> @partial-block~}}
-</a>
+  {{else}}
+  {{~name~}}
+  {{/if}}
+</a>{{~'.'~}}

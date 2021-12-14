@@ -79,5 +79,26 @@
         "url_full": "https://pay.informatiktutor.de/beispiel"
       }
     }
+  },
+  "tools": {
+    "codetogether": {
+      "name": "CodeTogether",
+      "url": "https://www.codetogether.com/",
+      "extension": "https://www.codetogether.com/download/",
+      "faq": "https://www.codetogether.com/docs/faq/",
+      "environments": {
+        "jetbrains": "https://www.codetogether.com/docs/three-steps-to-pair-programming-intellij/",
+        "eclipse": "https://www.codetogether.com/docs/three-steps-to-pair-programming-eclipse/",
+        "vscode": "https://www.codetogether.com/docs/three-steps-to-pair-programming-vs-code/"
+      }
+    },
+    "wbo": {
+      "name": "WBO",
+      "url": "https://wbo.ophir.dev/"
+    },
+    "zoom": {
+      "name": "Zoom",
+      "url": "https://zoom.us/"
+    }
   }
 }
