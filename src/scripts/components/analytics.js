@@ -1,5 +1,6 @@
 const DATA_NAME = 'sa'
 const LINK_MAX_DELAY_MS = 250
+const SCROLL_REGISTER_DELAY_MS = 500
 
 function trigger_event(name, callback) {
   if (window.hasOwnProperty('is_development')) {
@@ -64,13 +65,28 @@ function register_click_events(elements) {
   }
 }
 
+function register_scroll_start_event() {
+  // Add a delay to accomodate for browser-initiated scrolling
+  // when e.g. the user navigates back.
+  setTimeout(function () {
+    let has_scrolled = false
+    window.addEventListener('scroll', function () {
+      if (!has_scrolled) {
+        has_scrolled = true
+        trigger_event('scroll_start')
+        return
+      }
+    })
+  }, SCROLL_REGISTER_DELAY_MS)
+}
+
 export function get_analytics_children(element) {
   let elements = element.querySelectorAll(`*[data-${DATA_NAME}-id]`)
   return [...elements]
 }
 
 // TODO register scroll start event.
-function register_analytics_events() {
+function register_analytics_events(options) {
   if (!sa_event) {
     // Do not register event listeners if analytics are disabled.
     return
@@ -80,6 +96,10 @@ function register_analytics_events() {
   // elements = [...elements]
 
   register_click_events(elements.filter(predicate_for_trigger('click')))
+
+  if (options.scroll_start) {
+    register_scroll_start_event()
+  }
 }
 
 export { register_analytics_events }
