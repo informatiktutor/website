@@ -3,7 +3,7 @@
   data-collect-dnt='{{shared 'analytics.ignore_dnt'}}' src='https://{{
     shared 'analytics' 'domains' (when (env 'production') 'custom' 'scripts')
   }}/latest{{
-    shared 'analytics' (when (env 'development') 'script_dev_suffix' '')
+    when (env 'development') (shared 'analytics.script_dev_suffix') ''
   }}.js'></script>
 <noscript>
   <img src='https://{{
