@@ -2,6 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const { mergeWithRules } = require('webpack-merge')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const PurgecssPlugin = require('purgecss-webpack-plugin')
 
 const { variables, common } = require('./webpack.common.js')
@@ -30,6 +31,9 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: '[name].bundle.[contenthash].css',
       chunkFilename: '[id].chunk.[contenthash].css',
+    }),
+    new CopyPlugin({
+      patterns: [path.join(__dirname, 'src', 'static')],
     }),
     // FIXME PurgeCSS removes svg icon classes for whatever reason
     // new PurgecssPlugin({
