@@ -4,7 +4,9 @@ import { update_greeting } from './components/greeting'
 import { register_analytics_events } from './components/analytics'
 
 update_greeting()
-register_analytics_events()
+register_analytics_events({
+  scroll_start: true,
+})
 
 // (function () {
 
