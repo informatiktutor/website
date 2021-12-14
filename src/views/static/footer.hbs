@@ -44,6 +44,15 @@
         target='_blank'
         no-track=true
       }}
+      {{#unless index}}
+      {{> components/footer-link
+        id='home'
+        name='informatiktutor.de'
+        href='https://informatiktutor.de'
+        analytics=false
+        no-track=false
+      }}
+      {{/unless}}
       <p class='is-faint' style='padding-top: 1rem'>
         Copyright &copy; 2021
         {{shared 'contact.name.second'}}
