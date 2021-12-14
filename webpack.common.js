@@ -15,6 +15,8 @@ const common = {
   entry: {
     index: './src/scripts/index.js',
     contact: './src/scripts/contact.js',
+    privacy: './src/scripts/privacy.js',
+    imprint: './src/scripts/imprint.js',
   },
   target: ['web', 'es5'],
   module: {
@@ -80,12 +82,12 @@ const common = {
     new HtmlWebpackPlugin({
       filename: 'impressum.html',
       template: 'src/views/impressum.hbs',
-      chunks: [],
+      chunks: ['imprint'],
     }),
     new HtmlWebpackPlugin({
       filename: 'datenschutz.html',
       template: 'src/views/datenschutz.hbs',
-      chunks: [],
+      chunks: ['privacy'],
     }),
   ],
   output: {
