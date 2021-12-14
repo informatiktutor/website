@@ -4,6 +4,7 @@
     "second": "Jonas",
     "last": "van den Berg"
   },
+  "domain": "informatiktutor.de",
   "address": {
     "street": "Hülsenpfad 10",
     "city": "51491 Overath",
@@ -14,7 +15,7 @@
     "url": "mailto:jonas@informatiktutor.de"
   },
   "phone": {
-    "number": "+49 1573 5689487",
+    "number": "+49 1573 5689 487",
     "url": "tel:+4915735689487"
   },
   "booking": "https://go.oncehub.com/informatiktutor",

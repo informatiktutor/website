@@ -1,8 +1,48 @@
 {{#> layouts/base header=true}}
 {{#*inline 'content-block'}}
 
-<div class='section is-small'>
-  <h1>Bald verfügbar</h1>
+<div class='has-small-text'>
+  <div class='section is-small'>
+    <h1 class='title'>
+      <b>Impressum</b>
+    </h1>
+    <h2 class='title'>
+      Angaben gemäß § 5 TMG
+    </h2>
+    <p>
+      <span class='is-block'>
+        {{shared 'contact.name.first'}}
+        {{shared 'contact.name.second'}}
+        {{shared 'contact.name.last'}}
+      </span>
+      <span class='is-block'>
+        {{shared 'contact.domain'}}
+      </span>
+      <span class='is-block'>
+        {{shared 'contact.address.street'}}
+      </span>
+      <span class='is-block'>
+        {{shared 'contact.address.city'}}
+      </span>
+    </p>
+    <h2 class='title'>
+      Kontakt
+    </h2>
+    <p>
+      <span class='is-block'>
+        Telefon:
+        <a href='{{shared 'contact.phone.url'}}'>
+          {{shared 'contact.phone.number'}}
+        </a>
+      </span>
+      <span class='is-block'>
+        E-Mail:
+        <a href='{{shared 'contact.email.url'}}'>
+          {{shared 'contact.email.address'}}
+        </a>
+      </span>
+    </p>
+  </div>
 </div>
 
 {{/inline}}

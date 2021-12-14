@@ -47,8 +47,8 @@
       {{#unless index}}
       {{> components/footer-link
         id='home'
-        name='informatiktutor.de'
-        href='https://informatiktutor.de'
+        name=(shared 'contact.domain')
+        href=(concat 'https://' (shared 'contact.domain'))
         analytics=false
         no-track=false
       }}
