@@ -1,0 +1,24 @@
+<!-- TODO: FAQ? -->
+<!-- ich helfe nicht während einer prüfung -->
+
+
+tools beschreiben
+
+scheduleonce buchungsseite für kurze meetings aufsetzen!
+
+remove simpleanalytics from the landing-page!!
+
+impressum
+datenschutz
+
+
+scheduleonce:
+- sprechstunde
+- nachhilfe (morgen) [nie heute, das entscheide ich am selben tag]
+
+
+
+
+
+
+kosten teilen können (später, auf anfrage natürlich immer)
