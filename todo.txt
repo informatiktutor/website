@@ -1,7 +1,0 @@
-impressum
-datenschutz
-
-scheduleonce:
-- nachhilfe (morgen) [nie heute, das entscheide ich am selben tag]
-
-kosten teilen können (später, auf anfrage natürlich immer)
