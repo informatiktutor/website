@@ -92,12 +92,10 @@ function register_analytics_events(options) {
     return
   }
   const elements = get_analytics_children(document)
-  // let elements = document.querySelectorAll(`*[data-${DATA_NAME}-id]`)
-  // elements = [...elements]
 
   register_click_events(elements.filter(predicate_for_trigger('click')))
 
-  if (options.scroll_start) {
+  if (options && options.scroll_start) {
     register_scroll_start_event()
   }
 }

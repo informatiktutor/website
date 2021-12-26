@@ -5,12 +5,14 @@
   },
   "price": {
     "value": 18,
+    "minutes": 60,
     "currency": "€"
   },
   "external": {
     "university": {
       "name_die": "Technische Hochschule Köln",
       "name_der": "Technischen Hochschule Köln",
+      "name_short": "TH Köln",
       "url": "https://www.th-koeln.de/"
     },
     "tutoring": {
@@ -19,7 +21,7 @@
     }
   },
   "greetings": {
-    "default": "Hey",
+    "default": "Hallo",
     "punctuation": "!",
     "time_based": [
       {
@@ -56,7 +58,6 @@
       "Mathematik II",
       "Einführung in Betriebssysteme und Rechnerarchitektur",
       "Betriebssysteme und verteilte Systeme",
-      "Kommunikationstechnik und Netze",
       "Informatikprojekt",
       "Praxisprojekt"
     ],
@@ -69,36 +70,67 @@
     "optional": {
       "attended": ["Einführung in Docker", "Software-Qualitätssicherung"]
     },
-    "paused": ["Diskrete Mathematik"]
+    "paused": ["Diskrete Mathematik", "Kommunikationstechnik und Netze"]
   },
   "payment": {
     "methods": ["PayPal", "Lastschrift", "Kreditkarte", "Banküberweisung"],
     "page": {
       "example": {
-        "url": "pay.informatiktutor.de/beispiel",
-        "url_full": "https://pay.informatiktutor.de/beispiel"
+        "url": "https://pay.informatiktutor.de/beispiel",
+        "name": "pay.informatiktutor.de/beispiel",
+        "name_html": "pay.informatik&shy;tutor.de/<span class='break'></span>beispiel"
       }
     }
   },
-  "tools": {
+  "software": {
+    "by_category": {
+      "meeting": ["zoom", "discord", "google_meet", "microsoft_teams"],
+      "programming": ["code_with_me", "codetogether"]
+    },
+    "zoom": {
+      "name": "Zoom",
+      "url": "https://zoom.us"
+    },
+    "discord": {
+      "name": "Discord",
+      "url": "https://discord.com"
+    },
+    "google_meet": {
+      "name": "Google Meet",
+      "url": "https://meet.google.com"
+    },
+    "microsoft_teams": {
+      "name": "Microsoft Teams",
+      "url": "https://www.microsoft.com/de-de/microsoft-teams"
+    },
     "codetogether": {
       "name": "CodeTogether",
-      "url": "https://www.codetogether.com/",
-      "extension": "https://www.codetogether.com/download/",
-      "faq": "https://www.codetogether.com/docs/faq/",
-      "environments": {
+      "url": "https://www.codetogether.com",
+      "links": {
+        "extension": "https://www.codetogether.com/download/",
+        "faq": "https://www.codetogether.com/docs/faq/",
         "jetbrains": "https://www.codetogether.com/docs/three-steps-to-pair-programming-intellij/",
         "eclipse": "https://www.codetogether.com/docs/three-steps-to-pair-programming-eclipse/",
         "vscode": "https://www.codetogether.com/docs/three-steps-to-pair-programming-vs-code/"
       }
     },
-    "wbo": {
-      "name": "WBO",
-      "url": "https://wbo.ophir.dev/"
+    "code_with_me": {
+      "name": "JetBrains Code With Me",
+      "name_short": "Code With Me",
+      "url": "https://www.jetbrains.com/de-de/code-with-me"
     },
-    "zoom": {
-      "name": "Zoom",
-      "url": "https://zoom.us/"
+    "intellij_idea": {
+      "name": "IntelliJ IDEA",
+      "url": "https://www.jetbrains.com/de-de/idea"
+    },
+    "eclipse": {
+      "name": "Eclipse",
+      "url": "https://www.eclipse.org/eclipseide"
+    },
+    "vscode": {
+      "name": "Visual Studio Code",
+      "name_short": "VS Code",
+      "url": "https://code.visualstudio.com"
     }
   }
 }

@@ -3,13 +3,21 @@
 
 <head>
   {{> include/head}}
+  {{#if index}}
+  <noscript>
+    {{> styles/nojs}}
+  </noscript>
+  {{/if}}
 </head>
 
 <body>
+  {{#if index}}
+  {{> static/header}}
+  {{/if}}
   <div class='root'>
-    {{#if header}}
-    {{> static/header}}
-    {{/if}}
+    {{#unless index}}
+    {{> static/back}}
+    {{/unless}}
     <div class='page'>
       {{#> content-block}}
       {{/content-block}}

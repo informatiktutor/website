@@ -21,7 +21,11 @@ module.exports = merge(common, {
     rules: [
       {
         test: variables.module.rules.styles.test,
-        use: ['style-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+          },
+        ],
       },
     ],
   },
@@ -41,7 +45,8 @@ module.exports = merge(common, {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'static')
+      directory: path.join(__dirname, 'src', 'static'),
+      publicPath: '/',
     },
     compress: false,
     liveReload: false,

@@ -4,32 +4,71 @@
 
 // TODO Refactor this. Works for now though.
 
-.pt-2 {
-  padding-top: 0.5rem;
+.page {
+  width: auto;
+  max-width: inherit;
+  margin: 0;
 }
-.pt-3 {
-  padding-top: 0.75rem;
+
+.page-footer {
+  margin-top: 0;
 }
-.pt-4 {
-  padding-top: 1rem;
+
+.section,
+.header,
+.footer {
+  max-width: calc(#{$max-width} - 64px); // FIXME
+  margin: auto;
+  margin-top: 0;
+
+  // @media only screen and (min-width: $mobile-breakpoint) {
+  //   padding: 0 $page-padding;
+  // }
 }
+
+#intro {
+  margin-bottom: 1rem;
+}
+
+$rectangle-padding: 2rem;
+$rectangle-mobile-padding: 1rem;
 
 .rectangle {
-  $padding: 1rem;
-  padding: $padding;
-  margin: 0 (-1 * $padding);
+  padding: 1.25rem $rectangle-padding 1.5rem $rectangle-padding;
+  margin: 0 (-1 * $rectangle-padding);
 
-  font-size: 19pt;
+  @media only screen and (max-width: $mobile-breakpoint) {
+    padding-left: $rectangle-mobile-padding;
+    padding-right: $rectangle-mobile-padding;
+    margin-left: -1 * $rectangle-mobile-padding;
+    margin-right: -1 * $rectangle-mobile-padding;
+  }
+
+  border-radius: 4pt;
+
+  font-size: 18.5pt;
   font-weight: 600;
 
   &.is-green {
     background-color: $palette-green;
     color: $color-bright-text;
   }
+
+  // @media only screen and (min-width: $mobile-breakpoint) {
+  //   $padding: 2rem;
+  //   &.is-wide-desktop {
+  //     margin-left: $padding * -1;
+  //     padding-left: $padding;
+  //     margin-right: $padding * -1;
+  //     padding-right: $padding;
+  //   }
+  // }
 }
 
 .hero {
-  margin-bottom: 2rem;
+  &:not(.is-last) {
+    margin-bottom: 2rem;
+  }
 
   &__section {
     margin-bottom: 0.5rem;
@@ -40,15 +79,24 @@
 }
 
 .action {
-  max-width: 600px;
+  $border-radius: 6pt;
+  $negative-margin: -1rem;
+
+  // max-width: 600px;
 
   background-color: white;
 
-  border: 2px solid rgb(228, 228, 228);
-  border-left: none;
-  border-right: none;
+  outline: 2px solid rgb(228, 228, 228);
+  outline-offset: -2px;
+
+  // border-left: none;
+  // border-right: none;
   font-size: 15.5pt;
   line-height: 1.325;
+
+  border-radius: $border-radius;
+
+  margin: 0 $negative-margin;
 
   &__button {
     cursor: pointer;
@@ -60,23 +108,37 @@
 
     &:hover {
       background-color: rgb(250, 250, 250);
+      border-radius: $border-radius;
     }
 
     &__name {
       flex: 1;
-      margin-right: 1rem;
+      margin-right: 0.5rem;
     }
 
     &__icon {
       flex: 0;
       padding: 0 0.5rem;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
     }
   }
 
   &__button,
-  &__content,
   &-note {
     padding: 1rem 1rem;
+  }
+
+  &__content {
+    border-top: 2px solid whitesmoke;
+    // outline: 2px solid whitesmoke;
+
+    &.is-animated {
+      overflow: hidden;
+      transition: height 0.25s ease;
+    }
   }
 
   &-note {
@@ -84,26 +146,46 @@
   }
 }
 
+$spoiler-title-margin: 1rem;
+$spoiler-paragraph-margin: 1.25rem;
+
 .spoiler {
   &__checkbox,
-  &__content {
+  .action__content {
     display: none;
   }
 
   &__checkbox:checked + .action__button {
     color: rgb(112, 112, 112);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
     .icon-plus::before {
       width: 0;
     }
   }
 
-  &__checkbox:checked + .action__button + &__content {
+  &__checkbox:checked + .action__button + .action__content {
     display: inherit;
   }
 
-  &__content p {
-    margin-bottom: 1.25rem !important;
+  &__content {
+    padding: 1rem 1rem;
+
+    p {
+      margin-bottom: $spoiler-paragraph-margin !important;
+      &:last-child {
+        margin-bottom: 0.5rem !important;
+      }
+    }
+    p.is-title {
+      margin-bottom: $spoiler-title-margin !important;
+    }
+    @for $num from 1 to 6 {
+      h#{$num} {
+        margin-bottom: $spoiler-title-margin !important;
+      }
+    }
   }
 }
 
@@ -158,8 +240,13 @@
   }
 }
 
+// .section.has-shadow {
+//   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+// }
+
 .slanted-shadow {
   position: relative;
+  z-index: 0;
 
   $excess-width: 100vw;
 
@@ -173,6 +260,15 @@
     background-color: whitesmoke;
     pointer-events: none;
     z-index: -100;
+
+    // @media only screen and (min-width: 0px) {
+    // border: 1px solid rgb(221, 221, 221);
+    // }
+
+    // box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.05);
+    // outline: 3px solid whitesmoke;
+
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.05) inset;
   }
 
   @mixin slanted-transform($angle, $width) {
@@ -185,12 +281,13 @@
     //   tan(angle) = opposite / adjacent
     // The angle is at the top-left, the opposite leg is the wanted offset
     // and the adjacent leg of the triangle is equal to the excess width.
-    top: tan($angle) * -$width;
+    // Also, subtract 50vw, so that it is centered.
+    top: tan($angle) * (-$width - 50vw);
     transform: rotate($angle);
   }
 
   // PostCSS will remove the style definitions that are unused.
-  @for $i from 1 through 9 {
+  @for $i from 1 through 3 {
     $slant-angle: $i * 1deg;
 
     &.is-rising.is-#{$i} &__content::before {
@@ -213,30 +310,134 @@
 
   &.is-blue &__content::before {
     // background-color: $palette-blue-faint;
-    background-color: adjust-color(
-      $color: $palette-blue,
-      $lightness: +10%,
-      $alpha: -0.9
-    );
+    background-color: adjust-color($color: $palette-blue, $lightness: +50%);
   }
 
   &.is-green &__content::before {
-    background-color: adjust-color(
-      $color: $palette-green,
-      $lightness: +10%,
-      $alpha: -0.9
-    );
+    // background-color: adjust-color($color: $palette-green, $lightness: +52%);
+    background-color: $palette-green-lighter;
   }
 }
 
 .course-list {
   list-style-type: none;
   font-size: 15pt;
-  line-height: 1.3;
+  // line-height: 1.3;
   padding: 0.2rem 0;
-  padding-left: 0.5rem;
+  padding-left: 0.25rem;
 
   li {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.8rem;
+    padding: 0 0.2rem;
   }
 }
+
+.inline-list,
+.software {
+  margin-left: 0.5rem;
+}
+
+.inline-list {
+  margin-bottom: 0.75rem !important;
+}
+
+.software {
+  margin-bottom: 0.5rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.inline-list,
+.software__list {
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.25rem;
+    margin-bottom: 0.75rem;
+    margin-left: 0.25rem;
+  }
+}
+
+.is-underlined-grey {
+  text-decoration: underline;
+  text-decoration-color: whitesmoke;
+}
+
+.avatar-container {
+  $border-thickness: 3px;
+  $border-radius: 20pt;
+
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+
+  > .avatar {
+    flex: 0;
+    margin: $border-thickness;
+    margin-right: -1rem;
+    margin-left: 1.25rem;
+    margin-top: 0; // FIXME
+    z-index: -1000;
+    user-select: none;
+
+    // @media only screen and (max-width: $mobile-breakpoint) {
+    //   margin-right: -1 * $rectangle-mobile-padding;
+    // }
+
+    img {
+      image-rendering: auto;
+      border-radius: $border-radius;
+      outline: $border-thickness solid rgb(239, 239, 239);
+    }
+  }
+}
+
+// .avatar-container {
+//   position: relative;
+
+//   $border-thickness: 3px;
+//   $border-radius: 100pt;
+
+//   .avatar {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     margin: $border-thickness;
+//     margin-right: -1 * $rectangle-padding;
+//     margin-bottom: -1px;
+//     z-index: -100;
+
+//     img {
+//       max-width: 100%;
+//       max-height: 100%;
+//       image-rendering: auto;
+//       border-radius: $border-radius;
+//       outline: $border-thickness solid rgb(239, 239, 239);
+//     }
+//   }
+// }
+
+// section#intro {
+//   // position: relative;
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     display: block;
+//     height: 100vh;
+//     width: calc(50% - (#{$max-width} / 2));
+
+//     margin: auto;
+//     margin-top: -4rem;
+//     // left: -50vw;
+//     left: 0;
+
+//     border: 1px dotted red;
+//     overflow: hidden;
+//   }
+// }

@@ -1,15 +1,21 @@
-<nav class='navigation'>
+<nav id='sticky-header' class='navigation is-sticky is-hidden'
+  aria-hidden='true'>
   <div class='header'>
     <div class='header__content'>
       <div class='breadcrumb'>
-        <a id='back-link' href='/'>
-          <span class='breadcrumb__content'>
-            <span class='icon'>
-              <span class='icon-arrow is-left is-small'></span>
-            </span>
-            <span class='text'>Zurück</span>
+        {{#> components/link
+          id='contact-header'
+          href=(shared 'links.local.contact' (env))
+          no-track=false
+          no-tab=true
+        }}
+        <span class='breadcrumb__content'>
+          <span class='text'>Kontakt</span>
+          <span class='icon'>
+            <span class='icon-arrow is-small'></span>
           </span>
-        </a>
+        </span>
+        {{/components/link}}
       </div>
     </div>
   </div>

@@ -35,13 +35,21 @@ export function register_qr_popup_hooks() {
   }
 
   // register close handlers
-  const close_button = overlay.querySelector(`.${CLASS}-close`)
-  close_button.addEventListener('click', function (e) {
-    destroy_overlay()
-  })
+  const close_buttons = overlay.querySelectorAll(`.${CLASS}-close`)
+  for (const button of close_buttons) {
+    button.addEventListener('click', function (e) {
+      destroy_overlay()
+    })
+  }
   overlay.addEventListener('click', function (e) {
     if (e.target === this) {
       // The user clicked outside of the overlay.
+      destroy_overlay()
+    }
+  })
+
+  window.addEventListener('keydown', function (e) {
+    if (e.code === 'Escape') {
       destroy_overlay()
     }
   })
@@ -146,10 +154,12 @@ function show_overlay() {
   const overlay = document.querySelector('.overlay')
   overlay.classList.remove('is-hidden')
   overlay.setAttribute('aria-hidden', 'false')
+  document.body.classList.add('has-overlay')
 }
 
 function hide_overlay() {
   const overlay = document.querySelector('.overlay')
   overlay.classList.add('is-hidden')
   overlay.setAttribute('aria-hidden', 'true')
+  document.body.classList.remove('has-overlay')
 }

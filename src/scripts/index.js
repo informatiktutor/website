@@ -1,21 +1,16 @@
 import '../styles/index.scss'
 
+import { register_spoilers } from './animations/spoiler'
+import { register_sticky_header } from './animations/header'
+import { register_navigation } from './components/navigate'
 import { update_greeting } from './components/greeting'
 import { register_analytics_events } from './components/analytics'
 
 update_greeting()
+register_sticky_header()
+register_spoilers()
+
+register_navigation()
 register_analytics_events({
   scroll_start: true,
 })
-
-// (function () {
-
-// const spoilers = document.querySelectorAll('.spoiler');
-// for (const spoiler of spoilers) {
-//   const button = spoiler.querySelector('button.toggle-collapse');
-//   button.addEventListener('click', function (e) {
-//     spoiler.classList.toggle('is-collapsed');
-//   });
-// }
-
-// })()
