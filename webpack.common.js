@@ -36,6 +36,14 @@ const common = {
             options: {
               // https://webpack.js.org/loaders/css-loader/#importloaders
               importLoaders: 2,
+              modules: false,
+              url: {
+                filter: (url) => {
+                  if (url.includes('.png')) return false
+                  if (url.includes('.jpg')) return false
+                  return true
+                },
+              },
             },
           },
           'postcss-loader',
@@ -46,6 +54,7 @@ const common = {
         test: /\.(jpe?g|png)$/,
         loader: 'file-loader',
         options: {
+          name: '[name].[ext]',
           esModule: false,
         },
       },

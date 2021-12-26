@@ -2,9 +2,11 @@
   target='{{target}}' {{/if}} {{#unless (false no-track)}}
   {{> attributes/no-track}} {{/unless}} {{#unless (false analytics)}}
   {{> attributes/analytics id=(concat (concat (default id_prefix 'link') '_') id)}}
-  {{/unless}}>
+  {{/unless}} {{#if no-tab}} tabindex='-1' {{/if}}>
   {{~#if @partial-block~}}
   {{~> @partial-block~}}
+  {{~else if html~}}
+  {{{html}}}
   {{~else~}}
   {{~name~}}
   {{~/if~}}

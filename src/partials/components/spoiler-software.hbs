@@ -1,0 +1,17 @@
+<div class='software'>
+  <ul class='software__list'>
+    {{#each (lookup software.by_category type)}}
+    <li>
+      <span>{{~#> modifiers/highlight class='is-blue-light is-slim'~}}
+        {{~> components/link
+          id=(concat 'software-' ../this)
+          name=(prop ../../software ../this 'name')
+          href=(prop ../../software ../this 'url')
+          target='_blank'
+          no-track=true
+          analytics=false
+        ~}}</span>{{/modifiers/highlight}}
+    </li>
+    {{/each}}
+  </ul>
+</div>

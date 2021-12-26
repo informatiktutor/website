@@ -1,0 +1,13 @@
+<span class='highlighted {{class}}'>
+  <span class='highlighted__content'>
+    <span class='highlighted__content__text'>
+      {{~#if @partial-block~}}
+      {{~> @partial-block~}}
+      {{~else if text~}}
+      {{~text~}}
+      {{~else if html~}}
+      {{{html}}}
+      {{~/if~}}
+    </span>
+  </span>
+</span>

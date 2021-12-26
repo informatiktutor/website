@@ -1,161 +1,164 @@
-<section id='intro' class='section'>
-  <div class='hero'>
-    <div class='segment'>
-      <h1>
-        <span class='is-block is-tall-line'>
-          <span class='highlight is-black'>
-            <span class='js-greeting'>{{
+<div class='with-images at-top'>
+  <div id='papier' class='image is-repeated is-right is-faint'></div>
+  <div class='image-content'>
+    <section class='section'>
+      <div class='hero is-last'>
+        <div class='segment avatar-container'>
+          <h1>
+            <span class='is-block'>
+              {{#> modifiers/highlight class='is-black is-wide' }}
+              <span class='js-greeting'>{{
                 greetings.default
-              }}</span><span class='js-greeting-punctuation'>{{
+              }}</span><span>{{
                 greetings.punctuation
               }}</span>
-          </span>
-        </span>
-        <span class='is-block is-tall-line'>
-          <span class='highlight is-black'>
-            Mein Name ist
-            {{shared 'contact.name.second'}}.
-          </span>
-        </span>
-      </h1>
-    </div>
-    <div class='segment'>
-      <div class='rectangle is-green'>
-        <h2>
-          Ich helfe Studenten wie Dir bei ihrem Studium.
-        </h2>
-      </div>
-    </div>
-  </div>
-  <p class='segment'>
-    Der
-    <span class='underline is-yellow'>persönliche Kontakt</span>
-    und meine
-    <span class='underline is-yellow'>Leidenschaft</span>
-    für Informatik
-    gestalten dabei meinen Unterricht.
-  </p>
-  <div class='segment pt-4'>
-    <div class='action'>
-      {{#> actions/spoiler
-          id='about-me'
-          name='Erfahre mehr über mich'
-        }}
-      {{> spoilers/about-me.hbs}}
-      {{/actions/spoiler}}
-    </div>
-  </div>
-</section>
-
-<div class='slanted-shadow is-green is-falling is-4'>
-  <div class='slanted-shadow__content'>
-    <section id='contact' class='section'>
-      <p class='segment'>
-        Ich bringe Dir das nötige Wissen bei, damit Du Deine Aufgaben
-        <span class='underline is-yellow'>eigenständig</span>
-        lösen kannst.
-      </p>
-      <p class='segment'>
-        <span class='highlight is-black'>
-          Sehe mich als Deinen Lehrer, Mentor oder Freund!
-        </span>
-      </p>
-      <div class='segment is-padded'>
-        <div class='action'>
-          {{> actions/link
-            id='contact-top'
-            name='Kontaktiere mich'
-            href=(shared 'links.local.contact' (env))
-            no-track=false
-          }}
+              {{/modifiers/highlight}}
+            </span>
+            <span class='is-block pt-2'>
+              {{> modifiers/highlight class='is-black is-wide'
+                text='Mein Name ist Jonas'
+              }}
+            </span>
+          </h1>
+          <div class='avatar'>
+            <img src='images/avatar.jpg' height='72'></img>
+          </div>
         </div>
-        {{!-- <div class='action-note'>
-          {{! <span class='asterisk-destination'>Ich beiße nicht &#x1F9DB;</span> }}
-          <span class='asterisk-destination'>Ich antworte so schnell wie möglich</span>
-        </div> --}}
+        <div class='segment'>
+          <div class='rectangle is-green is-wide-desktop'>
+            <h2>
+              Ich gebe Studenten der Informatik privat Nachhilfe
+            </h2>
+          </div>
+        </div>
+        <p class='segment'>
+          Du lernst bei mir die Inhalte
+          deiner Vorlesungen zu verstehen und anzuwenden,
+          die dir im Moment noch Schwierigkeiten bereiten.
+        </p>
+        <p data-mark='sticky-header-in' class='segment'>
+          Ich erkläre sie dir individuell im Einzelunterricht,
+          so dass du deine Aufgaben eigenständig lösen kannst.
+        </p>
+        <div class='segment pt-1'>
+          <div class='action'>
+            {{> actions/link
+              id='contact-start'
+              name='Kontakt'
+              href=(shared 'links.local.contact' (env))
+              no-track=false
+            }}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div id='papier' class='image is-repeated is-left is-faint'></div>
+</div>
+
+<div class='slanted-shadow is-green is-rising is-1'>
+  <div class='slanted-shadow__content'>
+    <section id='kurse' class='section'>
+      <p class='segment'>
+        Ich behandle mit dir alle Kurse, die
+        <span class='underline is-green'>Programmierung</span>,
+        <span class='underline is-green'>Mathematik</span> oder
+        <span class='underline is-green'>Logik</span>
+        zum Inhalt haben.
+      </p>
+      <p class='segment'>
+        Gerne helfe ich dir auch bei der
+        <span class='underline is-green'>Korrektur</span>
+        und
+        <span class='underline is-green'>Verbesserung</span>
+        deiner Lösungen,
+        falls du dir unsicher sein solltest
+        oder ein zweites Paar Augen benötigst.
+      </p>
+      <div class='segment pt-1'>
+        <div class='action'>
+          {{#> actions/spoiler
+            id='courses'
+            name='Liste der Kurse'
+          }}
+          {{> spoilers/courses.hbs}}
+          {{/actions/spoiler}}
+        </div>
       </div>
     </section>
   </div>
 </div>
 
-<section id='elements' class='section'>
-  <p class='segment'>
-    Ich gebe Nachhilfe in allen Kursen die
-    <span class='underline is-yellow'>Informatik</span>,
-    <span class='underline is-yellow'>Programmierung</span>,
-    <span class='underline is-yellow'>Mathematik</span> oder
-    <span class='underline is-yellow'>Logik</span>
-    zum Inhalt haben.
-  </p>
-  <div class='segment'>
-    <div class='action'>
-      {{#> actions/spoiler
-          id='courses'
-          name='Liste der Kurse'
+<div class='with-images'>
+  <div id='papier' class='image is-repeated is-right is-faint'></div>
+  <div class='image-content'>
+    <section id='software' class='section'>
+      <p class='segment'>
+        {{> modifiers/highlight class='is-green-light'
+          text='Mein Unterricht findet online statt'
         }}
-      {{> spoilers/courses.hbs}}
-      {{/actions/spoiler}}
-    </div>
-  </div>
-  <p class='segment'>
-    Weiterhin biete ich die
-    <span class='highlight is-inline is-black'>Korrektur</span>
-    und
-    <span class='highlight is-inline is-black'>Verbesserung</span>
-    Deiner Lösungen an, sowie
-    <span class='highlight is-inline is-black'>Beratung</span>
-    zu Deinem Studium.
-  </p>
-</section>
-
-<div class='slanted-shadow is-blue is-rising is-1'>
-  <div class='slanted-shadow__content'>
-    <section id='pricing' class='section'>
-      <div class='segment'>
-        <p>
-          Der Preis ist transparent.
-        </p>
-        <p>
-          <span class='highlight is-blue'>
-            Ich nehme {{price.value}}{{price.currency}} pro Stunde.
-          </span>
-        </p>
-        <p>
-          Keinen Cent mehr.
-        </p>
-      </div>
-      <div class='segment'>
-        <p>
-          <span class='highlight is-black'>
-            Wir kennen uns noch nicht?
-          </span>
-        </p>
-        <p>
-          Lerne mich in einem Gespräch kennen!
-        </p>
-      </div>
-      <div class='segment'>
+      </p>
+      <p class='segment'>
+        Wir telefonieren über Zoom, Discord oder eine ähnliche Software.
+        Ich teile meinen Bildschirm und mein Whiteboard mit dir,
+        um dir Inhalte sowohl mündlich als auch visuell
+        anschaulich erklären zu können.
+      </p>
+      <p class='segment'>
+        Außerdem programmieren wir gemeinsam
+        in einer geteilten Entwicklungs&shy;umgebung,
+        welche zwischen unseren Computern synchronisiert wird.
+      </p>
+      <div class='segment pt-1'>
         <div class='action'>
-          <!-- TODO link to ScheduleOnce booking page -->
-          {{> actions/link
-            id='booking-page'
-            name='Vereinbare ein Meeting'
-            href=(shared 'contact.booking')
-            target='_blank'
-            no-track=true
+          {{#> actions/spoiler
+            id='software'
+            name='Verwendete Software'
           }}
+          {{> spoilers/software.hbs}}
+          {{/actions/spoiler}}
         </div>
       </div>
-      <div class='segment'>
-        Baue
-        <span class='underline is-yellow'>Vertrauen</span>
-        in mich auf, bevor Du mir Geld sendest.
-      </div>
-      <div class='segment'>
+    </section>
+  </div>
+  <div id='papier' class='image is-repeated is-left is-faint'></div>
+</div>
+
+<div class='slanted-shadow is-blue is-falling is-1'>
+  <div class='slanted-shadow__content'>
+    <section id='zahlung' class='section'>
+      <p class='segment'>
+        {{> modifiers/highlight class='is-blue'
+          text='Die erste Stunde ist kostenlos'
+        }}
+      </p>
+      <p class='segment'>
+        So kannst du mich zunächst kennen lernen
+        und dich von meinem Unterrichtsstil überzeugen!
+      </p>
+      <p class='segment'>
+        Anschließend nehme ich
+        <nobr><span class='underline is-blue'>{{price.value}}{{price.currency}}
+            pro {{price.minutes}} Minuten</span></nobr>.
+        Du bezahlst dabei nur die tatsächlich genutzten Minuten.
+      </p>
+      <p class='segment'>
+        Falls Minuten übrig bleiben sollten,
+        kannst du das entsprechende Geld
+        <span class='underline is-blue'>jederzeit zurück erhalten</span>
+        oder für einen zukünftigen Termin verwenden.
+      </p>
+      <p class='segment'>
+        Die Zahlung findet im Voraus statt.
+        Du erhältst für jede deiner Zahlungen
+        und alle durchgeführten Nachhilfe-Sitzungen
+        einen Beleg für deine Unterlagen.
+      </p>
+      <div data-mark='sticky-header-out' class='segment pt-1'>
         <div class='action'>
           {{#> actions/spoiler
               id='pricing'
-              name='Details zum Preis'
+              name='Weitere Informationen'
             }}
           {{> spoilers/pricing.hbs}}
           {{/actions/spoiler}}
@@ -165,65 +168,101 @@
   </div>
 </div>
 
-<section id='tools' class='section'>
-  <p class='segment'>
-    Wir arbeiten an einem gemeinsamen
-    <span class='underline is-yellow'>Whiteboard</span>
-    und in einer geteilten
-    <span class='underline is-yellow'>Entwicklungsumgebung</span>.
-  </p>
-  <p class='segment'>
-    <span class='highlight is-black'>
-      Meine Nachhilfe findet online statt.
-    </span>
-  </p>
-  <p class='segment'>
-    So kann ich Dir zu jeder Zeit
-    und so schnell es geht zur Seite stehen.
-  </p>
-  <div class='segment'>
-    <div class='action'>
-      {{#> actions/spoiler
-          id='tools'
-          name='Verwendete Tools'
-        }}
-      {{> spoilers/tools.hbs}}
-      {{/actions/spoiler}}
-    </div>
-  </div>
-</section>
-
-<div class='slanted-shadow is-green'>
-  <div class='slanted-shadow__content'>
-    <section id='ready' class='section'>
+<div class='with-images'>
+  <div id='papier' class='image is-repeated is-right is-faint'></div>
+  <div class='image-content'>
+    <section class='section'>
       <p class='segment'>
-        <span class='highlight is-black'>Brauchst Du Hilfe?</span>
+        {{> modifiers/highlight class='is-black'
+          text='Brauchst du Hilfe?'
+        }}
       </p>
-      <div class='segment is-spaced'>
-        <p>
-          <span class='underline is-yellow'>Kontaktiere mich</span>
-          und schildere, wobei Du Schwierigkeiten hast.
-        </p>
-        <p>
-          Sende mir auch
-          <span class='underline is-yellow'>Aufgaben</span> und
-          <span class='underline is-yellow'>Unterlagen</span>,
-          so dass ich verstehe um welche Themen es geht.
-        </p>
-      </div>
-      <div class='segment'>
+      <p class='segment'>
+        Du kannst mich jederzeit kontaktieren
+        und schildern wobei du Schwierigkeiten hast.
+        Ich werde so zeitnah wie möglich auf dich zukommen!
+      </p>
+      <div class='segment pt-1'>
         <div class='action'>
           {{> actions/link
-            id='contact-bottom'
-            name='Zur Kontakt-Seite'
+            id='contact-end'
+            name='Kontakt'
             href=(shared 'links.local.contact' (env))
             no-track=false
           }}
         </div>
       </div>
-      <p class='segment'>
-        <span class='highlight is-black'>Ich freue mich auf Dich!</span>
-      </p>
+      {{!-- <div class='footer-separator'></div> --}}
     </section>
   </div>
+  <div id='papier' class='image is-repeated is-left is-faint'></div>
+</div>
+
+<div class='slanted-shadow is-green is-rising is-1 mt-4'>
+  <div class='slanted-shadow__content'>
+    <section class='section'>
+      <p>
+        <span class='underline is-green'>
+          Über mich
+        </span>
+      </p>
+      <p>
+        Ich heiße
+        {{shared 'contact.name.second'}}
+        {{shared 'contact.name.last'}},
+        ich bin 22 Jahre alt
+        und habe Informatik mit Abschluss Bachelor an der
+        {{> components/link
+          id='ext-th-koeln'
+          href=external.university.url
+          name=external.university.name_der
+          target='_blank'
+          no-track=true
+          analytics=false
+        }}
+        studiert.
+        Ich war bereits während meines Studiums als Tutor beschäftigt
+        <nobr>({{> components/link
+          id='ext-tutoring-activity'
+          href=external.tutoring.url
+          name='siehe hier'
+          target='_blank'
+          no-track=true
+        }})</nobr>
+        und gebe nun nebenher freiberuflich Nachhilfe.
+      </p>
+      <p>
+        Bereits während meiner Schulzeit habe ich Zuhause programmiert
+        und mir vieles neues Wissen selbstständig beigebracht.
+        Diese Leidenschaft trage ich bis heute mit mir
+        und ich freue mich immer,
+        sie während meines Unterrichts ausleben zu können.
+      </p>
+      <p>
+        Gerne berate ich dich auch zu deinem Studium
+        oder berichte aus meinen eigenen Erfahrungen,
+        wenn du mal die Perspektive eines Absolventen gebrauchen kannst.
+      </p>
+      <div class='segment py-2'>
+        <div class='action'>
+          {{> actions/link
+            id='contact-about'
+            name='Schreibe mich an'
+            href=(shared 'links.local.contact' (env))
+            no-track=false
+          }}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class='with-images'>
+  <div id='papier' class='image is-repeated is-right is-faint'></div>
+  <div class='image-content'>
+    <section class='section py-0'>
+      <div style='width: 100vw; height: 5rem'></div>
+    </section>
+  </div>
+  <div id='papier' class='image is-repeated is-left is-faint'></div>
 </div>

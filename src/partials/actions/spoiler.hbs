@@ -1,6 +1,7 @@
 <div class='spoiler'>
   <form action='javascript:void(0);'>
-    <input id='spoiler-{{id}}' class='spoiler__checkbox' type='checkbox' />
+    <input id='spoiler-{{id}}' class='spoiler__checkbox' type='checkbox'
+      {{#if opened}} checked='true' {{/if}} />
     <label for='spoiler-{{id}}' class='action__button' tabindex='0'
       {{> attributes/analytics id=(concat 'spoiler_' id)}}>
       <span class='action__button__name'>
@@ -10,9 +11,11 @@
         <span class='icon-plus'></span>
       </span>
     </label>
-    <div class='action__content spoiler__content'>
-      <div class='spoiler__content__container'>
-        {{> @partial-block}}
+    <div class='action__content'>
+      <div class='spoiler__content'>
+        <div class='spoiler__content__container'>
+          {{> @partial-block}}
+        </div>
       </div>
     </div>
   </form>

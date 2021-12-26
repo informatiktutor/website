@@ -1,58 +1,38 @@
 <p>
-  Den Preis für die Korrektur und Verbesserung Deiner eigenen Lösungen
-  bestimme ich individuell, je nach Aufgabe und Umfang.
-  Wenn ich sehe, dass es nicht viel zu korrigieren gibt,
-  dann verlange ich auch entsprechend weniger.
-</p>
-<p>
-  Gerne können wir meine Korrektur anschließend in einem Meeting besprechen!
-</p>
-{{> components/divider}}
-<p>
-  Die Zahlung findet im Voraus statt.
-  Du kannst Dein Geld jederzeit zurück erhalten,
-  sofern ich die gewünschte Leistung noch nicht erbracht habe.
-</p>
-<p>
-  Wenn nötig,
-  können wir ein laufendes Meeting gerne etwas zeitlich ausdehnen.
-  Mir ist wichtig, dass Du die Inhalte richtig verstehst
-  und mit einem guten Gefühl aus dem Meeting gehst.
-</p>
-<p>
-  Wenn wir früher fertig sind als anfangs gedacht,
-  erstatte ich Dir gerne das Geld für die ungenutzten Minuten zurück.
-</p>
-{{> components/divider}}
-<p>
   Ich biete die folgenden Zahlungsmethoden an:
 </p>
-<ul class='course-list'>
+<ul class='inline-list'>
   {{#each payment.methods}}
   <li>
-    <span class='highlight is-small is-subtle is-rounded is-padded'>
-      {{{this}}}
-    </span>
+    {{> modifiers/highlight class='is-blue-light is-slim'
+      text=this
+    }}
   </li>
   {{/each}}
 </ul>
 <p>
-  Die Abwicklung erfolgt schnell und einfach über ein
-  <a {{> attributes/external}} href='{{shared 'links.github.pay'}}'
-    {{> attributes/analytics id=(concat 'link_' 'ext-github-pay')}}>eigens
-    entwickeltes</a>
-  Bezahlfenster.
-  Nachdem wir den Umfang meiner Leistung vereinbart haben,
-  erhältst Du einen Link, der so aussehen wird:
+  Die Abwicklung erfolgt über ein
+  {{> components/link
+    id='ext-github-pay'
+    name='eigens entwickeltes'
+    href=(shared 'links.github.pay')
+    target='_blank'
+    no-track=true
+  }}
+  Bezahlfenster,
+  in dem alle nötigen Informationen übersichtlich angezeigt werden.
 </p>
 <p>
-  <a class='highlight is-subtle is-small is-rounded is-padded is-size-small'
-    href='{{payment.page.example.url_full}}' target='_blank'
-    {{> attributes/analytics id=(concat 'link_' 'payment-page')}}>
-    {{~payment.page.example.url~}}
-  </a>
+  Über den folgenden Link kannst du eine Beispiel-Zahlung betrachten:
 </p>
 <p>
-  Über diese Seite kannst Du später
-  bequem die vereinbarte Zahlung durchführen.
+  {{~#> modifiers/highlight class='is-blue-light is-slim is-padded break-all'~}}
+  {{~> components/link
+    id='payment-page'
+    href=payment.page.example.url
+    html=payment.page.example.name_html
+    target='_blank'
+    no-track=false
+  ~}}
+  {{/modifiers/highlight}}
 </p>

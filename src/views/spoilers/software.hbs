@@ -1,0 +1,72 @@
+{{> components/spoiler-software type='meeting'}}
+<p>
+  Unser Meeting führen wir über einen beliebigen der genannten Dienste.
+</p>
+
+{{> components/divider}}
+{{> components/spoiler-software type='programming'}}
+<p>
+  Mit einer dieser beiden Optionen programmieren wir gemeinsam,
+  indem Cursor und Code zwischen unseren Editoren synchronisert werden,
+  als würden wir am selben Computer sitzen.
+</p>
+<p>
+  <span class='underline is-green-light'>
+    {{~software.code_with_me.name_short~}}
+  </span>
+  wird in jeder JetBrains Entwicklungs&shy;umgebung mitgeliefert
+  <nobr>
+    (z.B.
+    {{> components/link
+      name=software.intellij_idea.name
+      href=software.intellij_idea.url
+      target='_blank'
+      no-track=true
+      analytics=false
+    }})
+  </nobr>
+  und benötigt keine Installation weiterer Software.
+</p>
+<p>
+  <span class='underline is-green-light'>
+    {{~software.codetogether.name~}}
+  </span>
+  funktioniert auch in
+  {{> components/link
+    name=software.eclipse.name
+    href=software.eclipse.url
+    target='_blank'
+    no-track=true
+    analytics=false
+  }}
+  und
+  {{> components/link
+    name=software.vscode.name
+    href=software.vscode.url
+    target='_blank'
+    no-track=true
+    analytics=false
+  }}
+  und setzt die Installation einer kostenlosen
+  {{> components/link
+    name='Erweiterung'
+    href=software.codetogether.links.extension
+    target='_blank'
+    no-track=true
+    analytics=false
+  }} voraus.
+</p>
+<p>
+  Keine der Optionen erfordert
+  die Erstellung eines Benutzer-Kontos oder dergleichen.
+</p>
+
+{{> components/divider}}
+<p>
+  {{> modifiers/highlight class='is-green-light is-slim is-padded'
+    text='Bevorzugst du eine andere Software?'}}
+</p>
+<p>
+  Ich bin immer offen für Vorschläge und Alternativen,
+  spreche mich einfach darauf an!
+</p>

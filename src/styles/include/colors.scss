@@ -2,14 +2,56 @@ $color-highlight-black: black;
 $color-bright-text: white;
 $color-underline-yellow: rgb(255, 249, 167);
 $color-footer-text: rgb(58, 58, 58);
+$color-link: rgb(35, 121, 219);
 
-$palette-black: #000;
+$palette-black: rgb(41, 41, 41);
+// $palette-black: rgb(50, 50, 50);
+// $palette-black: black;
 $palette-blue: #0071ed;
 $palette-green: #2caf5f;
+// $palette-green: #30b463;
 $palette-yellow: $color-underline-yellow;
+
+$palette-green-subtle: adjust-color(
+  $color: $palette-green,
+  $lightness: +45%,
+  $saturation: -8%,
+);
+
+// TODO
+$palette-blue-subtle: adjust-color(
+  $color: $palette-blue,
+  $lightness: +44%,
+  $saturation: -8%,
+);
+
+$palette-blue-light: adjust-color(
+  $color: $palette-blue,
+  $lightness: +50%,
+);
+$palette-green-lighter: adjust-color(
+  $color: $palette-green,
+  $lightness: +53%,
+);
+$palette-green-light: adjust-color(
+  $color: $palette-green,
+  $lightness: +51%,
+);
 
 $whatsapp-green: #00e676;
 $signal-blue: #3a76f0;
 $discord-blurple: #5865f2;
+
+$color-underline-green: adjust-color(
+  $color: $palette-green,
+  $lightness: +48%,
+  $saturation: -10%,
+);
+
+$color-underline-blue: adjust-color(
+  $color: $palette-blue,
+  $lightness: +48%,
+  $saturation: -10%,
+);
 
 // $palette-blue-faint: #0072ed23;

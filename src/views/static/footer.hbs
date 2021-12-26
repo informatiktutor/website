@@ -48,15 +48,21 @@
       {{> components/footer-link
         id='home'
         name=(shared 'contact.domain')
-        href=(concat 'https://' (shared 'contact.domain'))
+        href=(
+          when (env 'production')
+          (concat 'https://' (shared 'contact.domain'))
+          '/'
+        )
         analytics=false
         no-track=false
       }}
       {{/unless}}
       <p class='is-faint' style='padding-top: 1rem'>
         Copyright &copy; 2021
-        {{shared 'contact.name.second'}}
-        {{shared 'contact.name.last'}}
+        <span style='white-space: nowrap'>
+          {{shared 'contact.name.second'}}
+          {{shared 'contact.name.last'}}
+        </span>
       </p>
     </div>
   </footer>

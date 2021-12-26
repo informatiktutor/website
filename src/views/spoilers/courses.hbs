@@ -1,35 +1,29 @@
 <p>
-  Beispielhaft sind nachfolgend
-  Kurse der {{external.university.name_der}} aufgelistet.
+  Folgende Module sind oder waren Bestandteil meines Unterrichts:
 </p>
 <ul class='course-list'>
   {{#each (sort (concat courses.obligatory courses.other_degrees))}}
   <li>
-    <span class='highlight is-small is-subtle is-rounded is-padded'>
-      {{{nbsp_until 2 this}}}
-    </span>
+    {{> modifiers/highlight class='is-green-lighter is-slim'
+      html=(nbsp_until 2 this)
+    }}
   </li>
   {{/each}}
 </ul>
 <p>
-  Außerdem habe ich folgende Wahlpflichtfächer
-  während meines Studiums belegt,
-  für die ich ebenfalls Nachhilfe anbiete:
+  Außerdem folgende Wahlpflichtfächer:
 </p>
 <ul class='course-list'>
   {{#each (sort courses.optional.attended)}}
   <li>
-    <span class='highlight is-small is-subtle is-rounded is-padded'>
-      {{{nbsp_until 2 this}}}
-    </span>
+    {{> modifiers/highlight class='is-green-lighter is-slim'
+      html=(nbsp_until 2 this)
+    }}
   </li>
   {{/each}}
 </ul>
 <p>
-  <span class='underline is-yellow'>Falls Dein Kurs nicht aufgelistet sein
-    sollte</span>,
-  kannst Du mich dennoch gerne darauf ansprechen!
-</p>
-<p>
-  Die hier aufgelisteten Kurse dienen nur als grobe Orientierung.
+  Falls dein Kurs nicht aufgelistet sein sollte,
+  heißt dies nicht, dass ich für diesen keine Nachhilfe anbiete.
+  Kontaktiere mich einfach und ich gebe dir Auskunft!
 </p>

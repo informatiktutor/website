@@ -3,8 +3,16 @@
 @import './fonts.scss';
 @import './colors.scss';
 
-$max-width: 600px;
-$horizontal-padding: 2rem;
+$max-width: 680px;
+$page-padding: 100px;
+// $horizontal-padding: 2rem;
+
+$segment-margin: 1.5rem;
+
+$mobile-breakpoint: 800px;
+$mobile-small-breakpoint: 350px;
+$wide-breakpoint: 1400px;
+$column-breakpoint: ($max-width + 200px);
 
 html {
   height: 100%;
@@ -16,9 +24,16 @@ body {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.45;
 
-  font-size: 18pt;
+  font-size: 16.5pt;
+}
+
+@media only screen and (max-width: $mobile-breakpoint) {
+  .is-break-mobile {
+    display: block;
+    padding-top: $segment-margin;
+  }
 }
 
 .root {
@@ -26,6 +41,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  position: relative;
 }
 
 .page,
@@ -35,6 +52,128 @@ body {
   max-width: $max-width;
   margin: auto;
   margin-top: 0;
+
+  // @media only screen and (min-width: $mobile-breakpoint) {
+  //   padding: 0 $page-padding;
+  // }
+}
+
+.py-0 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-3 {
+  padding-top: 0.75rem;
+}
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.ml-3 {
+  margin-left: 0.75rem;
+}
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.with-images {
+  display: flex;
+  width: 100%;
+
+  .image {
+    flex: 1;
+    // box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.125) inset;
+    outline: 3px solid whitesmoke;
+
+    margin: -3rem 0;
+  }
+
+  &.at-top .image {
+    margin-top: -1rem;
+  }
+
+  .image-content {
+    padding: 0 8vw;
+  }
+
+  @media only screen and (max-width: $column-breakpoint) {
+    .image {
+      visibility: hidden;
+    }
+    .image-content {
+      padding: 0;
+    }
+  }
+}
+
+.image {
+  z-index: -200;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.6;
+  }
+
+  &.is-repeated::before {
+    background-repeat: repeat;
+    background-size: 200px;
+  }
+
+  &.is-left::before {
+    background-position: 0%;
+  }
+  &.is-right::before {
+    background-position: 100%;
+  }
+
+  &.is-faint::before {
+    opacity: 0.175;
+  }
+}
+
+.image {
+  &#terminal::before {
+    background-image: url('images/terminal-2.png');
+  }
+  &#kugel::before {
+    background-image: url('images/kugel-3.jpg');
+  }
+  &#papier::before {
+    background-image: url('images/papier.jpg');
+  }
 }
 
 .page-footer {
@@ -46,24 +185,38 @@ body {
   }
 
   a:hover {
-    color: $palette-black;
+    color: black;
   }
 
   margin-top: 5rem;
   padding: 2.5rem 0;
 }
 
+$section-padding: 2.25rem;
+$section-padding-slim: 2rem;
+
 .footer {
   font-size: 12pt;
 
+  a {
+    text-decoration: none;
+  }
+
   &__content {
-    padding: 0 $horizontal-padding;
+    // padding: 0 $horizontal-padding;
+    padding: 0 $section-padding;
+
+    @media only screen and (max-width: $mobile-small-breakpoint) {
+      padding-left: $section-padding-slim;
+      padding-right: $section-padding-slim;
+    }
 
     $element-padding: 0.5rem;
     $inner-horizontal-padding: 0.5rem;
 
     .footer-link {
       margin: (2 * $element-padding) 0;
+      white-space: nowrap;
       a {
         padding: $element-padding $inner-horizontal-padding;
         padding-right: 5rem;
@@ -81,9 +234,47 @@ body {
   }
 }
 
+.footer-separator {
+  height: 2.5rem;
+}
+
+#sticky-header {
+  display: none;
+}
+
 .navigation {
   background-color: whitesmoke;
   font-size: 16pt;
+  z-index: 100;
+
+  &.is-animated {
+    transition: top 0.25s ease;
+  }
+
+  &.is-sticky {
+    background-color: white !important;
+    overflow: hidden;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid whitesmoke;
+
+    .header__content {
+      padding: 0;
+      @media only screen and (max-width: $mobile-breakpoint) {
+        padding: 0 2.25rem;
+      }
+
+      a:hover {
+        background-color: rgb(247, 247, 247);
+      }
+
+      .icon {
+        padding-left: 1rem;
+      }
+    }
+  }
 }
 
 .header__content {
@@ -112,19 +303,32 @@ body {
       align-items: center;
 
       .icon {
-        padding: 0 0.75rem 0 0.25rem;
+        padding: 0 0.5rem 0 0.5rem;
         display: flex;
       }
     }
   }
 }
 
-.section {
-  // padding: 1.5rem 2rem;
-  padding: 4rem 2rem 3.5rem 2rem;
-  // border: 1px dotted yellowgreen;
+.slanted-shadow {
+  .section {
+    // $padding: 2.5rem;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+  }
+}
 
-  // margin: 0 42rem;
+.is-empty {
+  width: $max-width - 64px; // FIXME
+}
+
+.section {
+  padding: 3.5rem $section-padding;
+
+  @media only screen and (max-width: $mobile-small-breakpoint) {
+    padding-left: $section-padding-slim;
+    padding-right: $section-padding-slim;
+  }
 
   &.is-small {
     // FIXME
@@ -137,13 +341,11 @@ body {
     }
   }
 
+  > p,
   .segment {
-    margin-bottom: 1.75rem;
+    margin-bottom: $segment-margin;
     &:last-child {
       margin-bottom: 0;
-    }
-    &.is-padded {
-      padding-top: 1.25rem;
     }
     &.is-spaced > p {
       margin-bottom: 1rem;
@@ -164,17 +366,224 @@ body {
   }
 }
 
-.underline {
-  $height: 0.8rem;
+$underline-height: 0.8rem;
 
-  @mixin underline-shadow($color, $height: 0.25rem, $offset: 0rem) {
-    // The $offset may not be larger than $height or a negative number.
-    box-shadow: inset 0 (-1 * ($height - $offset)) $color,
-      0 max(0, $offset) $color;
+@mixin underline-shadow($color, $height: 0.25rem, $offset: 0rem) {
+  // The $offset may not be larger than $height or a negative number.
+  box-shadow: inset 0 (-1 * ($height - $offset)) $color,
+    0 max(0, $offset) $color;
+}
+
+.break {
+  display: inline-block !important;
+  width: 0px !important;
+}
+
+.underline {
+  &.is-yellow {
+    @include underline-shadow($color-underline-yellow, $underline-height);
+  }
+  &.is-green {
+    @include underline-shadow($color-underline-green, $underline-height);
+  }
+  &.is-green-light {
+    @include underline-shadow($palette-green-light, $underline-height);
+  }
+  &.is-blue {
+    @include underline-shadow($color-underline-blue, $underline-height);
+  }
+}
+
+.slanted-shadow {
+  // &.is-blue .underline.is-blue {
+  //   @include underline-shadow($palette-blue, $underline-height);
+  // }
+  &.is-green .underline.is-green {
+    @include underline-shadow($palette-green-subtle, $underline-height);
+  }
+  &.is-blue .underline.is-blue {
+    @include underline-shadow($palette-blue-subtle, $underline-height);
+  }
+}
+
+// Highlight an element in a specific color,
+// similar as you would with a marker pen.
+.highlighted {
+  @mixin shadow($color, $overlap-x, $overlap-y) {
+    box-shadow: $overlap-x 0 0 $color, (-1 * $overlap-x) 0 0 $color,
+      $overlap-x $overlap-y 0 $color, (-1 * $overlap-x) $overlap-y 0 $color;
+    box-decoration-break: clone; // Firefox
+  }
+  // @mixin shadow-outlined(
+  //   $color,
+  //   $overlap-x,
+  //   $overlap-y,
+  //   $shadow-color,
+  //   $shadow-width
+  // ) {
+  //   box-shadow: $overlap-x 0 0 $color, (-1 * $overlap-x) 0 0 $color,
+  //     $overlap-x $overlap-y 0 $color, (-1 * $overlap-x) $overlap-y 0 $color,
+  //     ($overlap-x + $shadow-width) (-1 * $shadow-width) 0 $shadow-color,
+  //     (-1 * ($overlap-x + $shadow-width)) (-1 * $shadow-width) 0 $shadow-color,
+  //     ($overlap-x + $shadow-width) ($overlap-y + $shadow-width) 0 $shadow-color,
+  //     (-1 * ($overlap-x + $shadow-width)) ($overlap-y + $shadow-width) 0
+  //       $shadow-color;
+  //   box-decoration-break: clone; // Firefox
+  // }
+
+  $overlap-vertical: 0.25rem;
+  $overlap-vertical-inline: 0.025rem;
+
+  $overlap-horizontal: 0.75rem;
+  $overlap-horizontal-wide: $overlap-horizontal + 0.25rem;
+  $overlap-horizontal-slim: $overlap-horizontal - 0.25rem;
+  $overlap-horizontal-inline: $overlap-horizontal-slim;
+
+  $border-radius: 4pt;
+
+  $content: #{&}__content;
+  $text: #{$content}__text;
+
+  #{$content} {
+    display: inline;
+    border-radius: $border-radius;
+
+    // Fixes white background shining through
+    // between the box-shadow and the background
+    // when the border-radius is not equal to 0.
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   z-index: -100;
+    //   border-radius: $border-radius;
+    // }
   }
 
-  &.is-yellow {
-    @include underline-shadow($color-underline-yellow, $height);
+  &.is-inline {
+    #{$content} {
+      display: inline-block;
+      margin: 0 $overlap-horizontal-inline;
+    }
+  }
+
+  // #{$content} {
+  //   &::before {
+  //     right: -1 * $overlap-horizontal;
+  //   }
+  // }
+
+  // &.is-wider {
+  //   #{$content} {
+  //     &::before {
+  //       right: -1 * $overlap-horizontal-wide;
+  //     }
+  //   }
+  // }
+
+  $colors: 'blue' $palette-blue $color-bright-text,
+    'blue-light' $palette-blue-light black,
+    'green-light' $palette-green-light black,
+    'green-lighter' $palette-green-lighter black,
+    'blue-subtle' $palette-blue-subtle black,
+    'green-subtle' $palette-green-subtle black,
+    'yellow' $color-underline-yellow black,
+    'black' $palette-black $color-bright-text, 'light' whitesmoke black;
+
+  @each $name, $color, $color-text in $colors {
+    &.is-#{$name} {
+      color: $color-text;
+      // #{$content}::before
+      // #{$content},
+      #{$text} {
+        background-color: $color;
+      }
+      #{$content} {
+        @include shadow($color, $overlap-horizontal, $overlap-vertical);
+      }
+      &.is-padded {
+        #{$content} {
+          margin: 0 $overlap-horizontal;
+        }
+      }
+      &.is-wide {
+        #{$content} {
+          @include shadow($color, $overlap-horizontal-wide, $overlap-vertical);
+        }
+        &.is-padded {
+          #{$content} {
+            margin: 0 $overlap-horizontal-wide;
+          }
+        }
+      }
+      &.is-slim {
+        #{$content} {
+          @include shadow($color, $overlap-horizontal-slim, $overlap-vertical);
+        }
+        &.is-padded {
+          #{$content} {
+            margin: 0 $overlap-horizontal-slim;
+          }
+        }
+      }
+      &.is-inline {
+        #{$content} {
+          @include shadow(
+            $color,
+            $overlap-horizontal-inline,
+            $overlap-vertical-inline
+          );
+        }
+      }
+      &::before {
+        background-color: $color;
+      }
+    }
+  }
+
+  position: relative;
+
+  // This element covers the left shadow of the text,
+  // which would show dents where there would be
+  // a rounded border per line of text.
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: $border-radius;
+  }
+
+  &::before {
+    left: -1 * $overlap-horizontal;
+    width: $overlap-horizontal;
+  }
+
+  &.is-wide::before {
+    left: -1 * $overlap-horizontal-wide;
+    width: $overlap-horizontal-wide;
+  }
+  &.is-slim::before {
+    left: -1 * $overlap-horizontal-slim;
+    width: $overlap-horizontal-slim;
+  }
+  &.is-inline::before {
+    display: none;
+  }
+
+  &.is-padded {
+    &::before {
+      margin: 0 $overlap-horizontal;
+    }
+    &.is-wide::before {
+      margin: 0 $overlap-horizontal-wide;
+    }
+    &.is-slim::before {
+      margin: 0 $overlap-horizontal-slim;
+    }
   }
 }
 
@@ -184,6 +593,11 @@ body {
   // $color: rgb(252, 255, 154);
   // $color: rgb(255, 249, 167);
 
+  // @mixin highlight-color($color, $overlap-x, $overlap-y) {
+  //   box-shadow: 0 0 0 $color, 0 0 0 $color, 0 $overlap-y 0 $color,
+  //     0 $overlap-y 0 $color;
+  //   box-decoration-break: clone; // Firefox
+  // }
   @mixin highlight-color($color, $overlap-x, $overlap-y) {
     box-shadow: $overlap-x 0 0 $color, (-1 * $overlap-x) 0 0 $color,
       $overlap-x $overlap-y 0 $color, (-1 * $overlap-x) $overlap-y 0 $color;
@@ -192,10 +606,14 @@ body {
 
   display: inline;
 
+  border-radius: 4pt;
+
   $horizontal-overlap: 0.75rem;
-  $vertical-overlap: 0.3rem;
+  $horizontal-wide-addition: 0.25rem;
+  $vertical-overlap: 0.25rem;
 
   &.is-inline {
+    display: inline-block;
     padding: 0 0.3rem;
   }
   &.is-padded {
@@ -208,27 +626,58 @@ body {
     border-radius: 0.25rem;
   }
 
+  position: relative;
+
+  // Fixes white background shining through
+  // between the box-shadow and the background
+  // when the border-radius is not equal to 0.
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -10;
+    border-radius: 0;
+  }
+
   &.is-black {
+    $color: $palette-black;
+    // $color: adjust-color(#2caf5f, $lightness: -20, $saturation: -20);
+
     color: $color-bright-text;
-    background-color: $palette-black;
+
+    &,
+    &::before {
+      background-color: $color;
+    }
 
     &.is-small {
-      @include highlight-color($palette-black, 0.25rem, 0.2rem);
+      @include highlight-color($color, 0.25rem, 0.2rem);
     }
     &.is-inline {
-      box-shadow: 0 0.2rem 0 $palette-black;
+      box-shadow: 0 0.1rem 0 $color;
     }
-    &:not(.is-inline):not(.is-small) {
-      @include highlight-color(
-        $palette-black,
-        $horizontal-overlap,
-        $vertical-overlap
-      );
+    &:not(.is-small) {
+      // border: 0.5px solid $palette-black;
+      @include highlight-color($color, $horizontal-overlap, $vertical-overlap);
+      &.is-wider {
+        @include highlight-color(
+          $color,
+          $horizontal-overlap + $horizontal-wide-addition,
+          $vertical-overlap
+        );
+      }
     }
   }
   &.is-blue {
     color: $color-bright-text;
-    background-color: $palette-blue;
+
+    &,
+    &::before {
+      background-color: $palette-blue;
+    }
 
     &.is-small {
       @include highlight-color($palette-blue, 0.25rem, 0.2rem);
@@ -246,16 +695,20 @@ body {
     // $color: rgb(236, 236, 236);
     $color: rgb(228, 243, 255);
 
-    color: $palette-black;
+    color: black;
     background-color: $color;
     &.is-small {
       @include highlight-color($color, 0.5rem, 0.2rem);
     }
   }
   &.is-light {
-    $color: whitesmoke;
+    $color: rgb(248, 248, 248);
 
-    color: $palette-black;
+    &.is-bordered {
+      border: 1px solid rgb(200, 200, 200);
+    }
+
+    color: black;
     background-color: $color;
     &.is-small {
       @include highlight-color($color, 0.5rem, 0.2rem);
@@ -381,10 +834,22 @@ $svg-icon-size: 1.25rem;
   width: $svg-icon-size;
 }
 
+.is-color-link {
+  color: $color-link !important;
+}
+
 a {
-  color: rgb(35, 121, 219);
-  text-decoration: 1pt underline;
+  $color: $color-link;
+
+  color: $color;
+  text-decoration: 2px underline;
+  text-decoration-color: adjust-color($color: $color, $alpha: -0.75);
   text-underline-offset: 1pt;
+
+  &:hover {
+    color: adjust-color($color, $lightness: -10%);
+    text-decoration-color: adjust-color($color: $color, $alpha: -0.5);
+  }
 
   // &:visited {
   //   color: rgb(76, 58, 240);
@@ -395,12 +860,18 @@ a {
   display: none !important;
 }
 
+@media only screen and (max-width: $mobile-breakpoint) {
+  .is-hidden-mobile {
+    display: none !important;
+  }
+}
+
 .is-size-small {
   font-size: 14pt !important;
 }
 
 .is-block {
-  display: block;
+  display: block !important;
 }
 
 .is-tall-line {
