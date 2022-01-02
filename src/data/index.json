@@ -84,7 +84,7 @@
   },
   "software": {
     "by_category": {
-      "meeting": ["zoom", "discord", "google_meet", "microsoft_teams"],
+      "meeting": ["zoom", "discord", "google_meet"],
       "programming": ["code_with_me", "codetogether"]
     },
     "zoom": {
@@ -98,10 +98,6 @@
     "google_meet": {
       "name": "Google Meet",
       "url": "https://meet.google.com"
-    },
-    "microsoft_teams": {
-      "name": "Microsoft Teams",
-      "url": "https://www.microsoft.com/de-de/microsoft-teams"
     },
     "codetogether": {
       "name": "CodeTogether",
