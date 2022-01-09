@@ -392,6 +392,9 @@ $underline-height: 0.8rem;
   &.is-blue {
     @include underline-shadow($color-underline-blue, $underline-height);
   }
+  &.is-blue-light {
+    @include underline-shadow($palette-blue-light, $underline-height);
+  }
 }
 
 .slanted-shadow {
