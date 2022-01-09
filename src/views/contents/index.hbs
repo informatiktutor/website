@@ -119,6 +119,17 @@
           {{/actions/spoiler}}
         </div>
       </div>
+      <p class='segment' style='padding-top: 1.75rem'>
+        {{> modifiers/highlight class='is-green-light'
+          text='Alternativ helfe ich dir auch direkt per Chat'
+        }}
+      </p>
+      <p class='segment'>
+        Ich beantworte dir deine Fragen,
+        erkläre einzelne Aufgaben,
+        überprüfe deine Lösungen
+        oder helfe auf eine ähnliche Weise.
+      </p>
     </section>
   </div>
   <div id='papier' class='image is-repeated is-left is-faint'></div>
@@ -129,34 +140,24 @@
     <section id='zahlung' class='section'>
       <p class='segment'>
         {{> modifiers/highlight class='is-blue'
-          text='Die erste Stunde ist kostenlos'
+          text='Deine erste Stunde ist kostenlos'
         }}
       </p>
       <p class='segment'>
-        So kannst du mich zunächst kennen lernen
-        und dich von meinem Unterrichtsstil überzeugen!
-      </p>
-      <p class='segment'>
         Anschließend nehme ich
-        <nobr><span class='underline is-blue'>{{price.value}}{{price.currency}}
-            pro {{price.minutes}} Minuten</span></nobr>
-        (eine Stunde).
-        Du bezahlst dabei nur die tatsächlich genutzten Minuten.
+        <nobr><span class='underline is-blue'>20€ pro 60 Minuten</span></nobr>.
+        Du bezahlst nur die Zeit, die wir auch tatsächlich nutzen.
+        Dies gilt sowohl für meine Nachhilfe per Meeting als auch per Chat.
       </p>
       <p class='segment'>
-        <span class='underline is-blue'>Teile dir die Kosten</span>
-        mit anderen und nehmt gemeinsam bei mir Nachhilfe,
-        um Geld zu sparen.
+        <span class='underline is-blue'>Teile dir die Kosten</span> mit anderen,
+        indem ihr gemeinsam bei mir Nachhilfe nehmt, um Geld zu sparen.
       </p>
       <p class='segment'>
-        <span class='underline is-blue'>Ich bereite jede Sitzung vor</span>,
-        so dass wir direkt anfangen und zielgerichtet arbeiten können.
-      </p>
-      <p class='segment'>
-        Falls nach einer Sitzung Minuten übrig bleiben sollten,
-        kannst du das entsprechende Geld
-        <span class='underline is-blue'>jederzeit zurück erhalten</span>
-        oder für einen zukünftigen Termin verwenden.
+        Für drei oder mehr Stunden Nachhilfe am selben Tag,
+        erhältst du außerdem
+        <span class='underline is-blue'>10% Rabatt</span>
+        auf den gesamten Preis.
       </p>
       <div data-mark='sticky-header-out' class='segment pt-1'>
         <div class='action'>
@@ -168,6 +169,26 @@
           {{/actions/spoiler}}
         </div>
       </div>
+      {{!-- <p class='segment'>
+        So kannst du mich zunächst kennen lernen
+        und einen ersten Eindruck von mir erhalten.
+      </p> --}}
+      {{!-- <p class='segment'>
+        Anschließend nehme ich
+        <nobr><span class='underline is-blue'>{{price.value}}{{price.currency}}
+            pro {{price.minutes}} Minuten</span></nobr>
+        (eine Stunde).
+        Du bezahlst dabei nur die tatsächlich genutzten Minuten.
+      </p> --}}
+      {{!-- <p class='segment'>
+        <span class='underline is-blue'>Teile dir die Kosten</span>
+        mit anderen und nehmt gemeinsam bei mir Nachhilfe,
+        um Geld zu sparen.
+      </p> --}}
+      {{!-- <p class='segment'>
+        <span class='underline is-blue'>Ich bereite jede Sitzung vor</span>,
+        so dass wir direkt anfangen und zielgerichtet arbeiten können.
+      </p> --}}
     </section>
   </div>
 </div>
@@ -236,7 +257,7 @@
         und gebe nun nebenher freiberuflich Nachhilfe.
       </p>
       <p>
-        Bereits während meiner Schulzeit habe ich Zuhause programmiert
+        Bereits zu meiner Schulzeit habe ich Zuhause programmiert
         und mir vieles neues Wissen selbstständig beigebracht.
         Diese Leidenschaft trage ich bis heute mit mir
         und ich freue mich immer,
