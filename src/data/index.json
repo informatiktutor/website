@@ -73,14 +73,10 @@
     "paused": ["Diskrete Mathematik", "Kommunikationstechnik und Netze"]
   },
   "payment": {
-    "methods": ["PayPal", "Lastschrift", "Kreditkarte", "Banküberweisung"],
-    "page": {
-      "example": {
-        "url": "https://pay.informatiktutor.de/beispiel",
-        "name": "pay.informatiktutor.de/beispiel",
-        "name_html": "pay.informatik&shy;tutor.de/<span class='break'></span>beispiel"
-      }
-    }
+    "methods": ["PayPal", "Banküberweisung"],
+    "alternative_paypal_methods": ["Lastschrift", "Kreditkarte"],
+    "paypal_fee_overview_url": "https://www.paypal.com/de/webapps/mpp/paypal-fees",
+    "paypal_fee_calculator_url": "https://www.online-gebuehrenrechner.de/paypal.php"
   },
   "software": {
     "by_category": {
