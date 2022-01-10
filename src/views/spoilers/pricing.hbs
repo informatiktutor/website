@@ -10,14 +10,14 @@
 </p>
 <p>
   <span class='underline is-blue-light'>Teile dir die Kosten</span>
-  für meine Leistung gerne mit anderen Studenten,
+  gerne mit anderen Studenten,
   indem ihr gemeinsam bei mir Nachhilfe nehmt!
   Sag mir vorher nur kurz Bescheid,
   mit wie vielen Personen ich rechnen muss.
 </p>
 {{> components/divider}}
 <p>
-  Ich biete die folgenden Zahlungsmethoden an:
+  Ich akzeptiere die folgenden Zahlungsweisen:
 </p>
 <ul class='inline-list'>
   {{#each payment.methods}}
@@ -29,28 +29,43 @@
   {{/each}}
 </ul>
 <p>
-  Die Abwicklung erfolgt über ein
-  {{> components/link
-    id='ext-github-pay'
-    name='eigens entwickeltes'
-    href=(shared 'links.github.pay')
+  Falls keine der beiden Optionen infrage kommen sollte,
+  kannst du auch mit einer dieser Methoden zahlen:
+</p>
+<ul class='inline-list'>
+  {{#each payment.alternative_paypal_methods}}
+  <li>
+    {{> modifiers/highlight class='is-blue-light is-slim'
+      text=this
+    }}
+  </li>
+  {{/each}}
+</ul>
+<p>
+  Die Abwicklung erfolgt über PayPal,
+  die Erstellung eines Kontos ist hierfür jedoch nicht notwendig.
+</p>
+<p>
+  Die anfallenden Transaktions&shy;gebühren in Höhe von
+  <nobr><span class='underline is-blue-light'>2,49% + 0,35€</span></nobr>
+  ({{> components/link
+    id='ext-paypal-fees-overview'
+    href=payment.paypal_fee_overview_url
+    name='Quelle'
     target='_blank'
     no-track=true
-  }}
-  Bezahlfenster,
-  in dem alle nötigen Informationen übersichtlich angezeigt werden.
+  }})
+  werden so in den Preis integriert,
+  dass der Restbetrag dem ursprünglichen Preis entspricht.
 </p>
 <p>
-  Über den folgenden Link kannst du eine Beispiel-Zahlung ansehen:
-</p>
-<p>
-  {{~#> modifiers/highlight class='is-blue-light is-slim is-padded break-all'~}}
-  {{~> components/link
-    id='payment-page'
-    href=payment.page.example.url
-    html=payment.page.example.name_html
+  In der Regel handelt es sich dabei
+  um eine Erhöhung des Betrags von <nobr>ca. 1€</nobr>
+  ({{> components/link
+    id='ext-paypal-fees-calculator'
+    href=payment.paypal_fee_calculator_url
+    name='Gebührenrechner'
     target='_blank'
-    no-track=false
-  ~}}
-  {{/modifiers/highlight}}
+    no-track=true
+  }}).
 </p>
