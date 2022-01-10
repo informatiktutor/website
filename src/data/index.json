@@ -80,7 +80,7 @@
   },
   "software": {
     "by_category": {
-      "meeting": ["zoom", "discord", "google_meet"],
+      "meeting": ["discord", "zoom", "google_meet"],
       "programming": ["code_with_me", "codetogether"]
     },
     "zoom": {
