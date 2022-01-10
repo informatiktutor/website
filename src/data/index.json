@@ -65,7 +65,9 @@
       "Informatik I",
       "Informatik II",
       "Einführungsprojekt in die Informatik",
-      "Datenbanksysteme"
+      "Datenbanksysteme",
+      "Grundlagen des Web",
+      "Mobile Computing"
     ],
     "optional": {
       "attended": ["Einführung in Docker", "Software-Qualitätssicherung"]
