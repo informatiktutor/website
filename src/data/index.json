@@ -4,9 +4,16 @@
     "description": "Hast Du Schwierigkeiten bei Deinem Informatik-Studium? Ich helfe Dir gerne weiter! Auf dieser Seite findest Du alle wichtigen Informationen dazu."
   },
   "price": {
-    "value": 18,
-    "minutes": 60,
-    "currency": "€"
+    "currency_symbol": "€",
+    "currency_name": "Euro",
+    "lessons": {
+      "value": 20,
+      "minutes": 60
+    },
+    "solutions": {
+      "value_low": 5,
+      "value_high": 15
+    }
   },
   "external": {
     "university": {

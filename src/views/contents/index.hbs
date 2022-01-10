@@ -138,13 +138,17 @@
       </p>
       <p class='segment'>
         Anschließend nehme ich
-        <nobr><span class='underline is-blue'>20€ pro 60 Minuten</span></nobr>,
+        <nobr><span
+            class='underline is-blue'>{{price.lessons.value}}{{price.currency_symbol}}
+            pro {{price.lessons.minutes}} Minuten</span></nobr>,
         du bezahlst jedoch nur die Zeit, die wir auch tatsächlich nutzen.
         Dies gilt sowohl für meine Hilfe per Meeting als auch per Chat.
       </p>
       <p>
         Musterlösungen und Korrekturen kosten meist zwischen
-        <nobr><span class='underline is-blue'>5 und 15 Euro</span></nobr>,
+        <nobr><span class='underline is-blue'>{{price.solutions.value_low}}
+            und {{price.solutions.value_high}}
+            {{price.currency_name}}</span></nobr>,
         je nach Umfang und Komplexität.
         Wir einigen uns dabei im Voraus auf einen festen Preis.
       </p>
