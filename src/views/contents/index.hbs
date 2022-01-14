@@ -104,9 +104,9 @@
         {{prop (prop software (prop software.by_category.meeting 0)) 'name'}},
         {{prop (prop software (prop software.by_category.meeting 1)) 'name'}}
         oder eine ähnliche Software.
-        Ich teile meinen Bildschirm und mein Whiteboard mit dir,
-        um dir Inhalte sowohl mündlich als auch visuell
-        anschaulich erklären zu können.
+        Ich teile meinen Bildschirm mit dir
+        und nehme meinen Block und meinen Taschenrechner auf,
+        um dir Inhalte anschaulich erklären zu können.
       </p>
       <p class='segment'>
         Außerdem programmieren wir gemeinsam
@@ -138,24 +138,27 @@
       </p>
       <p class='segment'>
         Anschließend nehme ich
-        <nobr><span
-            class='underline is-blue'>{{price.lessons.value}}{{price.currency_symbol}}
-            pro {{price.lessons.minutes}} Minuten</span></nobr>,
-        du bezahlst jedoch nur die Zeit, die wir auch tatsächlich nutzen.
-        Dies gilt sowohl für meine Hilfe per Meeting als auch per Chat.
+        <span class='underline is-blue'>
+          zwischen <nobr>{{price.lessons.value_low}} und
+            {{price.lessons.value_high}}{{price.currency_symbol}}</nobr>
+          pro <nobr>{{price.lessons.minutes}} Minuten</nobr></span>.
+        Der genaue Preis hängt von der Komplexität des Themas
+        und der notwendigen Vorbereitungszeit ab.
+        {{!-- du bezahlst jedoch nur die Zeit, die wir auch tatsächlich nutzen.
+        Dies gilt sowohl für meine Hilfe per Meeting als auch per Chat. --}}
       </p>
       <p>
-        Musterlösungen und Korrekturen kosten meist zwischen
-        <nobr><span class='underline is-blue'>{{price.solutions.value_low}}
-            und {{price.solutions.value_high}}
-            {{price.currency_name}}</span></nobr>,
-        je nach Umfang und Komplexität.
-        Wir einigen uns dabei im Voraus auf einen festen Preis.
+        Musterlösungen und Korrekturen kosten meist
+        <span class='underline is-blue'><nobr>{{price.solutions.value_low}} bis
+          {{price.solutions.value_high}}{{price.currency_symbol}}</nobr>
+          pro Aufgabe</span>,
+        je nach Umfang und voraussichtlichem Zeitaufwand.
+        Die Erläuterung meiner Lösung ist im Preis inbegriffen.
       </p>
-      <p class='segment'>
+      {{!-- <p class='segment'>
         Falls du sehr viele Stunden Nachhilfe bei mir nimmst,
         können wir auch gerne über eine Vergünstigung sprechen.
-      </p>
+      </p> --}}
       <div data-mark='sticky-header-out' class='segment pt-1'>
         <div class='action'>
           {{#> actions/spoiler
