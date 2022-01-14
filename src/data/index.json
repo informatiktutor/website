@@ -7,8 +7,9 @@
     "currency_symbol": "€",
     "currency_name": "Euro",
     "lessons": {
-      "value": 20,
-      "minutes": 60
+      "value_low": 15,
+      "value_high": 25,
+      "minutes": 45
     },
     "solutions": {
       "value_low": 5,
