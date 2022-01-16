@@ -71,10 +71,9 @@
         <span class='underline is-green'>Korrektur</span>
         und
         <span class='underline is-green'>Verbesserung</span>
-        deiner Lösungen,
-        oder ich erstelle
-        <span class='underline is-green'>Musterlösungen</span>
-        und erläutere sie dir.
+        deiner Lösungen
+        oder ich erstelle einzelne
+        <span class='underline is-green'>Musterlösungen</span>.
       </p>
       <div class='segment pt-1'>
         <div class='action'>
@@ -133,19 +132,23 @@
     <section id='zahlung' class='section'>
       <p class='segment'>
         {{> modifiers/highlight class='is-blue'
-          text='Deine erste Stunde ist kostenlos'
+          text='Die erste Stunde ist unverbindlich'
         }}
       </p>
       <p class='segment'>
-        Anschließend nehme ich
+        Du zahlst nur dann, wenn du mit dieser Stunde zufrieden bist.
+        So können wir uns kennenlernen
+        und du kannst dich von mir überzeugen,
+        ganz ohne Zahlungsdruck.
+      </p>
+      <p class='segment'>
+        Ich nehme
         <span class='underline is-blue'>
           zwischen <nobr>{{price.lessons.value_low}} und
             {{price.lessons.value_high}}{{price.currency_symbol}}</nobr>
           pro <nobr>{{price.lessons.minutes}} Minuten</nobr></span>.
         Der genaue Preis hängt von der Komplexität des Themas
         und der notwendigen Vorbereitungszeit ab.
-        {{!-- du bezahlst jedoch nur die Zeit, die wir auch tatsächlich nutzen.
-        Dies gilt sowohl für meine Hilfe per Meeting als auch per Chat. --}}
       </p>
       <p>
         Musterlösungen und Korrekturen kosten meist
@@ -153,12 +156,7 @@
           {{price.solutions.value_high}}{{price.currency_symbol}}</nobr>
           pro Aufgabe</span>,
         je nach Umfang und voraussichtlichem Zeitaufwand.
-        Die Erläuterung meiner Lösung ist im Preis inbegriffen.
       </p>
-      {{!-- <p class='segment'>
-        Falls du sehr viele Stunden Nachhilfe bei mir nimmst,
-        können wir auch gerne über eine Vergünstigung sprechen.
-      </p> --}}
       <div data-mark='sticky-header-out' class='segment pt-1'>
         <div class='action'>
           {{#> actions/spoiler
