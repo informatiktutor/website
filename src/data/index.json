@@ -64,8 +64,10 @@
       "Datenbanken II",
       "Mathematik I",
       "Mathematik II",
+      "Diskrete Mathematik",
       "Einführung in Betriebssysteme und Rechnerarchitektur",
       "Betriebssysteme und verteilte Systeme",
+      "Kommunikationstechnik und Netze",
       "Informatikprojekt",
       "Praxisprojekt"
     ],
@@ -79,8 +81,7 @@
     ],
     "optional": {
       "attended": ["Einführung in Docker", "Software-Qualitätssicherung"]
-    },
-    "paused": ["Diskrete Mathematik", "Kommunikationstechnik und Netze"]
+    }
   },
   "payment": {
     "methods": ["PayPal", "Banküberweisung"],
