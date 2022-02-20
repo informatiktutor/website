@@ -86,10 +86,8 @@
     }
   },
   "payment": {
-    "methods": ["PayPal", "Banküberweisung"],
-    "alternative_paypal_methods": ["Lastschrift", "Kreditkarte"],
-    "paypal_fee_overview_url": "https://www.paypal.com/de/webapps/mpp/paypal-fees",
-    "paypal_fee_calculator_url": "https://www.online-gebuehrenrechner.de/paypal.php"
+    "methods": ["Banküberweisung"],
+    "girocode_information_url": "https://de.wikipedia.org/wiki/EPC-QR-Code"
   },
   "software": {
     "by_category": {
