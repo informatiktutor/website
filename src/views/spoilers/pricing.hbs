@@ -1,22 +1,5 @@
 <p>
-  Nach unserer ersten Stunde finden Zahlungen im Voraus statt.
-  Du erhältst für jede deiner Zahlungen einen Beleg für deine Unterlagen.
-</p>
-<p>
-  Das Geld für Minuten, die wir nicht genutzt haben, kannst du
-  <span class='underline is-blue-light'>jederzeit zurück erhalten</span>
-  oder für zukünftige Stunden als Guthaben bei mir aufbewahren.
-</p>
-<p>
-  <span class='underline is-blue-light'>Teile dir die Kosten</span>
-  gerne mit anderen Studenten,
-  indem ihr gemeinsam bei mir Nachhilfe nehmt!
-  Sag mir vorher nur kurz Bescheid,
-  mit wie vielen Personen ich rechnen muss.
-</p>
-{{> components/divider}}
-<p>
-  Ich akzeptiere die folgenden Zahlungsweisen:
+  Ich akzeptiere die folgenden Zahlungsmethoden:
 </p>
 <ul class='inline-list'>
   {{#each payment.methods}}
@@ -28,43 +11,27 @@
   {{/each}}
 </ul>
 <p>
-  Falls keine der beiden Optionen infrage kommen sollte,
-  kannst du auch mit einer dieser Methoden zahlen:
-</p>
-<ul class='inline-list'>
-  {{#each payment.alternative_paypal_methods}}
-  <li>
-    {{> modifiers/highlight class='is-blue-light is-slim'
-      text=this
-    }}
-  </li>
-  {{/each}}
-</ul>
-<p>
-  Die Abwicklung erfolgt über PayPal,
-  die Erstellung eines Kontos ist hierfür jedoch nicht notwendig.
-</p>
-<p>
-  Die anfallenden Transaktions&shy;gebühren in Höhe von
-  <nobr><span class='underline is-blue-light'>2,49% + 0,35€</span></nobr>
-  ({{> components/link
-    id='ext-paypal-fees-overview'
-    href=payment.paypal_fee_overview_url
-    name='Quelle'
+  Die zur Überweisung notwendigen Daten findest du auf deiner Rechnung,
+  die ich dir nach unserer Sitzung ausstelle.
+  Du hast die Möglichkeit unkompliziert
+  per mobiler Banking-App zu zahlen,
+  indem du den auf der Rechnung befindlichen
+  {{> components/link
+    id='ext-epc-qr-code'
+    href=payment.girocode_information_url
+    name='Girocode'
     target='_blank'
     no-track=true
-  }})
-  werden so in den Preis integriert,
-  dass der Restbetrag dem ursprünglichen Preis entspricht.
+  }}
+  mit der Kamera deines Smartphones scannst.
 </p>
 <p>
-  In der Regel handelt es sich dabei
-  um eine Erhöhung des Betrags von <nobr>ca. 1€</nobr>
-  ({{> components/link
-    id='ext-paypal-fees-calculator'
-    href=payment.paypal_fee_calculator_url
-    name='Gebührenrechner'
-    target='_blank'
-    no-track=true
-  }}).
+  <span class='underline is-blue-light'>Spare Kosten</span>
+  indem du zusammen mit anderen Studenten bei mir Nachhilfe nimmst!
+  Sag mir dazu einfach vorher Bescheid,
+  damit ich weiß, mit wie vielen Personen ich rechnen muss.
+</p>
+<p>
+  Falls du sehr viele Stunden nehmen solltest,
+  können wir auch über eine individuelle Vergünstigung sprechen.
 </p>
