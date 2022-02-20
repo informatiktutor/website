@@ -91,7 +91,7 @@
   },
   "software": {
     "by_category": {
-      "meeting": ["discord", "zoom", "google_meet"],
+      "meeting": ["zoom", "discord", "google_meet"],
       "programming": ["code_with_me", "codetogether"]
     },
     "zoom": {
