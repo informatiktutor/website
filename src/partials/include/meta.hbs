@@ -13,3 +13,6 @@
 {{#if meta.redirect}}
 <meta http-equiv="refresh" content="0;URL={{when (env 'production') (concat 'https://' (shared 'contact.domain')) '/'}}{{meta.redirect}}">
 {{/if}}
+{{#if index}}
+<meta name="google-site-verification" content="9tT4LSS6xmYQzWCBoSQ6L8yuNTz2RAlxFr2TTWpTZuQ" />
+{{/if}}
