@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "Nachhilfe für Informatik-Studenten",
-    "description": "Auf dieser Seite findest du alle Informationen zu meinem Nachhilfe-Angebot"
+    "description": "Individuelle Nachhilfe im Bereich Informatik im Einzelunterricht oder in Gruppen von Jonas van den Berg",
+    "robots": "index,follow,noimageindex"
   },
   "price": {
     "currency_symbol": "€",

@@ -14,6 +14,7 @@ const variables = {
 const common = {
   entry: {
     index: './src/scripts/index.js',
+    prices: './src/scripts/prices.js',
     contact: './src/scripts/contact.js',
     privacy: './src/scripts/privacy.js',
     imprint: './src/scripts/imprint.js',
@@ -83,6 +84,12 @@ const common = {
       chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
+      filename: 'preise.html',
+      template: 'src/views/preise.hbs',
+      templateParameters: require('./src/data/prices'),
+      chunks: ['prices'],
+    }),
+    new HtmlWebpackPlugin({
       filename: 'kontakt.html',
       template: 'src/views/kontakt.hbs',
       templateParameters: require('./src/data/contact'),
@@ -91,11 +98,13 @@ const common = {
     new HtmlWebpackPlugin({
       filename: 'impressum.html',
       template: 'src/views/impressum.hbs',
+      templateParameters: require('./src/data/impressum'),
       chunks: ['imprint'],
     }),
     new HtmlWebpackPlugin({
       filename: 'datenschutz.html',
       template: 'src/views/datenschutz.hbs',
+      templateParameters: require('./src/data/datenschutz'),
       chunks: ['privacy'],
     }),
   ],
