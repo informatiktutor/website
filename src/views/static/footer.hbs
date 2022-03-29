@@ -58,11 +58,15 @@
       }}
       {{/unless}}
       <p class='is-faint' style='padding-top: 1rem'>
-        Copyright &copy; 2021
+        Copyright &copy; 2021-{{now_year}}
+        &hairsp;
         <span style='white-space: nowrap'>
           {{shared 'contact.name.second'}}
           {{shared 'contact.name.last'}}
         </span>
+      </p>
+      <p class='is-faint-2'>
+        Zuletzt aktualisiert am {{now_date}} um {{now_time}} Uhr
       </p>
     </div>
   </footer>

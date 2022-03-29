@@ -230,6 +230,10 @@ $section-padding-slim: 2rem;
         font-size: 11pt;
         color: rgb(112, 112, 112);
       }
+      &.is-faint-2 {
+        font-size: 10pt;
+        color: rgb(153, 153, 153);
+      }
     }
   }
 }
@@ -323,7 +327,14 @@ $section-padding-slim: 2rem;
 }
 
 .section {
-  padding: 3.5rem $section-padding;
+  padding: 5rem $section-padding;
+
+  &.is-first {
+    padding-top: 3.5rem;
+  }
+  &.is-last {
+    padding-bottom: 0rem;
+  }
 
   @media only screen and (max-width: $mobile-small-breakpoint) {
     padding-left: $section-padding-slim;
