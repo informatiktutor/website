@@ -70,20 +70,24 @@
       "Kommunikationstechnik und Netze",
       "Künstliche Intelligenz",
       "Informatikprojekt",
-      "Praxisprojekt"
+      "Praxisprojekt",
+      "Einführung in Docker",
+      "Software-Qualitätssicherung",
+      "Programmiersprachen und Compilerbau"
     ],
     "other_degrees": [
+      "Betriebliche Anwendungssysteme 1",
+      "Mathematik",
+      "Mathematik für Wirtschaftsinformatiker",
       "Informatik I",
       "Informatik II",
       "Einführungsprojekt in die Informatik",
       "Datenbanksysteme",
       "Grundlagen des Web",
+      "Web Development",
       "Mobile Computing",
       "Programmieren"
-    ],
-    "optional": {
-      "attended": ["Einführung in Docker", "Software-Qualitätssicherung"]
-    }
+    ]
   },
   "payment": {
     "methods": ["Banküberweisung"],

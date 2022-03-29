@@ -1,21 +1,22 @@
 <div class='with-images at-top'>
   <div id='papier' class='image is-repeated is-right is-faint'></div>
   <div class='image-content'>
-    <section class='section'>
+    <section class='section is-first'>
       <div class='hero is-last'>
         <div class='segment avatar-container'>
           <h1>
             <span class='is-block'>
-              {{#> modifiers/highlight class='is-black is-wide' }}
+              {{#> modifiers/highlight class='is-light is-wide' }}
               <span class='js-greeting'>{{
                 greetings.default
-              }}</span><span>{{
-                greetings.punctuation
               }}</span>
+              <!-- <span>{{
+                greetings.punctuation
+              }}</span> -->
               {{/modifiers/highlight}}
             </span>
             <span class='is-block pt-2'>
-              {{> modifiers/highlight class='is-black is-wide'
+              {{> modifiers/highlight class='is-light is-wide'
                 text='Mein Name ist Jonas'
               }}
             </span>
@@ -27,24 +28,27 @@
         <div class='segment'>
           <div class='rectangle is-green is-wide-desktop'>
             <h2>
-              Ich gebe Studenten der Informatik privat Nachhilfe
+              Ich gebe Informatik-Studenten freiberuflich Nachhilfe
+              auf Augenhöhe.
             </h2>
           </div>
         </div>
-        <p class='segment'>
+        <!--<p class="segment">
           Du lernst bei mir die Inhalte
           deiner Vorlesungen zu verstehen und anzuwenden,
           die dir im Moment noch Schwierigkeiten bereiten.
-        </p>
-        <p data-mark='sticky-header-in' class='segment'>
-          Ich erkläre sie dir individuell im Einzelunterricht,
-          so dass du deine Aufgaben eigenständig lösen kannst.
+        </p>-->
+        <p data-mark="sticky-header-in" class="segment">
+          Durch meine Erfahrung
+          und meine Fähigkeit selbstständig komplexe Themen aufzuschlüsseln,
+          kann ich dir Inhalte verständlich erklären
+          und dir neue Perspektiven bieten.
         </p>
         <div class='segment pt-1'>
           <div class='action'>
             {{> actions/link
               id='contact-start'
-              name='Kontakt'
+              name='Kontaktiere mich'
               href=(shared 'links.local.contact' (env))
               no-track=false
             }}
@@ -65,15 +69,8 @@
         <span class='underline is-green'>Mathematik</span> oder
         <span class='underline is-green'>Logik</span>
         zum Inhalt haben.
-      </p>
-      <p class='segment'>
-        Gerne helfe ich dir auch bei der
-        <span class='underline is-green'>Korrektur</span>
-        und
-        <span class='underline is-green'>Verbesserung</span>
-        deiner Lösungen
-        oder ich erstelle einzelne
-        <span class='underline is-green'>Musterlösungen</span>.
+        Ich biete auch die Korrektur und Verbesserung deiner Lösungen an
+        oder erstelle einzelne Musterlösungen.
       </p>
       <div class='segment pt-1'>
         <div class='action'>
@@ -85,32 +82,19 @@
           {{/actions/spoiler}}
         </div>
       </div>
-    </section>
-  </div>
-</div>
-
-<div class='with-images'>
-  <div id='papier' class='image is-repeated is-right is-faint'></div>
-  <div class='image-content'>
-    <section id='software' class='section'>
-      <p class='segment'>
-        {{> modifiers/highlight class='is-green-light'
-          text='Mein Unterricht findet online statt'
-        }}
+      <p class='segment pt-4'>
+        <span class='underline is-green'>
+          Mein Unterricht findet online statt</span>,
+        so kann ich kurzfristig und zu praktisch jeder Tageszeit
+        zur Verfügung stehen.
       </p>
       <p class='segment'>
         Wir telefonieren über
         {{prop (prop software (prop software.by_category.meeting 0)) 'name'}},
         {{prop (prop software (prop software.by_category.meeting 1)) 'name'}}
         oder eine ähnliche Software.
-        Ich teile meinen Bildschirm mit dir
-        und nehme meinen Block und meinen Taschenrechner auf,
+        Ich teile meinen Bildschirm und meine Notizen mit dir,
         um dir Inhalte anschaulich erklären zu können.
-      </p>
-      <p class='segment'>
-        Außerdem programmieren wir gemeinsam
-        in einer geteilten Entwicklungs&shy;umgebung,
-        welche zwischen unseren Computern synchronisiert wird.
       </p>
       <div class='segment pt-1'>
         <div class='action'>
@@ -122,6 +106,35 @@
           {{/actions/spoiler}}
         </div>
       </div>
+    </section>
+  </div>
+</div>
+
+<div class='with-images'>
+  <div id='papier' class='image is-repeated is-right is-faint'></div>
+  <div class='image-content'>
+    <section class='section'>
+      <p class='segment'>
+        {{> modifiers/highlight class='is-black'
+          text='Benötigst du Hilfe?'
+        }}
+      </p>
+      <p class='segment'>
+        Du kannst mich jederzeit kontaktieren
+        und schildern wobei du Schwierigkeiten hast.
+        Ich werde so zeitnah wie möglich auf dich zukommen!
+      </p>
+      <div class='segment pt-1'>
+        <div class='action'>
+          {{> actions/link
+            id='contact-end'
+            name='Kontakt'
+            href=(shared 'links.local.contact' (env))
+            no-track=false
+          }}
+        </div>
+      </div>
+      {{!-- <div class='footer-separator'></div> --}}
     </section>
   </div>
   <div id='papier' class='image is-repeated is-left is-faint'></div>
@@ -174,38 +187,9 @@
 <div class='with-images'>
   <div id='papier' class='image is-repeated is-right is-faint'></div>
   <div class='image-content'>
-    <section class='section'>
+    <section class='section is-last'>
       <p class='segment'>
         {{> modifiers/highlight class='is-black'
-          text='Brauchst du Hilfe?'
-        }}
-      </p>
-      <p class='segment'>
-        Du kannst mich jederzeit kontaktieren
-        und schildern wobei du Schwierigkeiten hast.
-        Ich werde so zeitnah wie möglich auf dich zukommen!
-      </p>
-      <div class='segment pt-1'>
-        <div class='action'>
-          {{> actions/link
-            id='contact-end'
-            name='Kontakt'
-            href=(shared 'links.local.contact' (env))
-            no-track=false
-          }}
-        </div>
-      </div>
-      {{!-- <div class='footer-separator'></div> --}}
-    </section>
-  </div>
-  <div id='papier' class='image is-repeated is-left is-faint'></div>
-</div>
-
-<div class='slanted-shadow is-green is-rising is-1 mt-4'>
-  <div class='slanted-shadow__content'>
-    <section class='section'>
-      <p class='segment'>
-        {{> modifiers/highlight class='is-green-subtle'
           text='Über mich'
         }}
       </p>
@@ -244,7 +228,7 @@
       <p>
         Gerne berate ich dich auch zu deinem Studium
         oder berichte aus meinen eigenen Erfahrungen,
-        wenn du mal die Perspektive eines Absolventen gebrauchen kannst.
+        wenn du mal die Perspektive eines Absolventen gebrauchen kannst!
       </p>
       <div class='segment py-2'>
         <div class='action'>
@@ -258,6 +242,7 @@
       </div>
     </section>
   </div>
+  <div id='papier' class='image is-repeated is-left is-faint'></div>
 </div>
 
 <div class='with-images'>

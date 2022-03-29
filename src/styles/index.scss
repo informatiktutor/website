@@ -91,7 +91,7 @@ $rectangle-mobile-padding: 1rem;
 
   // border-left: none;
   // border-right: none;
-  font-size: 15.5pt;
+  font-size: 16pt;
   line-height: 1.325;
 
   border-radius: $border-radius;
@@ -106,9 +106,10 @@ $rectangle-mobile-padding: 1rem;
     flex-direction: row;
     align-items: center;
 
+    border-radius: $border-radius;
+
     &:hover {
       background-color: rgb(250, 250, 250);
-      border-radius: $border-radius;
     }
 
     &__name {
@@ -133,7 +134,6 @@ $rectangle-mobile-padding: 1rem;
 
   &__content {
     border-top: 2px solid whitesmoke;
-    // outline: 2px solid whitesmoke;
 
     &.is-animated {
       overflow: hidden;
