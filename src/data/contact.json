@@ -1,7 +1,8 @@
 {
   "meta": {
     "title": "Kontakt",
-    "description": "Hier findest Du alle Möglichkeiten mit mir in Kontakt zu treten."
+    "description": "Möglichkeiten zur Kontaktaufnahme und Terminvereinbarung",
+    "robots": "index,nofollow,nosnippet,noarchive,noimageindex"
   },
   "apps": {
     "whatsapp": {

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot-Image
+User-agent: AdsBot-Google
+Disallow: /
+
+Sitemap: https://informatiktutor.de/sitemap.xml
