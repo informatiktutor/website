@@ -49,4 +49,4 @@ Push the changes to update the live page.
 
 This repository does not come with any license.
 
-*Copyright &copy; 2021 Jonas van den Berg*
+*Copyright &copy; 2021-2022 Jonas van den Berg*
