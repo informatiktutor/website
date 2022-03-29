@@ -332,9 +332,6 @@ $section-padding-slim: 2rem;
   &.is-first {
     padding-top: 3.5rem;
   }
-  &.is-last {
-    padding-bottom: 0rem;
-  }
 
   @media only screen and (max-width: $mobile-small-breakpoint) {
     padding-left: $section-padding-slim;
