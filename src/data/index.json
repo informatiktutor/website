@@ -30,9 +30,13 @@
     }
   },
   "greetings": {
-    "default": "Hallo",
+    "default": "Guten Tag",
     "punctuation": "!",
     "time_based": [
+      {
+        "value": "Guten Abend",
+        "hour_range": [0, 4]
+      },
       {
         "value": "Guten Morgen",
         "hour_range": [4, 11]
