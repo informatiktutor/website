@@ -18,7 +18,8 @@
     "serve": "npm run serve:production",
     "watch": "npm run serve:development",
     "pages:clean": "rm -rf docs/*",
-    "pages:deploy": "npm run build:production -- -o docs"
+    "pages:deploy": "npm run build:production -- -o docs",
+    "pages:serve": "http-server docs -p 8000"
   },
   "dependencies": {
     "mobile-detect": "^1.4.5",
@@ -40,6 +41,7 @@
     "handlebars": "^4.7.7",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
     "husky": "^7.0.4",
     "mathsass": "^0.11.0",
     "mini-css-extract-plugin": "^2.4.5",
