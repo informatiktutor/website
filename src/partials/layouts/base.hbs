@@ -15,8 +15,10 @@
   {{> static/header}}
   {{/if}}
   <div class='root'>
+    {{#unless noheader}}
     {{#unless index}}
     {{> static/back}}
+    {{/unless}}
     {{/unless}}
     <div class='page'>
       {{#> content-block}}

@@ -7,7 +7,11 @@
             <span class='icon'>
               <span class='icon-arrow is-left is-small'></span>
             </span>
-            <span class='text'>Zurück</span>
+            {{#if back_text includeZero=true}}
+              <span class='text'>{{back_text}}</span>
+            {{else}}
+              <span class='text'>Zurück</span>
+            {{/if}}
           </span>
         </a>
       </div>
