@@ -12,6 +12,8 @@
 <meta property="og:type" content="website" />
 {{#if meta.redirect}}
 <meta http-equiv="refresh" content="0;URL={{when (env 'production') (concat 'https://' (shared 'contact.domain')) '/'}}{{meta.redirect}}">
+{{else if meta.redirect_external}}
+<meta http-equiv="refresh" content="0;URL={{meta.redirect_external}}">
 {{/if}}
 {{#if index}}
 <meta name="google-site-verification" content="9tT4LSS6xmYQzWCBoSQ6L8yuNTz2RAlxFr2TTWpTZuQ" />

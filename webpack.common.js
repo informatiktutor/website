@@ -18,6 +18,7 @@ const common = {
     contact: './src/scripts/contact.js',
     privacy: './src/scripts/privacy.js',
     imprint: './src/scripts/imprint.js',
+    rating: './src/scripts/rating.js'
   },
   target: ['web', 'es5'],
   module: {
@@ -106,6 +107,12 @@ const common = {
       template: 'src/views/datenschutz.hbs',
       templateParameters: require('./src/data/datenschutz'),
       chunks: ['privacy'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'bewerten.html',
+      template: 'src/views/bewerten.hbs',
+      templateParameters: require('./src/data/rating'),
+      chunks: ['rating'],
     }),
   ],
   output: {
