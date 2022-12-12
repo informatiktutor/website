@@ -30,7 +30,7 @@ The `pre-commit` hook will automatically run the following command
 and stage any generated files:
 
 ```
-$ yarn pages:deploy
+$ yarn pages:build
 ```
 
 (You do not need to run this command manually!)

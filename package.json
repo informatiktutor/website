@@ -18,7 +18,7 @@
     "serve": "npm run serve:production",
     "watch": "npm run serve:development",
     "pages:clean": "rm -rf docs/*",
-    "pages:deploy": "npm run build:production -- -o docs",
+    "pages:build": "npm run build:production -- -o docs",
     "pages:serve": "http-server docs -p 8000"
   },
   "dependencies": {
