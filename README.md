@@ -5,8 +5,8 @@
 Install [`husky`](https://www.npmjs.com/package/husky) hooks and package dependencies.
 
 ```
-$ yarn prepare
 $ yarn install
+$ yarn prepare
 ```
 
 ## Development
@@ -30,7 +30,7 @@ The `pre-commit` hook will automatically run the following command
 and stage any generated files:
 
 ```
-$ yarn pages:build
+yarn pages:build
 ```
 
 (You do not need to run this command manually!)
