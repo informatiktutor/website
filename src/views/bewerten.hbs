@@ -7,7 +7,15 @@
   </h1>
   <p class='segment is-size-smaller pt-4'>
     Mit dem Klick auf "Fortfahren" wird ein Google-Formular zur Bewertung geladen.
-    Hierbei gilt die <a href="https://policies.google.com/privacy">Datenschutz&shy;erklärung</a> von Google
+    Hierbei gilt die
+    {{> components/link
+      id='google-privacy'
+      html='Datenschutz&shy;erklärung'
+      href='https://policies.google.com/privacy'
+      no-track=true
+      analytics=false
+    }}
+    von Google
     zur Erhebung und Speicherung von Daten und dem Setzen von Cookies.
   </p>
   <div>
