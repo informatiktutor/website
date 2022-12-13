@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkinformatiktutor=self.webpackChunkinformatiktutor||[]).push([[21],{872:function(){var n,t;window.onFormLoaded=(n=document.getElementById("iframe-container"),t=0,function(){t>0&&(n.style.height="50vh"),window.scrollTo(0,0),t++})}},function(n){n(n.s=872)}]);
