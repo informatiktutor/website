@@ -18,6 +18,9 @@ function onFormLoaded() {
   const embedContainer = document.querySelector('#iframe-container');
   const iframe = embedContainer.querySelector('iframe');
 
+  const ratingPreview = document.querySelector('#rating-preview');
+  ratingPreview.addEventListener('dragstart', () => false);
+
   let toggled = false;
   continueButton.addEventListener('click', (e) => {
     if (toggled) {
