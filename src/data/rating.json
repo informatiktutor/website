@@ -2,6 +2,7 @@
   "meta": {
     "title": "Meinen Unterricht bewerten",
     "description": "Ich würde mich freuen, wenn du dir einen Moment Zeit nehmen würdest um meine Leistung zu bewerten",
-    "robots": "noindex,nofollow,nosnippet,noarchive"
+    "robots": "noindex,nofollow,nosnippet,noarchive",
+    "redirect_external": "https://forms.gle/MMEP8jFvUmvgV1iSA"
   }
 }
