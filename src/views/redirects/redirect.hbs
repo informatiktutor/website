@@ -1,6 +1,11 @@
 <div class='has-small-text'>
   <div class='section is-small'>
     Falls keine Weiterleitung erfolgt,
-    klicke <a href="/{{meta.redirect}}">hier</a>.
+    klicke
+    {{#if meta.redirect}}
+    <a href="{{when (env 'production') (concat 'https://' (shared 'contact.domain')) '/'}}{{meta.redirect}}">hier</a>.
+    {{else if meta.redirect_external}}
+    <a href="{{meta.redirect_external}}">hier</a>.
+    {{/if}}
   </div>
 </div>
