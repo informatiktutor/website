@@ -896,3 +896,19 @@ a {
 .is-bolder {
   font-weight: 600;
 }
+
+.info-banner {
+  background-color: rgb(255, 252, 93);
+  font-size: 14.5pt;
+  margin-top: 1rem;
+
+  .info-banner__container {
+    color: black;
+    max-width: $max-width;
+    padding-right: $section-padding;
+    padding-left: $section-padding;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: auto;
+  }
+}
