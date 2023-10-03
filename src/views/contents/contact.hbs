@@ -61,17 +61,17 @@
       {{shared 'contact.phone.number'}}
       {{/components/link}}
     </p>
-    <p>
+    <!--<p>
       <span
         class='tag highlight is-light is-small is-rounded is-padded'>Discord</span><span>
         {{~apps.discord.name~}}
       </span>
-    </p>
+    </p>-->
   </div>
 </section>
 <section class='section is-small'>
   <h2 class='title'>
-    <span class='highlight is-black is-padded'>Messenger</span>
+    <span class='highlight is-black is-padded'>Nachricht</span>
   </h2>
   <div class='contact-buttons'>
     {{> components/contact-button
@@ -83,7 +83,7 @@
       target='_blank'
       no-track=true
     }}
-    {{> components/contact-button
+    <!--{{> components/contact-button
       id='discord'
       name='Discord'
       icon='discord'
@@ -91,7 +91,7 @@
       href=apps.discord.open_url
       target='_blank'
       no-track=true
-    }}
+    }}-->
     {{> components/contact-button
       id='signal'
       name='Signal'
@@ -101,9 +101,17 @@
       target='_blank'
       no-track=true
     }}
+    {{> components/contact-button
+      id='email'
+      name='E-Mail'
+      after_name='schreiben'
+      icon='paper-plane'
+      href=(shared 'contact.email.url')
+      no-track=false
+    }}
   </div>
 </section>
-<section class='section is-small'>
+<!--<section class='section is-small'>
   <h2 class='title'>
     <span class='highlight is-black is-padded'>Weiteres</span>
   </h2>
@@ -116,7 +124,7 @@
       href=(shared 'contact.email.url')
       no-track=false
     }}
-    <!--{{> components/contact-button
+    {{> components/contact-button
       id='meeting'
       name='Meeting'
       after_name='buchen'
@@ -124,9 +132,9 @@
       href=(shared 'contact.booking')
       target='_blank'
       no-track=true
-    }}-->
+    }}
   </div>
-</section>
+</section>-->
 <section class='section is-small'>
   <h2 class='title'>
     <span class='highlight is-black is-padded'>Plattformen</span>
@@ -145,6 +153,21 @@
       name='LinkedIn'
       icon='linkedin'
       href=(shared 'contact.platforms.linkedin')
+      target='_blank'
+      no-track=true
+    }}
+  </div>
+</section>
+<section class='section is-small'>
+  <h2 class='title'>
+    <span class='highlight is-black is-padded'>Weiteres von mir</span>
+  </h2>
+  <div class='contact-buttons is-subtle'>
+    {{> components/contact-button
+      id='jonasberge'
+      name='Fotografie'
+      icon='photo'
+      href=(shared 'contact.platforms.jonasberge')
       target='_blank'
       no-track=true
     }}

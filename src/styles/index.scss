@@ -17,13 +17,8 @@
 .section,
 .header,
 .footer {
-  max-width: calc(#{$max-width} - 64px); // FIXME
   margin: auto;
   margin-top: 0;
-
-  // @media only screen and (min-width: $mobile-breakpoint) {
-  //   padding: 0 $page-padding;
-  // }
 }
 
 #intro {
@@ -52,6 +47,11 @@ $rectangle-mobile-padding: 1rem;
   &.is-green {
     background-color: $palette-green;
     color: $color-bright-text;
+  }
+
+  &.is-green-subtle {
+    background-color: $palette-green-subtle;
+    color: $palette-black;
   }
 
   // @media only screen and (min-width: $mobile-breakpoint) {
@@ -320,11 +320,12 @@ $spoiler-paragraph-margin: 1.25rem;
 }
 
 .course-list {
-  list-style-type: none;
+  /* list-style-type: none; /**/
   font-size: 15pt;
   // line-height: 1.3;
   padding: 0.2rem 0;
-  padding-left: 0.25rem;
+  /* padding-left: 0.25rem; /**/
+  padding-left: 1.25em;
 
   li {
     margin-bottom: 0.8rem;
@@ -363,37 +364,6 @@ $spoiler-paragraph-margin: 1.25rem;
 .is-underlined-grey {
   text-decoration: underline;
   text-decoration-color: whitesmoke;
-}
-
-.avatar-container {
-  $border-thickness: 3px;
-  $border-radius: 20pt;
-
-  display: flex;
-
-  > * {
-    flex: 1;
-  }
-
-  > .avatar {
-    flex: 0;
-    margin: $border-thickness;
-    margin-right: -1rem;
-    margin-left: 1.25rem;
-    margin-top: 0; // FIXME
-    z-index: -1000;
-    user-select: none;
-
-    // @media only screen and (max-width: $mobile-breakpoint) {
-    //   margin-right: -1 * $rectangle-mobile-padding;
-    // }
-
-    img {
-      image-rendering: auto;
-      border-radius: $border-radius;
-      outline: $border-thickness solid rgb(239, 239, 239);
-    }
-  }
 }
 
 // .avatar-container {

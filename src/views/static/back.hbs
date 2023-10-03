@@ -4,14 +4,18 @@
       <div class='breadcrumb'>
         <a id='back-link' href='/'>
           <span class='breadcrumb__content'>
-            <span class='icon'>
-              <span class='icon-arrow is-left is-small'></span>
-            </span>
-            {{#if back_text includeZero=true}}
-              <span class='text'>{{back_text}}</span>
-            {{else}}
-              <span class='text'>Zurück</span>
-            {{/if}}
+            <div style="display: inline-block">
+              <div class='avatar-container small-avatar'>
+                <div class='avatar' style="margin-left: 4pt; margin-right: 10pt">
+                  <img src='images/logo.jpg'></img>
+                </div>
+              </div>
+              {{#if back_text includeZero=true}}
+                <span class='text'>{{back_text}}</span>
+              {{else}}
+                <span class='text'>informatiktutor.de</span>
+              {{/if}}
+            </div>
           </span>
         </a>
       </div>

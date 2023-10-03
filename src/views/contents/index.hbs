@@ -1,4 +1,5 @@
 <!-- {{> components/info-banner }} -->
+
 <div class='with-images at-top'>
   <div id='papier' class='image is-repeated is-right is-faint'></div>
   <div class='image-content'>
@@ -7,45 +8,48 @@
         <div class='segment avatar-container'>
           <p>
             <span class='is-block'>
-              {{#> modifiers/highlight class='is-light is-wide' }}
-              <span class='js-greeting'>{{
+              {{#> modifiers/highlight class='is-white is-wide' }}
+              <span class='js-greeting' style="display: none">{{
                 greetings.default
               }}</span>
+              <span><b>{{shared 'contact.name.second'}} {{shared 'contact.name.last'}}</b></span>
               <!-- <span>{{
                 greetings.punctuation
               }}</span> -->
               {{/modifiers/highlight}}
             </span>
             <span class='is-block pt-2'>
-              {{> modifiers/highlight class='is-light is-wide'
-                text='Mein Name ist Jonas'
+              {{> modifiers/highlight class='is-white is-wide'
+                text='Unterricht im Bereich Informatik'
               }}
+              <!--{{> modifiers/highlight class='is-light is-wide'
+                text='Mein Name ist Jonas'
+              }}-->
             </span>
           </p>
           <div class='avatar'>
-            <img src='images/avatar.jpg' height='72'></img>
+            <img src='images/avatar2.jpg' height='72'></img>
           </div>
         </div>
         <div class='segment'>
-          <div class='rectangle is-green is-wide-desktop'>
+          <div class='rectangle is-green-subtle is-wide-desktop'>
             <h1>
-              Ich gebe Informatik-Studenten freiberuflich Nachhilfe
-              auf Augenhöhe.
+              Ich biete Informatik-Studenten
+              individuellen Unterricht auf Augenhöhe
             </h1>
           </div>
         </div>
         <p class="segment">
-          Du lernst bei mir die Themen zu verstehen,
-          die dir im Moment noch Schwierigkeiten bereiten,
-          so dass du deine Aufgaben eigenständig lösen kannst.
+          Mein Angebot umfasst zahlreiche Module der Informatik,
+          mit Augenmerk auf deine spezifischen Bedürfnisse in einer angenehmen Arbeitsatmosphäre.
         </p>
         <p data-mark="sticky-header-in" class="segment">
-          Durch meine Erfahrung
-          und meine Fähigkeit selbstständig neues zu lernen,
+          Da ich mir den großteil meines Wissens eigenständig angeeignet habe
+          und ich jahrelange praktische Erfahrung mitbringe,
           kann ich dir Inhalte verständlich erklären
           und dir neue Perspektiven bieten.
         </p>
-        <div class='segment pt-1'>
+        <div class='segment pt-4'>
           <div class='action'>
             {{> actions/link
               id='contact-start'
@@ -65,7 +69,7 @@
   <div class='slanted-shadow__content'>
     <section id='kurse' class='section'>
       <p class='segment'>
-        Ich behandle mit dir alle Kurse, die
+        Ich behandle mit dir alle Themen, die
         <span class='underline is-green'>Programmierung</span>,
         <span class='underline is-green'>Mathematik</span> oder
         <span class='underline is-green'>Logik</span>
@@ -77,7 +81,7 @@
         <div class='action'>
           {{#> actions/spoiler
             id='courses'
-            name='Liste der Kurse'
+            name='Liste der Themenbereiche'
           }}
           {{> spoilers/courses.hbs}}
           {{/actions/spoiler}}
@@ -94,8 +98,8 @@
         {{prop (prop software (prop software.by_category.meeting 0)) 'name'}},
         {{prop (prop software (prop software.by_category.meeting 1)) 'name'}}
         oder eine ähnliche Software.
-        Ich teile meinen Bildschirm und meine Notizen mit dir,
-        um dir Inhalte anschaulich erklären zu können.
+        Ich teile meinen Bildschirm und meine Mitschriften mit dir,
+        um Inhalte anschaulich erklären zu können.
       </p>
       <div class='segment pt-1'>
         <div class='action'>
@@ -123,7 +127,7 @@
       <p class='segment'>
         Du kannst mich jederzeit kontaktieren
         und schildern wobei du Schwierigkeiten hast.
-        Ich werde so zeitnah wie möglich auf dich zukommen!
+        Ich werde so zeitnah wie möglich auf dich zukommen.
       </p>
       <div class='segment pt-1'>
         <div class='action'>
@@ -151,7 +155,7 @@
         }}
       </p>
       <p class='segment'>
-        Du zahlst nur dann, wenn du mit deiner Stunde zufrieden bist.
+        Du zahlst nur dann, wenn du mit dem Unterricht zufrieden bist.
         So können wir uns kennenlernen
         und du kannst dich von mir überzeugen,
         ganz ohne Zahlungsdruck.
@@ -159,17 +163,14 @@
       <p class='segment'>
         Ich nehme
         <span class='underline is-blue'>
-          zwischen <nobr>{{price.lessons.value_low}} und
+          zwischen <nobr>{{price.lessons.value_low}}{{price.currency_symbol}} und
             {{price.lessons.value_high}}{{price.currency_symbol}}</nobr>
           pro <nobr>{{price.lessons.minutes}} Minuten</nobr></span>.
         Der genaue Preis hängt von der Komplexität des Themas
         und der notwendigen Vorbereitungszeit ab.
       </p>
       <p>
-        Musterlösungen und Korrekturen kosten meist
-        <span class='underline is-blue'><nobr>{{price.solutions.value_low}} bis
-          {{price.solutions.value_high}}{{price.currency_symbol}}</nobr>
-          pro Aufgabe</span>,
+        Musterlösungen und Korrekturen werden ähnlich berechnet,
         je nach Umfang und voraussichtlichem Zeitaufwand.
       </p>
       <div data-mark='sticky-header-out' class='segment pt-1'>
@@ -196,11 +197,10 @@
         }}
       </p>
       <p>
-        Ich heiße
+        Mein Name ist
         {{shared 'contact.name.second'}}
         {{shared 'contact.name.last'}},
-        ich bin 23 Jahre alt
-        und habe Informatik mit Abschluss Bachelor an der
+        ich habe Informatik an der
         {{> components/link
           id='ext-th-koeln'
           href=external.university.url
@@ -209,34 +209,31 @@
           no-track=true
           analytics=false
         }}
-        studiert.
-        Ich war bereits während meines Studiums als Tutor beschäftigt
-        <nobr>({{> components/link
-          id='ext-tutoring-activity'
-          href=external.tutoring.url
-          name='siehe hier'
-          target='_blank'
-          no-track=true
-        }})</nobr>
-        und gebe nun nebenher freiberuflich Nachhilfe.
+        am Campus Gummersbach studiert
+        und unterrichte seit meinem Abschluss in 2021 nebenher freiberuflich
+        verschiedenste Themen der Informatik,
+        da ich das selbst Gelernte anderen immer sehr gut weiter vermitteln konnte.
       </p>
       <p>
-        Bereits zu meiner Schulzeit habe ich in meiner Freizeit programmiert
-        und mir vieles neues Wissen selbstständig beigebracht.
-        Diese Leidenschaft trage ich bis heute mit mir
-        und ich freue mich immer,
-        sie während meines Unterrichts ausleben zu können.
+        Das Programmieren ist für mich zweite Natur,
+        seitdem ich mir bereits während meiner Jugend eigenständig mehr beigebracht habe,
+        um Projektideen umzusetzen, die mir während der Freizeit in den Sinn kamen.
+        Bis heute steckt mir das Programmieren im Blut
+        und ist fester Bestandteil meines Lebens.
       </p>
       <p>
-        Gerne berate ich dich auch zu deinem Studium
-        oder berichte aus meinen eigenen Erfahrungen,
-        wenn du mal die Perspektive eines Absolventen gebrauchen kannst!
+        Mein Unterricht mit dir ist nicht primär eine geschäftliche Transaktion,
+        wie bei vielen anderen Anbietern,
+        sondern ein persönlicher Kontakt zwischen Lehrer und Student,
+        von Mensch zu Mensch.
+        Ich gehe auf deine individuellen Bedürfnisse ein
+        und versuche dir bestmöglich bei deinen Schwierigkeiten zu helfen.
       </p>
       <div class='segment py-2'>
         <div class='action'>
           {{> actions/link
             id='contact-about'
-            name='Schreibe mich an'
+            name='Schreibe mir eine Nachricht'
             href=(shared 'links.local.contact' (env))
             no-track=false
           }}

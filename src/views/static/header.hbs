@@ -1,21 +1,43 @@
-<nav id='sticky-header' class='navigation is-sticky is-hidden'
-  aria-hidden='true'>
+{{#if static_included}}
+<nav class='navigation is-normal'>
+{{else}}
+<nav id='sticky-header' class='navigation is-sticky is-hidden' aria-hidden='true'>
+{{/if}}
   <div class='header'>
     <div class='header__content'>
       <div class='breadcrumb'>
-        {{#> components/link
-          id='contact-header'
-          href=(shared 'links.local.contact' (env))
-          no-track=false
-          no-tab=true
-        }}
-        <span class='breadcrumb__content'>
-          <span class='text'>Kontakt</span>
-          <span class='icon'>
-            <span class='icon-arrow is-small'></span>
+        <div style="display:inline-block; float:left">
+          <div class='segment avatar-container small-avatar mr-2'>
+            <div class='avatar'>
+              <img src='images/logo.jpg'></img>
+            </div>
+          </div>
+          {{#> components/link
+            id='contact-header'
+            href='/'
+            no-track=false
+            no-tab=true
+          }}
+          <span class='breadcrumb__content'>
+            <span class='text'>informatiktutor.de</span>
           </span>
+          {{/components/link}}
+        </div>
+        <span style="display:inline-block; float:right">
+          {{#> components/link
+            id='contact-header'
+            href=(shared 'links.local.contact' (env))
+            no-track=false
+            no-tab=true
+          }}
+          <span class='breadcrumb__content'>
+            <span class='text'>Kontakt</span>
+            <span class='svg-icon icon-white-paper-plane' style="margin-left: 10pt; margin-right: 5pt"></span>
+            <!--<span class='icon'>
+              <span class='icon-arrow is-small'></span>
+            </span>-->
+          {{/components/link}}
         </span>
-        {{/components/link}}
       </div>
     </div>
   </div>

@@ -21,6 +21,12 @@ body {
   min-height: 100%;
 }
 
+.section,
+.header,
+.footer {
+  max-width: calc(#{$max-width} - 64px) !important; // FIXME
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
@@ -85,6 +91,10 @@ body {
   margin-top: 1rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -96,6 +106,19 @@ body {
 }
 .ml-4 {
   margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mr-3 {
+  margin-right: 0.75rem;
+}
+.mr-4 {
+  margin-right: 1rem;
 }
 
 .with-images {
@@ -247,7 +270,9 @@ $section-padding-slim: 2rem;
 }
 
 .navigation {
-  background-color: whitesmoke;
+  background-color: black;
+  color: white !important;
+
   font-size: 16pt;
   z-index: 100;
 
@@ -255,23 +280,43 @@ $section-padding-slim: 2rem;
     transition: top 0.25s ease;
   }
 
-  &.is-sticky {
-    background-color: white !important;
-    overflow: hidden;
+  .icon-arrow::before {
+    background-color: white;
+  }
+  .icon-arrow::after {
+    border-color: white !important;
+  }
+
+  &.is-normal {
+    display: inherit !important;
+    height: calc(64px + .5rem);
+
+    .header__content {
+      padding: .5rem 0;
+    }
+  }
+
+  .align-right {
     text-align: right;
+  }
+  .align-left {
+    text-align: left;
+  }
+
+  &.is-sticky {
+    padding: .5rem 0;
+
+    /* background-color: white !important; /**/
+    overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid $palette-black;
 
     .header__content {
       padding: 0;
       @media only screen and (max-width: $mobile-breakpoint) {
         padding: 0 2.25rem;
-      }
-
-      a:hover {
-        background-color: rgb(247, 247, 247);
       }
 
       .icon {
@@ -289,13 +334,21 @@ $section-padding-slim: 2rem;
 
   .breadcrumb {
     a {
-      color: black;
+      color: white;
       text-decoration: none !important;
       display: inline-block;
       padding: 0.75rem $link-horizontal-padding;
 
       &:hover {
-        background-color: white;
+        /* background-color: rgb(247, 247, 247); /**/
+        /* background-color: black; /**/
+
+        & span {
+          text-decoration: underline;
+          text-decoration-thickness: 2pt;
+          text-underline-offset: 4pt;
+          text-decoration-color: white;
+        }
       }
     }
 
@@ -728,8 +781,8 @@ $underline-height: 0.8rem;
 }
 
 .icon-arrow {
-  // $color-arrow: rgb(59, 59, 59);
-  $color-arrow: black;
+  $color-arrow: rgb(59, 59, 59);
+  // $color-arrow: white;
 
   $size: 18pt;
   $thickness: 2px;
@@ -828,6 +881,9 @@ $svg-icon-size: 1.25rem;
 .icon-paper-plane {
   background: url('../icons/paper-plane.svg');
 }
+.icon-white-paper-plane {
+  background: url('../icons/white-paper-plane.svg');
+}
 .icon-linkedin {
   background: url('../icons/linkedin.svg');
 }
@@ -836,6 +892,10 @@ $svg-icon-size: 1.25rem;
 }
 .icon-instagram {
   background: url('../icons/instagram.svg');
+  height: 1.5rem !important;
+}
+.icon-photo {
+  background: url('../icons/photo.svg');
   height: 1.5rem !important;
 }
 
@@ -910,5 +970,53 @@ a {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: auto;
+  }
+}
+
+
+.avatar-container {
+  $border-thickness: 3px;
+  $border-radius: 20pt;
+
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+
+  > .avatar {
+    flex: 0;
+    margin: $border-thickness;
+    margin-right: -1rem;
+    margin-left: 1.25rem;
+    margin-top: 0; // FIXME
+    z-index: -1000;
+    user-select: none;
+
+    // @media only screen and (max-width: $mobile-breakpoint) {
+    //   margin-right: -1 * $rectangle-mobile-padding;
+    // }
+
+    img {
+      image-rendering: auto;
+      border-radius: $border-radius;
+      outline: $border-thickness solid rgb(239, 239, 239);
+    }
+  }
+
+  &.small-avatar {
+    $border-thickness: 2pt;
+    $border-radius: 6pt;
+
+    display:inline-block;
+
+    > .avatar {
+      img {
+        height: 24px;
+        margin-bottom: -4px;
+        border-radius: $border-radius;
+        outline: $border-thickness solid rgb(228, 228, 228);
+      }
+    }
   }
 }
