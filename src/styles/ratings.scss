@@ -1,0 +1,9 @@
+@import './include/base';
+
+#ratings {
+  margin-top: 1rem;
+
+  .rating:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}

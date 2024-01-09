@@ -3,7 +3,12 @@
     "website": "https://github.com/informatiktutor/website",
     "pay": "https://github.com/informatiktutor/pay"
   },
+  "trustpilot": "https://de.trustpilot.com/review/informatiktutor.de",
   "local": {
+    "ratings": {
+      "development": "bewertungen.html",
+      "production": "bewertungen"
+    },
     "contact": {
       "development": "kontakt.html",
       "production": "kontakt"

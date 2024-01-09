@@ -1,0 +1,14 @@
+
+<section class='section is-small'>
+  <h1 class='title'>
+    <b>Bewertungen</b>
+  </h1>
+  <div id="ratings">
+    {{#each (reverse (shared 'ratings'))}}
+      {{> components/rating
+        rating=this
+        show_date=true
+      }}
+    {{/each}}
+  </div>
+</section>

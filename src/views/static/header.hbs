@@ -13,7 +13,7 @@
             </div>
           </div>
           {{#> components/link
-            id='contact-header'
+            id='header-index'
             href='/'
             no-track=false
             no-tab=true
@@ -25,7 +25,18 @@
         </div>
         <span style="display:inline-block; float:right">
           {{#> components/link
-            id='contact-header'
+            id='header-link-ratings'
+            class='is-hidden-mobile'
+            href=(shared 'links.local.ratings' (env))
+            no-track=false
+            no-tab=true
+          }}
+          <span class='breadcrumb__content'>
+            <span class='text'>Bewertungen</span>
+          </span>
+          {{/components/link}}
+          {{#> components/link
+            id='header-link-contact'
             href=(shared 'links.local.contact' (env))
             no-track=false
             no-tab=true
@@ -33,9 +44,7 @@
           <span class='breadcrumb__content'>
             <span class='text'>Kontakt</span>
             <span class='svg-icon icon-white-paper-plane' style="margin-left: 10pt; margin-right: 5pt"></span>
-            <!--<span class='icon'>
-              <span class='icon-arrow is-small'></span>
-            </span>-->
+          </span>
           {{/components/link}}
         </span>
       </div>

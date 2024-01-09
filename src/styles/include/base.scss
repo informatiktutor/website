@@ -3,7 +3,7 @@
 @import './fonts.scss';
 @import './colors.scss';
 
-$max-width: 680px;
+$max-width: 700px;
 $page-padding: 100px;
 // $horizontal-padding: 2rem;
 
@@ -291,9 +291,20 @@ $section-padding-slim: 2rem;
     display: inherit !important;
     height: calc(64px + .5rem);
 
-    .header__content {
-      padding: .5rem 0;
+    @media only screen and (min-width: $max-width) {
+      .header__content {
+        padding: .5rem 0;
+      }
     }
+
+    @media only screen and (max-width: $max-width) {
+      .header__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: .5rem;
+      }
+    }
+
   }
 
   .align-right {
@@ -1018,5 +1029,62 @@ a {
         outline: $border-thickness solid rgb(228, 228, 228);
       }
     }
+  }
+}
+
+// https://stackoverflow.com/questions/21690979/half-star-with-css
+.star {
+  font-size: x-large;
+  width: 24px;
+  margin-top: -11px;
+  display: inline-block;
+  color: rgb(221, 221, 221);
+}
+.star:last-child {
+  margin-right: 0;
+}
+.star:before {
+  content:'\2605';
+}
+.star.on {
+  color: rgb(255, 190, 0);
+}
+.star.half:after {
+  content:'\2605';
+  color: rgb(255, 190, 0);
+  position: absolute;
+  margin-left: -22px;
+  width: 11px;
+  overflow: hidden;
+}
+
+// rating
+.rating {
+  border: 3pt solid rgb(252, 244, 200);
+  border-radius: 4pt;
+  background-color: rgb(255, 249, 217);
+  padding: 1rem;
+  margin: 0 -.9rem;
+
+  font-size: 13pt;
+  .rating__header {
+    position: relative;
+    display: block;
+  }
+  .rating__title {
+    padding-top: 1rem;
+    color: rgb(105, 105, 105);
+  }
+  .rating__review-text {
+    margin-top: .5rem;
+  }
+  .rating__footer {
+    font-size: 12pt;
+    margin-top: .5rem;
+    opacity: 0.9;
+  }
+  .rating__timestamp {
+    font-size: 11pt;
+    color: gray;
   }
 }
