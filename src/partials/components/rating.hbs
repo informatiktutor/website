@@ -1,0 +1,45 @@
+{{#if rating.consent_for_public_display}}
+<div class="rating">
+  <div class="rating__header">
+    <span class="rating__title">
+      {{rating.customer_name_abbreviated}}
+      {{#if rating.degree_name}}
+        &#x2022;
+        {{rating.degree_name}}
+      {{/if}}
+    </span>
+    <div class="stars" style="float: right">
+      {{{stars rating.satisfaction_value}}}
+    </div>
+  </div>
+  <div class="rating__review-text">
+    {{rating.review_text}}
+  </div>
+  <div class="rating__footer">
+    {{#if show_date}}
+      <span class="rating__timestamp">
+        {{dateformat rating.timestamp}}
+      </span>
+    {{/if}}
+    {{#if rating.trustpilot_url}}
+      {{#if show_date}}
+        &nbsp;&#x2022;&nbsp;
+      {{/if}}
+      <a href="{{rating.trustpilot_url}}">Auf Trustpilot ansehen</a>
+    {{/if}}
+    {{#if show_more}}
+      {{#unless show_date}}
+        {{#if rating.trustpilot_url}}
+          &nbsp;&#x2022;&nbsp;
+        {{/if}}
+      {{/unless}}
+      {{#unless rating.trustpilot_url}}
+        {{#if show_date}}
+          &nbsp;&#x2022;&nbsp;
+        {{/if}}
+      {{/unless}}
+      <a href="{{shared 'links.local.ratings' (env)}}">Weitere Bewertungen ansehen</a>
+    {{/if}}
+  </div>
+</div>
+{{/if}}

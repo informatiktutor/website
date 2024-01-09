@@ -4,6 +4,9 @@ module.exports = function (path) {
   const args = [...arguments].slice(0, arguments.length - 1)
   const segments = []
   for (const path of args) {
+    if (path === undefined) {
+      continue;
+    }
     for (const segment of path.split('.')) {
       segments.push(segment)
     }

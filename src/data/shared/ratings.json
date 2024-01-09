@@ -1,0 +1,147 @@
+[
+  {
+    "id": "d2e7c4a27f76",
+    "timestamp": "2022-02-02T16:39:08.623Z",
+    "satisfaction_value": 10,
+    "review_text": "Super verst\u00e4ndlich. Hat mich richtig weitergebracht",
+    "customer_name_abbreviated": "Alex",
+    "degree_name": "Wirtschaftsinformatik",
+    "current_semester": "5",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "85461422280d",
+    "timestamp": "2022-02-02T19:10:06.999Z",
+    "satisfaction_value": 10,
+    "review_text": "Ich bin sehr zufrieden. Jonas bietet sehr gute Nachhilfe an. Er erkl\u00e4rt die Aufgaben und L\u00f6sungen sehr verst\u00e4ndlich und gibt viele Hilfestellungen. Mit ihm ist es m\u00f6glich komplexe und schwierige Aufgaben zu bearbeiten. Er geht auf L\u00f6sungsvorschl\u00e4ge ein und verbessert diese sogar.\nVielen Dank f\u00fcr deine M\u00fche ! :)",
+    "customer_name_abbreviated": "Theresa Ruppert",
+    "degree_name": "Wirtschaftsinformatik",
+    "current_semester": "11",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "b37e0bbad1f8",
+    "timestamp": "2022-12-12T22:10:51.964Z",
+    "satisfaction_value": 10,
+    "review_text": "Jonas hilft mir mit der parktischen Informatik besser zurecht zukommen.Er ist \u00e4u\u00dferst geduldig und hat eine angenehme Art inhaltlich komplexe Inhalte auf ein verst\u00e4ndliches Niveau herunterzubrechen. Fachlich wie auch menschlich ein perfekter Lehrer. Eine passenden Termin finden wir auch immer. Ich kann ihn nur weiterempfehlen!",
+    "customer_name_abbreviated": "T.",
+    "degree_name": "Informatik",
+    "current_semester": "1",
+    "consent_for_public_display": true,
+    "trustpilot_url": "https://de.trustpilot.com/reviews/6397a28ceb0ad8489908eb4a"
+  },
+  {
+    "id": "7b836ae05e28",
+    "timestamp": "2022-12-13T16:29:44.701Z",
+    "satisfaction_value": 10,
+    "review_text": "Sehr gut schritt f\u00fcr schritt mein Material mit mir durchgegangen, es wurde nicht nur oberfl\u00e4chlich erkl\u00e4rt, sondern man hat auch nach der Nachhilfe Stunde ein echtes Verst\u00e4ndnis f\u00fcr das Material gehabt :)",
+    "customer_name_abbreviated": "M. R.",
+    "degree_name": "Informatik",
+    "current_semester": "1",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "3b1071dbfd3b",
+    "timestamp": "2022-12-14T11:14:49.962Z",
+    "satisfaction_value": 10,
+    "review_text": "Ich fand die Nachhilfe sehr hilfreich. Jonas war immer vorbereitet und hat die Themen verst\u00e4ndlich erkl\u00e4rt.",
+    "customer_name_abbreviated": "Selen",
+    "service_date": "2021-07-11",
+    "course_name": "BA1",
+    "degree_name": "Wirtschaftsinformatik",
+    "current_semester": "12+",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "0b3d74a65542",
+    "timestamp": "2023-01-19T21:27:57.783Z",
+    "satisfaction_value": 10,
+    "review_text": "Unfassbar gute Nachhilfe, bin sehr gl\u00fccklich mit Jonas. Er hat eine sehr gute Erkl\u00e4rweise und gibt tolle, mega hilfreiche Nachhilfemitschriften dazu. Kann ich nur weiter empfehlen! :)",
+    "customer_name_abbreviated": "Maike",
+    "course_name": "Informatik/ Computer Structures and Algorithms",
+    "degree_name": "M.Sc. Computer Science with Data Analytics",
+    "current_semester": "1",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "8082315e9fb2",
+    "timestamp": "2023-03-18T17:38:43.102Z",
+    "satisfaction_value": 10,
+    "review_text": "Jede Stunde die ich mit dem Jonas gemacht habe war richtig effizient weil f\u00fcr ihm wichtiger ist die Aufgaben zu verstehen und auch selbst in der Lage zu sein die zu l\u00f6sen . K\u00f6nnte richtig gut alle meine Fragen beantworten und k\u00f6nnte man flexibel Termine vereinbaren. Top \ud83d\udc4d\ud83c\udffb",
+    "customer_name_abbreviated": "Eni Cina",
+    "course_name": "Rechnerarchitektur, Datenbanksysteme 2",
+    "degree_name": "Medieninformatik",
+    "current_semester": "4",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "1b9b2923c0c9",
+    "timestamp": "2023-04-21T16:04:59.886Z",
+    "satisfaction_value": 10,
+    "review_text": "Die Nachhilfe mit Jonas ist wirklich Super! Obwohl er \u00fcber tiefere Kenntnisse in Informatik und Mathematik verf\u00fcgt , vermittelt er den Stoff auf einem einfachen Weg. Er geht auf die Problemstellungen ein und hat bei den Erl\u00e4uterungen sehr viel Geduld. Es macht wirklich Spa\u00df mit seiner Hilfe wieder zu studieren :).Ely",
+    "customer_name_abbreviated": "Ely",
+    "service_date": "2023-04-21",
+    "course_name": "Objektorientierte Programmierung",
+    "degree_name": "Informatik",
+    "current_semester": "2",
+    "consent_for_public_display": true,
+    "trustpilot_url": "https://de.trustpilot.com/reviews/64458ebf517b4680f03c24f3"
+  },
+  {
+    "id": "bbbf1ff578e2",
+    "timestamp": "2023-04-26T21:14:57.180Z",
+    "satisfaction_value": 10,
+    "review_text": "Top, immer vorbereitet alle meine Fragen zu beantworten und sehr flexibel.",
+    "customer_name_abbreviated": "Eni Cina",
+    "service_date": "2023-04-21",
+    "course_name": "Web-Engineering, Datenbanken",
+    "degree_name": "Medieninformatik",
+    "current_semester": "5",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "c0fc067d4822",
+    "timestamp": "2023-05-21T12:25:34.596Z",
+    "satisfaction_value": 9,
+    "review_text": "",
+    "customer_name_abbreviated": "Adam B.",
+    "course_name": "Datenbanken, Betriebliche Anwendungssysteme",
+    "degree_name": "Wirtschaftsinformatik",
+    "current_semester": "6",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "741ebd394886",
+    "timestamp": "2023-05-29T21:11:01.215Z",
+    "satisfaction_value": 10,
+    "review_text": "F\u00fcr mich findet der Unterricht \u00fcber Zoom statt. Wir gehen dabei dann das durch, was ich nicht verstanden habe bzw. wo ich noch Hilfe brauche, dabei nutzen wir Screen-Sharing. F\u00fcr mich sind dies haupts\u00e4chlich Themen in der Programmierung in Java. Man kann ihn aber auch Themen rund um die IT und Softwaretechnik fragen und merkt, dass er davon wirklich Ahnung hat. \nWas ich pers\u00f6nlich sehr gut finde ist, dass Jonas nicht alles quasi f\u00fcr einen macht, sondern er die Geduld hat zuzuschauen, wie ich mit seiner Hilfe selbst programmiere und dann eingreift, wenn ich nicht weiterkomme. Man geht also genau das durch, was man wissen m\u00f6chte und er findet den richtigen Weg Dinge zu erkl\u00e4ren ohne zu weit auszuschweifen. Mir hilft seine Nachhilfe daher ungeheim weiter und w\u00fcrde sie jedem weiterempfehlen! Es ist besser, sich von Jonas etwas zeigen zu lassen, als selbst stundenlang dar\u00fcber nachzudenken!\n\nZudem ist er sehr gut organisiert und man kann per Online-Tool einen Termin seiner Wahl buchen.",
+    "customer_name_abbreviated": "Roman H.",
+    "service_date": "2023-05-05",
+    "course_name": "Softwaretechnik, Programmierung",
+    "degree_name": "Management & Technology",
+    "current_semester": "4",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "742cdd75fbd3",
+    "timestamp": "2023-05-31T22:20:12.684Z",
+    "satisfaction_value": 10,
+    "review_text": "Sehr kompetent und  alle gew\u00fcnschten Bereiche der Nachhilfe ( Fragen, Erkl\u00e4rungen etc.) wurden verst\u00e4ndlich und ausf\u00fchrlich beigebracht.",
+    "customer_name_abbreviated": "I. R.",
+    "service_date": "2023-05-30",
+    "course_name": "Informatik",
+    "degree_name": "Informationstechnik",
+    "current_semester": "6",
+    "consent_for_public_display": true
+  },
+  {
+    "id": "1aa28a8e2b16",
+    "timestamp": "2023-07-07T16:41:01.256Z",
+    "satisfaction_value": 10,
+    "review_text": "Sehr kompetent, in der Lage komplexe Aufgaben logisch und verst\u00e4ndlich zu erkl\u00e4ren!",
+    "customer_name_abbreviated": "Toni W.",
+    "service_date": "2023-07-07",
+    "course_name": "Informatik",
+    "consent_for_public_display": true
+  }
+]

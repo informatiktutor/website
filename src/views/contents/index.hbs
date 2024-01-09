@@ -28,7 +28,7 @@
             </span>
           </p>
           <div class='avatar'>
-            <img src='images/avatar2.jpg' height='72'></img>
+            <img src='images/avatar.jpg' height='72'></img>
           </div>
         </div>
         <div class='segment'>
@@ -58,6 +58,13 @@
               no-track=false
             }}
           </div>
+        </div>
+        <div class='segment pt-4'>
+          {{> components/rating
+            rating=(find (shared 'ratings') 'id' '0b3d74a65542')
+            show_more=true
+            show_date=false
+          }}
         </div>
       </div>
     </section>

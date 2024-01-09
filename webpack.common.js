@@ -19,7 +19,8 @@ const common = {
     privacy: './src/scripts/privacy.js',
     imprint: './src/scripts/imprint.js',
     rating: './src/scripts/rating.js',
-    booking: './src/scripts/booking.js'
+    booking: './src/scripts/booking.js',
+    ratings: './src/scripts/ratings.js'
   },
   target: ['web', 'es5'],
   module: {
@@ -120,6 +121,12 @@ const common = {
       template: 'src/views/buchen.hbs',
       templateParameters: require('./src/data/booking'),
       chunks: ['booking'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'bewertungen.html',
+      template: 'src/views/bewertungen.hbs',
+      templateParameters: require('./src/data/ratings'),
+      chunks: ['ratings'],
     }),
   ],
   output: {
