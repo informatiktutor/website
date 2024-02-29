@@ -49,7 +49,12 @@
       {{shared 'contact.email.address'}}
       {{/components/link}}
     </p>
-    <p>
+    <p class="contact-status">
+      <span>
+        Aktuell bin ich nur per E-Mail erreichbar.
+      </span>
+    </p>
+    <!--<p>
       <span
         class='tag highlight is-light is-small is-rounded is-padded'>Telefon</span>
       {{~#> components/link
@@ -60,7 +65,7 @@
       ~}}
       {{shared 'contact.phone.number'}}
       {{/components/link}}
-    </p>
+    </p>-->
     <!--<p>
       <span
         class='tag highlight is-light is-small is-rounded is-padded'>Discord</span><span>
@@ -74,7 +79,7 @@
     <span class='highlight is-black is-padded'>Nachricht</span>
   </h2>
   <div class='contact-buttons'>
-    {{> components/contact-button
+    <!--{{> components/contact-button
       id='whatsapp'
       name='WhatsApp'
       icon='whatsapp'
@@ -82,7 +87,7 @@
       href=apps.whatsapp.open_url
       target='_blank'
       no-track=true
-    }}
+    }}-->
     <!--{{> components/contact-button
       id='discord'
       name='Discord'
@@ -92,7 +97,7 @@
       target='_blank'
       no-track=true
     }}-->
-    {{> components/contact-button
+    <!--{{> components/contact-button
       id='signal'
       name='Signal'
       icon='signal'
@@ -100,7 +105,7 @@
       href=apps.signal.open_url
       target='_blank'
       no-track=true
-    }}
+    }}-->
     {{> components/contact-button
       id='email'
       name='E-Mail'
