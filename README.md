@@ -55,7 +55,7 @@ Serve the build output that will be pushed to GitHub Pages
 and make sure nothing is terribly broken before making it live.
 
 ```
-$ git push origin main
+$ git push origin master
 ```
 
 Now push the changes to update the live page.
