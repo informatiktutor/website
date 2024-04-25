@@ -56,12 +56,11 @@ Now push the changes to update the live page.
 
 ## Recurring TODOs
 
-**Yearly**, last changed: 2023
-* Update my age on the page
-* Update copyright year on the page, in the license and the README
+**Yearly**, last changed: 2024
+* Update copyright year on the page and in the README
 
 ## License
 
 This repository does not come with any license for now.
 
-*Copyright &copy; 2021-2023 Jonas van den Berg*
+*Copyright &copy; 2021-2024 Jonas van den Berg*
