@@ -119,6 +119,7 @@
       no-track=false
       keep_text=true
       do_click=true
+      class='email-button'
     }}
   </div>
 </section>
@@ -146,7 +147,7 @@
     }}
   </div>
 </section>-->
-<section class='section is-small'>
+<!--<section class='section is-small'>
   <h2 class='title'>
     <span class='highlight is-black is-padded'>Plattformen</span>
   </h2>
@@ -168,27 +169,43 @@
       no-track=true
     }}
   </div>
-</section>
+</section>-->
 <section class='section is-small'>
   <h2 class='title'>
-    <span class='highlight is-black is-padded'>Weiteres von mir</span>
+    <span class='highlight is-black is-padded'>Sonstiges</span>
   </h2>
   <div class='contact-buttons is-subtle'>
     {{> components/contact-button
+      id='github'
+      name='GitHub'
+      icon='github'
+      href=(shared 'contact.platforms.github')
+      target='_blank'
+      no-track=true
+    }}
+    {{> components/contact-button
+      id='linkedin'
+      name='LinkedIn'
+      icon='linkedin'
+      href=(shared 'contact.platforms.linkedin')
+      target='_blank'
+      no-track=true
+    }}
+    <!--{{> components/contact-button
       id='jonasberge'
       name='Fotografie'
       icon='photo'
       href=(shared 'contact.platforms.jonasberge')
       target='_blank'
       no-track=true
-    }}
-    {{> components/contact-button
+    }}-->
+    <!--{{> components/contact-button
       id='instagram'
       name='Instagram'
       icon='instagram'
       href=(shared 'contact.platforms.instagram')
       target='_blank'
       no-track=true
-    }}
+    }}-->
   </div>
 </section>

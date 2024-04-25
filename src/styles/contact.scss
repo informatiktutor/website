@@ -44,6 +44,24 @@
   margin-bottom: 0.6rem;
   white-space: nowrap;
 
+  &.email-button {
+    border: 3px solid rgb(197, 226, 248);
+    box-shadow: 0px 3px 10px rgba(146, 198, 240, 0.5);
+    transition: box-shadow 200ms ease-in-out;
+    .name {
+      color: black !important;
+      transition: color 200ms ease-in-out;
+    }
+  }
+  &.email-button:hover {
+    border: 3px solid rgb(146, 198, 240);
+    box-shadow: 1px 1px 5px rgba(146, 198, 240, 0.5);
+    background-color: rgb(249, 253, 255);
+    .name {
+      color: rgb(44, 79, 107)!important;
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
