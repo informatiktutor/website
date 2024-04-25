@@ -1,0 +1,42 @@
+b37e0bbad1f8:
+  trustpilot_url: https://de.trustpilot.com/reviews/6397a28ceb0ad8489908eb4a
+1b9b2923c0c9:
+  trustpilot_url: https://de.trustpilot.com/reviews/64458ebf517b4680f03c24f3
+bbbf1ff578e2:
+  corrections:
+    - key: course_name
+      find: Webeng
+      replace: Web-Engineering
+    - key: course_name
+      find: datenbank
+      replace: Datenbanken
+    - key: review_text
+      find: " ,"
+      replace: ","
+    - key: review_text
+      find: " ."
+      replace: "."
+c0fc067d4822:
+  corrections:
+    - key: customer_name_abbreviated
+      find: B
+      replace: B.
+    - key: review_text
+      find: "*"
+      replace: ""
+741ebd394886:
+  corrections:
+    - key: course_name
+      find: " / "
+      replace: ", "
+0b3d74a65542:
+  trustpilot_url: https://de.trustpilot.com/reviews/63c9b67e9b64b1bdaf3d5342
+  corrections:
+    - key: degree_name
+      find: MSc
+      replace: M.Sc.
+1aa28a8e2b16:
+  corrections:
+    - key: review_text
+      find: "in der Lage,"
+      replace: "in der Lage"

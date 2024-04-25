@@ -20,6 +20,14 @@ The page automatically refreshes via
 [`browser-sync`](https://www.npmjs.com/package/browser-sync).
 The view is synced with other instances, e.g. one on your phone.
 
+## Updating ratings
+
+```
+cd ratings
+make
+# Follow the auth flow in your browser
+```
+
 ## Deployment of Changes
 
 ```
