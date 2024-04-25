@@ -32,6 +32,14 @@
   </div>
 </div>
 
+<section class="section is-small">
+  <p class="contact-status">
+    <span>
+      Aktuell bin ich nur per E-Mail erreichbar.
+    </span>
+  </p>
+</section>
+
 <section class='section is-small'>
   <h1 class='title'>
     <b>Kontakt</b>
@@ -40,19 +48,15 @@
     <p>
       <span
         class='tag highlight is-light is-small is-rounded is-padded'>E-Mail</span>
-      {{~#> components/link
-        id_prefix='contact'
-        id='email'
-        href=(shared 'contact.email.url')
-        no-track=false
-      ~}}
-      {{shared 'contact.email.address'}}
-      {{/components/link}}
-    </p>
-    <p class="contact-status">
-      <span>
-        Aktuell bin ich nur per E-Mail erreichbar.
-      </span>
+        {{~#> components/email_base64
+          id_prefix='contact'
+          id='email'
+          name='Zum Anzeigen klicken'
+          email_base64=(shared 'contact.emails.kontakt_base64')
+          no-track=false
+        ~}}
+        Zum Anzeigen klicken
+        {{/components/email_base64}}
     </p>
     <!--<p>
       <span
@@ -111,8 +115,10 @@
       name='E-Mail'
       after_name='schreiben'
       icon='paper-plane'
-      href=(shared 'contact.email.url')
+      email_base64=(shared 'contact.emails.kontakt_base64')
       no-track=false
+      keep_text=true
+      do_click=true
     }}
   </div>
 </section>

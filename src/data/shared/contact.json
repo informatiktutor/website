@@ -10,6 +10,10 @@
     "city": "51491 Overath",
     "country": "Deutschland"
   },
+  "emails": {
+    "kontakt_base64": "YW5mcmFnZUBpbmZvcm1hdGlrdHV0b3IuZGU=",
+    "impressum_base64": "aW1wcmVzc3VtKzJkODRjMDA3QGluZm9ybWF0aWt0dXRvci5kZQ=="
+  },
   "email": {
     "address": "jonas@informatiktutor.de",
     "url": "mailto:jonas@informatiktutor.de"

@@ -1,0 +1,16 @@
+<a href='#' {{#unless keep_text }}data-change="true"{{/unless}} onclick="var e=atob('{{ email_base64 }}'); if(this.hasAttribute('data-change'))this.innerText=e;this.href=atob('bWFpbHRvOg==')+e;this.onclick=undefined;return false;"
+  {{#if class}} class='{{class}}' {{/if}} {{#if target}}
+  target='{{target}}' {{/if}} {{#unless (false no-track)}}
+  {{> attributes/no-track}} {{/unless}} {{#unless (false analytics)}}
+  {{/unless}} {{#if no-tab}} tabindex='-1' {{/if}}>
+  {{~#if @partial-block~}}
+  {{~> @partial-block~}}
+  {{~else if html~}}
+  {{{html}}}
+  {{~else~}}
+  {{~name~}}
+  {{~/if~}}
+</a>{{~'.'~}}
+{{#if do_click }}
+<script>document.currentScript.previousElementSibling.click();</script>
+{{/if}}
